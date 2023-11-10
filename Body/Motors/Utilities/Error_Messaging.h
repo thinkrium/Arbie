@@ -15,7 +15,7 @@ namespace Utilities {
              struct Error_Messaging {
 
              public:
-                 string Header_File_Not_Present = "The header file you are trying to include does not exist";
+                 inline static const string Header_File_Not_Present = "The header file you are trying to include does not exist";
          };
     }
 }

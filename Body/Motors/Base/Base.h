@@ -16,6 +16,7 @@ namespace Motor {
     public:
 
         Base();
+
         float getDegrees() const;
 
         void setDegrees(float degrees);

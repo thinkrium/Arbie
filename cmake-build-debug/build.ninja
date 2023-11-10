@@ -51,19 +51,19 @@ build cmake_object_order_depends_target_Arbie: phony || CMakeFiles/Arbie.dir
 
 build CMakeFiles/Arbie.dir/main.cpp.obj: CXX_COMPILER__Arbie_unscanned_Debug C$:/Development/Robotics/Source$ Code/Arbie/main.cpp || cmake_object_order_depends_target_Arbie
   DEP_FILE = CMakeFiles\Arbie.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Arbie.dir
   OBJECT_FILE_DIR = CMakeFiles\Arbie.dir
 
 build CMakeFiles/Arbie.dir/Body/Motors/Base/Base.cpp.obj: CXX_COMPILER__Arbie_unscanned_Debug C$:/Development/Robotics/Source$ Code/Arbie/Body/Motors/Base/Base.cpp || cmake_object_order_depends_target_Arbie
   DEP_FILE = CMakeFiles\Arbie.dir\Body\Motors\Base\Base.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Arbie.dir
   OBJECT_FILE_DIR = CMakeFiles\Arbie.dir\Body\Motors\Base
 
 build CMakeFiles/Arbie.dir/Body/Motors/Servo/Servo.cpp.obj: CXX_COMPILER__Arbie_unscanned_Debug C$:/Development/Robotics/Source$ Code/Arbie/Body/Motors/Servo/Servo.cpp || cmake_object_order_depends_target_Arbie
   DEP_FILE = CMakeFiles\Arbie.dir\Body\Motors\Servo\Servo.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Arbie.dir
   OBJECT_FILE_DIR = CMakeFiles\Arbie.dir\Body\Motors\Servo
 

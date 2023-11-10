@@ -14,6 +14,8 @@ void Motor::Servo::Turn_Motor(Rotation_Direction rotationDirection, float degree
     else if (rotationDirection == Rotation_Direction::Counter_Clockwise) {
 
     }
+
+
 }
 
 Motor::Servo::~Servo() {
