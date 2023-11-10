@@ -3,3 +3,17 @@
 //
 
 #include "Base.h"
+
+float Motor::Base::getDegrees() const {
+    return Degrees;
+}
+
+void Motor::Base::setDegrees(float degrees) {
+    Degrees = degrees;
+}
+
+Motor::Base::~Base() {
+
+}
+
+Motor::Base::Base() {}

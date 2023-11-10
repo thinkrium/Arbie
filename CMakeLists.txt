@@ -8,4 +8,6 @@ add_executable(Arbie main.cpp
         Body/Motors/Base/Base.h
         Body/Motors/Servo/Servo.cpp
         Body/Motors/Servo/Servo.h
+        Body/Motors/Utilities/Enumerations.h
+        Body/Motors/Utilities/Error_Messaging.h
 )
