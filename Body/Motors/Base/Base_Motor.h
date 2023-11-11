@@ -2,8 +2,8 @@
 // Created by thome on 11/9/2023.
 //
 
-#ifndef ARBIE_BASE_H
-#define ARBIE_BASE_H
+#ifndef ARBIE_BASE_MOTOR_H
+#define ARBIE_BASE_MOTOR_H
 
 #include "../Utilities/Enumerations.h"
 
@@ -11,11 +11,13 @@ using namespace Utilities::Enumerations;
 
 namespace Motor {
 
-    class Base {
+    class Base_Motor {
 
     public:
 
-        Base();
+        Base_Motor();
+
+        Base_Motor(Pin_Number pinNumber);
 
         float getDegrees() const;
 
@@ -23,11 +25,16 @@ namespace Motor {
 
         virtual void Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) = 0;
 
-        virtual ~Base();
+        virtual ~Base_Motor();
 
     private:
-        float Degrees;
+        float degrees;
+        Pin_Number pin_number;
+    public:
+        Pin_Number getPinNumber() const;
+
+        void setPinNumber(Pin_Number pinNumber);
     };
 }
 
-#endif //ARBIE_BASE_H
+#endif //ARBIE_BASE_MOTOR_H
