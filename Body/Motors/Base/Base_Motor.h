@@ -30,6 +30,8 @@ namespace Motor {
     private:
         float degrees;
         Pin_Number pin_number;
+
+
     public:
         Pin_Number getPinNumber() const;
 

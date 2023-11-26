@@ -1,5 +1,9 @@
 # ninja log v5
 14	184	7213630255111456	CMakeFiles/Arbie.dir/Body/Motors/Base/Base.cpp.obj	a4ee7757469a20f0
 22	869	7213630261984280	CMakeFiles/Arbie.dir/Body/Motors/Servo/Servo.cpp.obj	5e38a738bb20c9f4
-5	828	7213630261578808	CMakeFiles/Arbie.dir/main.cpp.obj	a3167e5bd2d5f194
+17	916	7215970202864324	CMakeFiles/Arbie.dir/main.cpp.obj	9da91952939667da
 870	1106	7213630264267326	Arbie.exe	f34ee93a62ba860d
+2	439	7226793126745177	build.ninja	3e8f3912ea81ffff
+6	377	7215970196841088	CMakeFiles/Arbie.dir/Body/Motors/Base/Base_Motor.cpp.obj	59c4acbfa0729959
+5	629	7215970568658981	CMakeFiles/Arbie.dir/Body/Motors/Servo/Servo_Motor.cpp.obj	e6aa3a5d7446551f
+20	323	7226795487340238	CMakeFiles/Arbie.dir/Body/Motors/Base/Base_Motor.cpp.obj	59c4acbfa0729959

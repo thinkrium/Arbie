@@ -15,7 +15,9 @@ namespace Utilities {
              struct Error_Messaging {
 
              public:
+                 inline static const string No_Error = "No error found";
                  inline static const string Header_File_Not_Present = "The header file you are trying to include does not exist";
+                 inline static const string Outside_Servo_PWM_Range = "The system is trying to turn a servo motor outside its allowable range";
          };
     }
 }
