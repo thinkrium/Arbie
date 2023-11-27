@@ -27,3 +27,7 @@ void Motor::Base_Motor::setDegreeOfRotation(int degreeOfRotation) {
 int Motor::Base_Motor::getDegreeOfRotation() const {
     return degree_of_rotation;
 }
+
+Motor::Base_Motor::Base_Motor(int pinNumber) {
+
+}
