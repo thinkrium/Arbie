@@ -15,20 +15,44 @@ namespace Motor {
     public:
         Servo_Motor();
 
-        void Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) override;
+        Servo_Motor(int motorFrequency);
 
+        Servo_Motor( int pinNumber, int degreeOfRotation,int minimumPulseWidth, int maximumPulseWidth,
+                    int motorFrequency);
+
+        void Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) override;
 
         ~Servo_Motor() override;
 
+        int getPulseWidth() const;
+
+        void setPulseWidth(int pulseWidth);
+
+        int getMaximumPulseWidth() const;
+
+        void setMaximumPulseWidth(int maximumPulseWidth);
+
+        int getMotorFrequency() const;
+
+        void setMotorFrequency(int motorFrequency);
+
     private:
 
-        int Convert_Degrees_To_Pulse_Width(float degrees);
+        int convertDegreesToPulseWidth(float degrees);
 
-        int pulseWidth;
+        int determinePulseWidth(float onTimePercentage);
+
+        int pulse_width;
 
         int maximum_pulse_width;
 
-        int frequency;
+        int minimum_pulse_width;
+
+        int getMinimumPulseWidth() const;
+
+        void setMinimumPulseWidth(int minimumPulseWidth);
+
+        int motor_frequency;
     };
 }
 

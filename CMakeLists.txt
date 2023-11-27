@@ -3,9 +3,11 @@ project(Arbie)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_definitions(-I/usr/include -L/usr/lib -lwiringPi)
+#add_definitions(-I/usr/include -L/usr/lib -lwiringPi)
 
-include(Findpigpio.cmake)
+#include(Findpigpio.cmake)
+
+add_definitions(-I/usr/include -L/usr/lib )
 
 add_executable(Arbie main.cpp
         Body/Motors/Base/Base_Motor.cpp

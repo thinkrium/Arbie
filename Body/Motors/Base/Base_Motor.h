@@ -17,25 +17,23 @@ namespace Motor {
 
         Base_Motor();
 
-        Base_Motor(Pin_Number pinNumber);
+        Base_Motor(int pinNumber);
 
-        float getDegrees() const;
+        int getDegreeOfRotation() const;
 
-        void setDegrees(float degrees);
+        void setDegreeOfRotation(int degreeOfRotation);
 
         virtual void Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) = 0;
 
         virtual ~Base_Motor();
 
+         int getPinNumber() const;
+
+        void setPinNumber(int pinNumber);
+
     private:
-        float degrees;
-        Pin_Number pin_number;
-
-
-    public:
-        Pin_Number getPinNumber() const;
-
-        void setPinNumber(Pin_Number pinNumber);
+        int degree_of_rotation;
+        int pin_number;
     };
 }
 

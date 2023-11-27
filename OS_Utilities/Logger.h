@@ -15,6 +15,7 @@ namespace OS_Utilities {
     public:
         static void Info(string message);
         static void Log(string message);
+        static void Success(string message);
         static void Warn(string message);
         static void Error(string message);
     };

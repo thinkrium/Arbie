@@ -4,13 +4,7 @@
 
 #include "Base_Motor.h"
 
-float Motor::Base_Motor::getDegrees() const {
-    return degrees;
-}
 
-void Motor::Base_Motor::setDegrees(float degrees) {
-    degrees = degrees;
-}
 
 Motor::Base_Motor::~Base_Motor() {
 
@@ -18,10 +12,18 @@ Motor::Base_Motor::~Base_Motor() {
 
 Motor::Base_Motor::Base_Motor() {}
 
-Pin_Number Motor::Base_Motor::getPinNumber() const {
+int Motor::Base_Motor::getPinNumber() const {
     return pin_number;
 }
 
-void Motor::Base_Motor::setPinNumber(Pin_Number pinNumber) {
+void Motor::Base_Motor::setPinNumber(int pinNumber) {
     pin_number = pinNumber;
+}
+
+void Motor::Base_Motor::setDegreeOfRotation(int degreeOfRotation) {
+    degree_of_rotation = degreeOfRotation;
+}
+
+int Motor::Base_Motor::getDegreeOfRotation() const {
+    return degree_of_rotation;
 }

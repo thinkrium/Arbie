@@ -4,6 +4,7 @@
 
 #include <unistd.h>
 #include "Servo_Motor.h"
+#include "../Base/Base_Motor.h"
 #include "../../Libraries/PCA9685/PCA9685.h"
 #include "../../../OS_Utilities/Logger.h"
 
@@ -63,7 +64,13 @@ Motor::Servo_Motor::~Servo_Motor() {
 
 }
 
-int Motor::Servo_Motor::Convert_Degrees_To_Pulse_Width(float degrees) {
+
+/**
+ * The
+ * @param degrees
+ * @return
+ */
+int Motor::Servo_Motor::convertDegreesToPulseWidth(float degrees) {
 
     int pulse_width = 0;
 
@@ -75,3 +82,68 @@ int Motor::Servo_Motor::Convert_Degrees_To_Pulse_Width(float degrees) {
     }
     return 0;
 }
+
+/**
+ * The definition of pulse width is % of on time / frequency
+ * @return
+ */
+int Motor::Servo_Motor::determinePulseWidth(float onTimePercentage) {
+
+    return (int) (onTimePercentage / this->getMotorFrequency());
+
+}
+
+Motor::Servo_Motor::Servo_Motor(int motorFrequency) {
+   this->motor_frequency =  motorFrequency;
+}
+
+int Motor::Servo_Motor::getPulseWidth() const {
+    return pulse_width;
+}
+
+void Motor::Servo_Motor::setPulseWidth(int pulseWidth) {
+    pulse_width = pulseWidth;
+}
+
+int Motor::Servo_Motor::getMaximumPulseWidth() const {
+    return maximum_pulse_width;
+}
+
+void Motor::Servo_Motor::setMaximumPulseWidth(int maximumPulseWidth) {
+    maximum_pulse_width = maximumPulseWidth;
+}
+
+int Motor::Servo_Motor::getMotorFrequency() const {
+    return motor_frequency;
+}
+
+void Motor::Servo_Motor::setMotorFrequency(int motorFrequency) {
+    motor_frequency = motorFrequency;
+}
+
+int Motor::Servo_Motor::getMinimumPulseWidth() const {
+
+    return minimum_pulse_width;
+}
+
+Motor::Servo_Motor::Servo_Motor(int pinNumber,  int degreeOfRotation,  int minimumPulseWidth, int maximumPulseWidth,
+                                int motorFrequency) : Base_Motor(pinNumber) {
+    try {
+
+        this->setPinNumber(pinNumber);
+        this->setDegreeOfRotation(degreeOfRotation);
+        this->setMinimumPulseWidth(minimumPulseWidth);
+        this->setMaximumPulseWidth(maximumPulseWidth);
+        this->setMotorFrequency(motorFrequency);
+
+        Logger::Success(Error_Messaging::Servo_Motor_Init_Succeeded);
+    }
+    catch (exception ex) {
+       Logger::Error(Error_Messaging::Servo_Motor_General_Failure);
+    }
+}
+
+void Motor::Servo_Motor::setMinimumPulseWidth(int minimumPulseWidth) {
+    minimum_pulse_width = minimumPulseWidth;
+}
+
