@@ -8,6 +8,7 @@
 #include "../Base/Base_Motor.h"
 
 #include "../Utilities/Error_Messaging.h"
+#include "../../Libraries/PCA9685/PCA9685.h"
 
 namespace Motor {
     class Servo_Motor : public Base_Motor {
@@ -38,6 +39,8 @@ namespace Motor {
 
     private:
 
+        PCA9685 pwm;
+
         void  determinePulseWidthDegreeStep();
 
         int convertDegreesToPulseWidth(float degrees);
@@ -50,12 +53,12 @@ namespace Motor {
 
         int minimum_pulse_width;
 
-        float pulse_width_degree_step;
+        float pulse_width_from_degree_step;
 
 
-        float getPulseWidthDegreeStep() const;
+        float getPulseWidthFromDegreeStep() const;
 
-        void setPulseWidthDegreeStep(float pulseWidthDegreeStep);
+        void setPulseWidthFromDegreeStep(float pulseWidthFromDegreeStep);
 
         int absolute_range_of_degrees;
     public:

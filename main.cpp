@@ -11,9 +11,9 @@ int main() {
 
     Servo_Motor servoMotor(0,  0, 135, 500, 2500, 200);
 
-    Logger::Info(Error_Messaging::No_Error);
+    servoMotor.Turn_Motor(Rotation_Direction::Counter_Clockwise, 30, 3);
 
-    servoMotor.Turn_Motor(Rotation_Direction::Counter_Clockwise, 3, 3);
+    Logger::Info(Error_Messaging::No_Error);
 
     return 0;
 }

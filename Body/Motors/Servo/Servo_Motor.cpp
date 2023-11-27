@@ -13,49 +13,19 @@ using namespace OS_Utilities;
 Motor::Servo_Motor::Servo_Motor() {}
 
 void Motor::Servo_Motor::Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) {
+    int pulseWidth = this->convertDegreesToPulseWidth(degrees);
 
     if(rotationDirection == Rotation_Direction::Clockwise) {
 
+        pwm.setPWM(this->getPinNumber(), 0, pulseWidth);
     }
     else if (rotationDirection == Rotation_Direction::Counter_Clockwise) {
+        pwm.setPWM(this->getPinNumber(), 0, pulseWidth);
 
     }
 
-/*
-
-    float percentage = 0;
-
-    PCA9685 pwm;
-    pwm.init(1,0x40);
-    usleep(1000 * 100);
-    std::cout << "frequency" << endl;
-    pwm.setPWMFreq (200);
-    usleep(2000 * 1000);
-    std::cout << "min" << endl;
-
-    pwm.setPWM(0, 0, 300); // down
-    usleep(2000 * 1000);
-    std::cout << "max" << endl;
-
-    pwm.setPWM(0, 0, 2200); // down
-    usleep(2000 * 1000);
-    std::cout << "neutral" << endl;
-
-    pwm.setPWM(0, 0, 1225); // down
-    usleep(2000 * 1000);
-*/
 
     Logger::Warn(  Error_Messaging::Outside_Servo_PWM_Range);
-
-//   for (int i = 0; i <  2800 ; i+=100) {
-//
-//       pwm.setPWM(0, 0, i); // down
-//       usleep(1000 * 1000);
-//       float upTime = ((i / 4095) * 100);
-//       cout << "The up "<< i << " time is " <<  upTime << endl;
-//   }
-
-//        pwm.setPWM(1,0, 1500); // around
 
 
 }
@@ -75,12 +45,13 @@ int Motor::Servo_Motor::convertDegreesToPulseWidth(float degrees) {
     int pulse_width = 0;
 
     try {
-
+       pulse_width = this->getPulseWidthFromDegreeStep() * degrees;
+       return pulse_width;
     }
     catch (exception ex) {
        Logger::Error(  Error_Messaging::Outside_Servo_PWM_Range );
     }
-    return 0;
+    return -1;
 }
 
 /**
@@ -138,6 +109,12 @@ Motor::Servo_Motor::Servo_Motor(int pinNumber,  int degreeOfRotation, int absolu
         this->setMotorFrequency(motorFrequency);
         this->determinePulseWidthDegreeStep();
 
+
+        // the 1 here '/ below is a bus number which is different then pin number
+        pwm.init(1,0x40);
+        usleep(1000 * 100);
+        pwm.setPWMFreq (this->getMotorFrequency());
+
         Logger::Success(Error_Messaging::Servo_Motor_Init_Succeeded);
     }
     catch (exception ex) {
@@ -149,19 +126,18 @@ void Motor::Servo_Motor::setMinimumPulseWidth(int minimumPulseWidth) {
     minimum_pulse_width = minimumPulseWidth;
 }
 
-float Motor::Servo_Motor::getPulseWidthDegreeStep() const {
-    return pulse_width_degree_step;
+float Motor::Servo_Motor::getPulseWidthFromDegreeStep() const {
+    return pulse_width_from_degree_step;
 }
 
-void Motor::Servo_Motor::setPulseWidthDegreeStep(float pulseWidthDegreeStep) {
-    pulse_width_degree_step = pulseWidthDegreeStep;
+void Motor::Servo_Motor::setPulseWidthFromDegreeStep(float pulseWidthFromDegreeStep) {
+    pulse_width_from_degree_step = pulseWidthFromDegreeStep;
 }
 
 void Motor::Servo_Motor::determinePulseWidthDegreeStep() {
     float neutral_position_pulse_width_range = ((this->getMaximumPulseWidth() - this->getMinimumPulseWidth()) / 2) ;
     float step =  (neutral_position_pulse_width_range / this->getAbsoluteRangeOfDegrees());
-    this->setPulseWidthDegreeStep(step);
-    Logger::Info(to_string(step));
+    this->setPulseWidthFromDegreeStep(step);
 }
 
 int Motor::Servo_Motor::getAbsoluteRangeOfDegrees() const {
