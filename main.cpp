@@ -9,7 +9,7 @@ using namespace OS_Utilities;
 using namespace Motor;
 int main() {
 
-    Servo_Motor servoMotor(0,  0,  500, 2500, 200);
+    Servo_Motor servoMotor(0,  0, 135, 500, 2500, 200);
 
     Logger::Info(Error_Messaging::No_Error);
 

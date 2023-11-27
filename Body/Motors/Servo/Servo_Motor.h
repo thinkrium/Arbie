@@ -17,7 +17,7 @@ namespace Motor {
 
         Servo_Motor(int motorFrequency);
 
-        Servo_Motor( int pinNumber, int degreeOfRotation,int minimumPulseWidth, int maximumPulseWidth,
+        Servo_Motor( int pinNumber, int degreeOfRotation,  int absoluteRangeOfDegrees, int minimumPulseWidth, int maximumPulseWidth,
                     int motorFrequency);
 
         void Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) override;
