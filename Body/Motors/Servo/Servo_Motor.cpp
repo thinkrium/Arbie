@@ -135,6 +135,7 @@ Motor::Servo_Motor::Servo_Motor(int pinNumber,  int degreeOfRotation,  int minim
         this->setMinimumPulseWidth(minimumPulseWidth);
         this->setMaximumPulseWidth(maximumPulseWidth);
         this->setMotorFrequency(motorFrequency);
+        this->determinePulseWidthDegreeStep();
 
         Logger::Success(Error_Messaging::Servo_Motor_Init_Succeeded);
     }
@@ -146,4 +147,28 @@ Motor::Servo_Motor::Servo_Motor(int pinNumber,  int degreeOfRotation,  int minim
 void Motor::Servo_Motor::setMinimumPulseWidth(int minimumPulseWidth) {
     minimum_pulse_width = minimumPulseWidth;
 }
+
+float Motor::Servo_Motor::getPulseWidthDegreeStep() const {
+    return pulse_width_degree_step;
+}
+
+void Motor::Servo_Motor::setPulseWidthDegreeStep(float pulseWidthDegreeStep) {
+    pulse_width_degree_step = pulseWidthDegreeStep;
+}
+
+void Motor::Servo_Motor::determinePulseWidthDegreeStep() {
+    int neutral_position_pulse_width = (this->getMaximumPulseWidth() - this->getMinimumPulseWidth()) / 2;
+    float step = this->getAbsoluteRangeOfDegrees() / neutral_position_pulse_width;
+    this->setPulseWidthDegreeStep(step);
+}
+
+int Motor::Servo_Motor::getAbsoluteRangeOfDegrees() const {
+    return absolute_range_of_degrees;
+}
+
+void Motor::Servo_Motor::setAbsoluteRangeOfDegrees(int absoluteRangeOfDegrees) {
+    absolute_range_of_degrees = absoluteRangeOfDegrees;
+}
+
+
 

@@ -38,6 +38,8 @@ namespace Motor {
 
     private:
 
+        void  determinePulseWidthDegreeStep();
+
         int convertDegreesToPulseWidth(float degrees);
 
         int determinePulseWidth(float onTimePercentage);
@@ -48,6 +50,20 @@ namespace Motor {
 
         int minimum_pulse_width;
 
+        float pulse_width_degree_step;
+
+
+        float getPulseWidthDegreeStep() const;
+
+        void setPulseWidthDegreeStep(float pulseWidthDegreeStep);
+
+        int absolute_range_of_degrees;
+    public:
+        int getAbsoluteRangeOfDegrees() const;
+
+        void setAbsoluteRangeOfDegrees(int absoluteRangeOfDegrees);
+
+    private:
         int getMinimumPulseWidth() const;
 
         void setMinimumPulseWidth(int minimumPulseWidth);

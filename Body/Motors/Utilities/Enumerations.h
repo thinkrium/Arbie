@@ -8,7 +8,7 @@
 namespace Utilities {
     namespace Enumerations {
         enum Rotation_Direction {Clockwise, Counter_Clockwise};
-        enum Pin_Number {one, two};
+        enum Pin_Number {zero, one, two};
     }
 }
 #endif //ARBIE_ENUMERATIONS_H
