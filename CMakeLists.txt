@@ -20,6 +20,8 @@ add_executable(Arbie main.cpp
         Body/Libraries/PCA9685/PCA9685.h
         OS_Utilities/Logger.cpp
         OS_Utilities/Logger.h
+        Body/Parts/Base/Base_Body_Part.cpp
+        Body/Parts/Base/Base_Body_Part.h
 )
 
 

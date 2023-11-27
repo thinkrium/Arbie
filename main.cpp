@@ -1,5 +1,4 @@
 #include "Body/Motors/Utilities/Error_Messaging.h"
-#include <iostream>
 #include "Body/Motors/Servo/Servo_Motor.h"
 #include "OS_Utilities/Logger.h"
 
@@ -13,7 +12,7 @@ int main() {
 
     servoMotor.Turn_Motor(Rotation_Direction::Counter_Clockwise, 30, 3);
 
-    Logger::Info(Error_Messaging::No_Error);
+    Logger::Success(Error_Messaging::No_Error);
 
     return 0;
 }

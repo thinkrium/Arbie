@@ -79,6 +79,12 @@ build CMakeFiles/Arbie.dir/OS_Utilities/Logger.cpp.obj: CXX_COMPILER__Arbie_unsc
   OBJECT_DIR = CMakeFiles\Arbie.dir
   OBJECT_FILE_DIR = CMakeFiles\Arbie.dir\OS_Utilities
 
+build CMakeFiles/Arbie.dir/Body/Parts/Base_Body_Part.cpp.obj: CXX_COMPILER__Arbie_unscanned_Debug C$:/Development/Robotics/Source$ Code/Arbie/Body/Parts/Base_Body_Part.cpp || cmake_object_order_depends_target_Arbie
+  DEP_FILE = CMakeFiles\Arbie.dir\Body\Parts\Base_Body_Part.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always   -I/usr/include -L/usr/lib
+  OBJECT_DIR = CMakeFiles\Arbie.dir
+  OBJECT_FILE_DIR = CMakeFiles\Arbie.dir\Body\Parts
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Arbie
@@ -87,7 +93,7 @@ build CMakeFiles/Arbie.dir/OS_Utilities/Logger.cpp.obj: CXX_COMPILER__Arbie_unsc
 #############################################
 # Link the executable Arbie.exe
 
-build Arbie.exe: CXX_EXECUTABLE_LINKER__Arbie_Debug CMakeFiles/Arbie.dir/main.cpp.obj CMakeFiles/Arbie.dir/Body/Motors/Base/Base_Motor.cpp.obj CMakeFiles/Arbie.dir/Body/Motors/Servo/Servo_Motor.cpp.obj CMakeFiles/Arbie.dir/Body/Libraries/PCA9685/PCA9685.cpp.obj CMakeFiles/Arbie.dir/OS_Utilities/Logger.cpp.obj
+build Arbie.exe: CXX_EXECUTABLE_LINKER__Arbie_Debug CMakeFiles/Arbie.dir/main.cpp.obj CMakeFiles/Arbie.dir/Body/Motors/Base/Base_Motor.cpp.obj CMakeFiles/Arbie.dir/Body/Motors/Servo/Servo_Motor.cpp.obj CMakeFiles/Arbie.dir/Body/Libraries/PCA9685/PCA9685.cpp.obj CMakeFiles/Arbie.dir/OS_Utilities/Logger.cpp.obj CMakeFiles/Arbie.dir/Body/Parts/Base_Body_Part.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Arbie.dir
