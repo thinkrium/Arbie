@@ -5,11 +5,14 @@
 #ifndef ARBIE_BASE_MOTOR_H
 #define ARBIE_BASE_MOTOR_H
 
-#include "../Utilities/Enumerations.h"
+#include "../../../OS_Utilities/Enumerations.h"
+#include "iostream"
+
+using namespace std;
 
 using namespace Utilities::Enumerations;
 
-namespace Motor {
+namespace Motors {
 
     class Base_Motor {
 
@@ -30,6 +33,12 @@ namespace Motor {
          int getPinNumber() const;
 
         void setPinNumber(int pinNumber);
+
+        const string &getMotorName() const;
+
+        void setMotorName(const string &motorName);
+
+        string motor_name;
 
     private:
         int degree_of_rotation;

@@ -10,7 +10,6 @@ namespace Body {
 
         }
 
-        Base_Body_Part::Base_Body_Part() {}
 
         int Base_Body_Part::getPartLength() const {
             return part_length;
@@ -19,6 +18,28 @@ namespace Body {
         void Base_Body_Part::setPartLength(int partLength) {
             part_length = partLength;
         }
+
+        Body_Part Base_Body_Part::getPartName() const {
+            return part_name;
+        }
+
+        void Base_Body_Part::setPartName(Body_Part partName) {
+            part_name = partName;
+        }
+
+        Body_Side Base_Body_Part::getBodySide() const {
+            return body_side;
+        }
+
+        void Base_Body_Part::setBodySide(Body_Side bodySide) {
+            body_side = bodySide;
+        }
+
+        Base_Body_Part::Base_Body_Part() {
+
+        }
+
+
 
     } // Body
 } // Parts

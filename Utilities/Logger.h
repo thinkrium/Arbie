@@ -20,6 +20,6 @@ namespace OS_Utilities {
         static void Error(string message);
     };
 
-} // OS_Utilities
+} // Utilities
 
 #endif //ARBIE_LOGGER_H

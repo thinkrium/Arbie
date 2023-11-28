@@ -6,28 +6,37 @@
 
 
 
-Motor::Base_Motor::~Base_Motor() {
+Motors::Base_Motor::~Base_Motor() {
 
 }
 
-Motor::Base_Motor::Base_Motor() {}
+Motors::Base_Motor::Base_Motor() {}
 
-int Motor::Base_Motor::getPinNumber() const {
+const string &Motors::Base_Motor::getMotorName() const {
+    return motor_name;
+}
+
+void Motors::Base_Motor::setMotorName(const string &motorName) {
+    motor_name = motorName;
+}
+
+
+int Motors::Base_Motor::getPinNumber() const {
     return pin_number;
 }
 
-void Motor::Base_Motor::setPinNumber(int pinNumber) {
+void Motors::Base_Motor::setPinNumber(int pinNumber) {
     pin_number = pinNumber;
 }
 
-void Motor::Base_Motor::setDegreeOfRotation(int degreeOfRotation) {
+void Motors::Base_Motor::setDegreeOfRotation(int degreeOfRotation) {
     degree_of_rotation = degreeOfRotation;
 }
 
-int Motor::Base_Motor::getDegreeOfRotation() const {
+int Motors::Base_Motor::getDegreeOfRotation() const {
     return degree_of_rotation;
 }
 
-Motor::Base_Motor::Base_Motor(int pinNumber) {
+Motors::Base_Motor::Base_Motor(int pinNumber) {
 
 }

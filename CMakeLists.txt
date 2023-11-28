@@ -10,16 +10,18 @@ add_executable(Arbie main.cpp
         Body/Motors/Base/Base_Motor.h
         Body/Motors/Servo/Servo_Motor.cpp
         Body/Motors/Servo/Servo_Motor.h
-        Body/Motors/Utilities/Enumerations.h
-        Body/Motors/Utilities/Error_Messaging.h
+        Utilities/Logger.cpp
+        Utilities/Logger.h
         Body/Libraries/PCA9685/PCA9685.cpp
         Body/Libraries/PCA9685/PCA9685.h
-        OS_Utilities/Logger.cpp
-        OS_Utilities/Logger.h
         Body/Parts/Base/Base_Body_Part.cpp
         Body/Parts/Base/Base_Body_Part.h
         Body/Definitions.h
         Body/Definitions.h
+        Utilities/Enumerations.h
+        Utilities/Enumerations.h
+        Utilities/Error_Messaging.h
+        Utilities/Error_Messaging.h
 )
 
 

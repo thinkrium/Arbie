@@ -7,10 +7,10 @@
 
 #include "../Base/Base_Motor.h"
 
-#include "../Utilities/Error_Messaging.h"
+#include "../../../OS_Utilities/Error_Messaging.h"
 #include "../../Libraries/PCA9685/PCA9685.h"
 
-namespace Motor {
+namespace Motors {
     class Servo_Motor : public Base_Motor {
 
     public:

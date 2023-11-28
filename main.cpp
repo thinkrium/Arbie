@@ -1,11 +1,11 @@
-#include "Body/Motors/Utilities/Error_Messaging.h"
+#include "OS_Utilities/Error_Messaging.h"
 #include "Body/Motors/Servo/Servo_Motor.h"
 #include "OS_Utilities/Logger.h"
 
 
 using namespace Utilities::Enumerations;
 using namespace OS_Utilities;
-using namespace Motor;
+using namespace Motors;
 int main() {
 
     Servo_Motor servoMotor(0,  0, 135, 500, 2500, 200);
