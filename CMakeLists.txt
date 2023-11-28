@@ -3,10 +3,6 @@ project(Arbie)
 
 set(CMAKE_CXX_STANDARD 17)
 
-#add_definitions(-I/usr/include -L/usr/lib -lwiringPi)
-
-#include(Findpigpio.cmake)
-
 add_definitions(-I/usr/include -L/usr/lib )
 
 add_executable(Arbie main.cpp
@@ -22,6 +18,8 @@ add_executable(Arbie main.cpp
         OS_Utilities/Logger.h
         Body/Parts/Base/Base_Body_Part.cpp
         Body/Parts/Base/Base_Body_Part.h
+        Body/Definitions.h
+        Body/Definitions.h
 )
 
 

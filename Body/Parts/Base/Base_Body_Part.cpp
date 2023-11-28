@@ -6,5 +6,19 @@
 
 namespace Body {
     namespace Parts {
+        Base_Body_Part::~Base_Body_Part() {
+
+        }
+
+        Base_Body_Part::Base_Body_Part() {}
+
+        int Base_Body_Part::getPartLength() const {
+            return part_length;
+        }
+
+        void Base_Body_Part::setPartLength(int partLength) {
+            part_length = partLength;
+        }
+
     } // Body
 } // Parts

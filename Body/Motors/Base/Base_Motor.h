@@ -34,7 +34,7 @@ namespace Motor {
     private:
         int degree_of_rotation;
         int pin_number;
-    };
+      };
 }
 
 #endif //ARBIE_BASE_MOTOR_H
