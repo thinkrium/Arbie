@@ -39,6 +39,13 @@ namespace Body {
 
         }
 
+        bool Base_Body_Part::isJoint() const {
+            return is_joint;
+        }
+
+        void Base_Body_Part::setIsJoint(bool isJoint) {
+            is_joint = isJoint;
+        }
 
 
     } // Body

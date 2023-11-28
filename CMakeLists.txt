@@ -17,11 +17,12 @@ add_executable(Arbie main.cpp
         Body/Parts/Base/Base_Body_Part.cpp
         Body/Parts/Base/Base_Body_Part.h
         Body/Definitions.h
-        Body/Definitions.h
-        Utilities/Enumerations.h
         Utilities/Enumerations.h
         Utilities/Error_Messaging.h
-        Utilities/Error_Messaging.h
+        Body/Parts/Shoulder/Shoulder.cpp
+        Body/Parts/Shoulder/Shoulder.h
+        Body/Axes/Axis.cpp
+        Body/Axes/Axis.h
 )
 
 

@@ -24,6 +24,12 @@ namespace Body {
 
             int part_length;
 
+            bool is_joint;
+        public:
+            bool isJoint() const;
+
+            void setIsJoint(bool isJoint);
+
 
         public:
             Base_Body_Part(   );
