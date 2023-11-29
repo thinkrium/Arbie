@@ -1,16 +1,35 @@
 #include "Utilities/Error_Messaging.h"
-#include "Body/Motors/Servo/Servo_Motor.h"
+#include "Body/Parts/Shoulder/Shoulder.h"
 #include "Utilities/Logger/Logger.h"
-
+#include "Body/Axes/Axis.h"
 
 using namespace Utilities::Enumerations;
 using namespace Utilities;
-using namespace Motors;
+using namespace Body::Parts;
+using namespace Body::Axes;
+
+
 int main() {
 
-    Servo_Motor servoMotor(0,  0, 135, 500, 2500, 200);
 
-    servoMotor.Turn_Motor(Rotation_Direction::Counter_Clockwise, 30, 3);
+    Servo_Motor
+        pitchServoMotor(Servo_Motor_Profile),
+        yawServoMotor( Servo_Motor_Profile),
+        rollServoMotor(Servo_Motor_Profile) ;
+
+    Axis pitchAxis(pitchServoMotor),
+         yawAxis(yawServoMotor),
+         rollAxis(rollServoMotor);
+
+    map<Orientation_Axes, Axis> axes = {
+            {Orientation_Axes::pitch,   pitchAxis},
+            {Orientation_Axes::yaw,     yawAxis  },
+            {Orientation_Axes::roll,    rollAxis }
+    };
+
+    Shoulder shoulder(
+                  axes
+            );
 
     Logger::Success(Error_Messaging::No_Error);
 

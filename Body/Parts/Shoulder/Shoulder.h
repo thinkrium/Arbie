@@ -5,7 +5,7 @@
 #ifndef ARBIE_SHOULDER_H
 #define ARBIE_SHOULDER_H
 
-#include "../Base/Base_Body_Part.h"
+#include "../Joint/Joint.h"
 #include "map"
 #include "../../Axes/Axis.h"
 
@@ -14,7 +14,7 @@ using namespace Body::Axes;
 namespace Body {
     namespace Parts {
 
-        class Shoulder : public Base_Body_Part {
+        class Shoulder : public Joint {
 
         private:
 

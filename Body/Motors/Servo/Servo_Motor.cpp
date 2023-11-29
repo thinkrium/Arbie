@@ -30,6 +30,8 @@ void Motors::Servo_Motor::Turn_Motor(Rotation_Direction rotationDirection, float
 
 }
 
+Motors::Servo_Motor::Servo_Motor(int pinNumber, Servo_Motor_Profile servoMotorProfile) : Base_Motor(pinNumber) {}
+
 Motors::Servo_Motor::~Servo_Motor() {
 
 }

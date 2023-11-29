@@ -12,6 +12,15 @@ namespace Utilities {
         enum Body_Side {left, right};
         enum Orientation_Axes {pitch, roll, yaw};
         enum Body_Part {upper_arm, fore_arm, elbow, shoulder, neck, hip, upper_leg, lower_leg, knee, ankle, instep, toes, head};
+
+        struct Servo_Motor_Profile {
+        public:
+            inline static int motorFrequency = 200;
+            inline static int minimumPulseWidth = 500;
+            inline static int maximumPulseWidth = 2500;
+            inline static int absoluteDegreeRange = 135;
+        };
+
     }
 }
 #endif //ARBIE_ENUMERATIONS_H

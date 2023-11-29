@@ -22,6 +22,8 @@ namespace Body {
 
             Axis();
 
+            explicit Axis(const Servo_Motor &motor);
+
             const Servo_Motor &getMotor() const;
 
             void setMotor(const Servo_Motor &motor);
