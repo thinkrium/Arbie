@@ -34,6 +34,8 @@ Motors::Servo_Motor::Servo_Motor(int pinNumber, Servo_Motor_Profile servoMotorPr
 
 Motors::Servo_Motor::~Servo_Motor() {
 
+    // the 1 here '/ below is a bus number which is different then pin number
+    pwm.init(1,0x40);
 }
 
 
@@ -98,6 +100,7 @@ int Motors::Servo_Motor::getMinimumPulseWidth() const {
 
     return minimum_pulse_width;
 }
+
 
 Motors::Servo_Motor::Servo_Motor(int pinNumber, int degreeOfRotation, int absoluteRangeOfDegrees, int minimumPulseWidth, int maximumPulseWidth,
                                  int motorFrequency) : Base_Motor(pinNumber) {

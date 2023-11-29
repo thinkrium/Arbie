@@ -11,13 +11,14 @@ using namespace Body::Axes;
 
 int main() {
 
+ Servo_Motor_Profile profile;
 
     Servo_Motor
-        pitchServoMotor(Servo_Motor_Profile),
-        yawServoMotor( Servo_Motor_Profile),
-        rollServoMotor(Servo_Motor_Profile) ;
+        pitchServoMotor(0, profile ),
+        yawServoMotor(1, profile ),
+        rollServoMotor(2, profile ) ;
 
-    Axis pitchAxis(pitchServoMotor),
+    Axis pitchAxis( pitchServoMotor),
          yawAxis(yawServoMotor),
          rollAxis(rollServoMotor);
 
