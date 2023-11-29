@@ -9,7 +9,7 @@
 
 using namespace std;
 
-namespace OS_Utilities {
+namespace Utilities {
 
     class Logger {
     public:

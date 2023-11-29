@@ -8,7 +8,7 @@
 #include "../../Libraries/PCA9685/PCA9685.h"
 #include "../../../Utilities/Logger/Logger.h"
 
-using namespace OS_Utilities;
+using namespace Utilities;
 
 Motors::Servo_Motor::Servo_Motor() {}
 

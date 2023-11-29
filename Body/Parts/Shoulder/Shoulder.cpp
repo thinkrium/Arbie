@@ -8,20 +8,26 @@ namespace Body {
     namespace Parts {
 
 
-        Axis Shoulder::getOrientationAxis()  {
+        Axis Shoulder::getAxis(Orientation_Axes orientationAxis) {
             Axis a;
             return a ;
         }
-        void Shoulder::setOrientationAxes(map<Orientation_Axes, Axis> axes) {
+        void Shoulder::setAxes(map<Orientation_Axes, Axis> axes) {
             this->axes = axes;
         }
 
-        void Shoulder::addOrientationAxis(Orientation_Axes orientationAxes, Axis axis) {
-//            this->axes.insert( )
+        void Shoulder::addAxis(Orientation_Axes orientationAxes, Axis axis) {
+            this->axes.insert({orientationAxes, axis});
         }
 
-        map<Orientation_Axes, Axis> Shoulder::getOrientationAxes() {
+        map<Orientation_Axes, Axis> Shoulder::getAxes() {
             return map<Orientation_Axes, Axis>();
+        }
+
+        Shoulder::Shoulder(const map<Orientation_Axes, Axis> &axes) : axes(axes) {}
+
+        Shoulder::~Shoulder() {
+
         }
 
     } // Body

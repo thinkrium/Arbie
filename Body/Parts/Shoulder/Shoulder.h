@@ -23,10 +23,15 @@ namespace Body {
         public:
 
             Shoulder();
-            Axis getOrientationAxis() ;
-            map<Orientation_Axes, Axis> getOrientationAxes();
-            void setOrientationAxes(map<Orientation_Axes, Axis> axes);
-            void addOrientationAxis(Orientation_Axes orientationAxes, Axis axis);
+
+            explicit Shoulder(const map<Orientation_Axes, Axis> &axes);
+
+            Axis getAxis(Orientation_Axes orientationAxis);
+            map<Orientation_Axes, Axis> getAxes();
+            void setAxes(map<Orientation_Axes, Axis> axes);
+            void addAxis(Orientation_Axes orientationAxes, Axis axis);
+
+            ~Shoulder() override;
 
         };
 

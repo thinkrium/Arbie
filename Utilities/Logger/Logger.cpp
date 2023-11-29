@@ -6,7 +6,7 @@
 
 //https://stackoverflow.com/questions/2616906/how-do-i-output-coloured-text-to-a-linux-terminal
 
-namespace OS_Utilities {
+namespace Utilities {
     void Logger::Info(string message) {
         cout << "\033[1;37m" + message + "\033[0m\n";
 

@@ -12,7 +12,7 @@ int main() {
 
     servoMotor.Turn_Motor(Rotation_Direction::Counter_Clockwise, 30, 3);
 
-//    Logger::Success(Error_Messaging::No_Error);
+    Logger::Success(Error_Messaging::No_Error);
 
     return 0;
 }
