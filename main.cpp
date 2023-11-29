@@ -1,10 +1,10 @@
-#include "OS_Utilities/Error_Messaging.h"
+#include "Utilities/Error_Messaging.h"
 #include "Body/Motors/Servo/Servo_Motor.h"
-#include "OS_Utilities/Logger.h"
+#include "Utilities/Logger/Logger.h"
 
 
 using namespace Utilities::Enumerations;
-using namespace OS_Utilities;
+using namespace Utilities;
 using namespace Motors;
 int main() {
 
@@ -12,7 +12,7 @@ int main() {
 
     servoMotor.Turn_Motor(Rotation_Direction::Counter_Clockwise, 30, 3);
 
-    Logger::Success(Error_Messaging::No_Error);
+//    Logger::Success(Error_Messaging::No_Error);
 
     return 0;
 }

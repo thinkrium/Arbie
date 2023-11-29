@@ -23,8 +23,9 @@ namespace Body {
         public:
 
             Shoulder();
-            Axis getOrientationAxes() ;
-            void setOrientationAxis(map<Orientation_Axes, Axis> axes);
+            Axis getOrientationAxis() ;
+            map<Orientation_Axes, Axis> getOrientationAxes();
+            void setOrientationAxes(map<Orientation_Axes, Axis> axes);
             void addOrientationAxis(Orientation_Axes orientationAxes, Axis axis);
 
         };

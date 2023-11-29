@@ -6,7 +6,7 @@
 #include "Servo_Motor.h"
 #include "../Base/Base_Motor.h"
 #include "../../Libraries/PCA9685/PCA9685.h"
-#include "../../../OS_Utilities/Logger.h"
+#include "../../../Utilities/Logger/Logger.h"
 
 using namespace OS_Utilities;
 

@@ -5,7 +5,7 @@
 #ifndef ARBIE_BASE_MOTOR_H
 #define ARBIE_BASE_MOTOR_H
 
-#include "../../../OS_Utilities/Enumerations.h"
+#include "../../../Utilities/Enumerations.h"
 #include "iostream"
 
 using namespace std;
