@@ -27,6 +27,10 @@ add_executable(Arbie main.cpp
         Body/Parts/Joint/Joint.h
         Brain/Functionality/Functionality.cpp
         Brain/Functionality/Functionality.h
+        Body/Parts/Elbow/Elbow.cpp
+        Body/Parts/Elbow/Elbow.h
+        Body/Parts/Arm/Arm.cpp
+        Body/Parts/Arm/Arm.h
 )
 
 
