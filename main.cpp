@@ -32,9 +32,9 @@ int main() {
                   axes
             );
 
-    shoulder.turnShoulderOnAxis(Relative_Axes::x, Rotation_Direction::Counter_Clockwise, 30);
-    shoulder.turnShoulderOnAxis(Relative_Axes::y, Rotation_Direction::Counter_Clockwise, 30);
-    shoulder.turnShoulderOnAxis(Relative_Axes::z, Rotation_Direction::Counter_Clockwise, 30);
+    shoulder.turnOnAxis(Relative_Axes::x, Rotation_Direction::Counter_Clockwise, 30);
+    shoulder.turnOnAxis(Relative_Axes::y, Rotation_Direction::Counter_Clockwise, 30);
+    shoulder.turnOnAxis(Relative_Axes::z, Rotation_Direction::Counter_Clockwise, 30);
 
     Logger::Success(Error_Messaging::No_Error);
 

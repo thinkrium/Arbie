@@ -30,7 +30,7 @@ namespace Body {
 
         }
 
-        void Shoulder::turnShoulderOnAxis(Relative_Axes orientationAxis, Rotation_Direction direction, int degrees) {
+        void Shoulder::turnOnAxis(Relative_Axes orientationAxis, Rotation_Direction direction, int degrees) {
             this->axes[orientationAxis].turnMotor(direction, degrees);
         }
 
