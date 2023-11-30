@@ -30,12 +30,34 @@ void Motors::Servo_Motor::Turn_Motor(Rotation_Direction rotationDirection, float
 
 }
 
-Motors::Servo_Motor::Servo_Motor(int pinNumber, Servo_Motor_Profile servoMotorProfile) : Base_Motor(pinNumber) {}
+Motors::Servo_Motor::Servo_Motor(int pinNumber, int initialDegreeOfRotation, Servo_Motor_Profile servoMotorProfile) : Base_Motor(pinNumber) {
+
+    try {
+
+        this->setPinNumber(pinNumber);
+        this->setDegreeOfRotation(  initialDegreeOfRotation );
+        this->setAbsoluteRangeOfDegrees(servoMotorProfile.absoluteDegreeRange);
+        this->setMinimumPulseWidth(servoMotorProfile.minimumPulseWidth);
+        this->setMaximumPulseWidth(servoMotorProfile.maximumPulseWidth);
+        this->setMotorFrequency(servoMotorProfile.motorFrequency);
+        this->determinePulseWidthDegreeStep();
+
+
+        // the 1 here '/ below is a bus number which is different then pin number
+        pwm.init(1,0x40);
+        usleep(1000 * 100);
+
+        pwm.setPWMFreq (this->getMotorFrequency());
+
+        Logger::Success(Error_Messaging::Servo_Motor_Init_Succeeded);
+    }
+    catch (exception ex) {
+        Logger::Error(Error_Messaging::Servo_Motor_General_Failure);
+    }
+}
 
 Motors::Servo_Motor::~Servo_Motor() {
 
-    // the 1 here '/ below is a bus number which is different then pin number
-    pwm.init(1,0x40);
 }
 
 

@@ -14,9 +14,9 @@ int main() {
  Servo_Motor_Profile profile;
 
     Servo_Motor
-        pitchServoMotor(0, profile ),
-        yawServoMotor(1, profile ),
-        rollServoMotor(2, profile ) ;
+        pitchServoMotor(0,0, profile ),
+        yawServoMotor(1, 0,profile ),
+        rollServoMotor(2, 0,profile ) ;
 
     Axis pitchAxis( pitchServoMotor),
          yawAxis(yawServoMotor),
