@@ -67,10 +67,10 @@ Motors::Servo_Motor::Servo_Motor(int pinNumber, int initialDegreeOfRotation, Ser
 
         pwm.setPWMFreq (this->getMotorFrequency());
 
-        Logger::Success(Error_Messaging::Servo_Motor_Init_Succeeded);
+        Logger::Success("Servo","Servo", Error_Messaging::Servo_Motor_Init_Succeeded);
     }
     catch (exception ex) {
-        Logger::Error(Error_Messaging::Servo_Motor_General_Failure);
+        Logger::Error("Servo","Servo",Error_Messaging::Servo_Motor_General_Failure);
     }
 }
 
@@ -94,7 +94,7 @@ int Motors::Servo_Motor::convertDegreesToPulseWidth(int degrees) {
        return pulse_width;
     }
     catch (exception ex) {
-       Logger::Error( "[ConvertDegreesToPulseWidth]" +  Error_Messaging::Outside_Servo_PWM_Range );
+       Logger::Error( "Servo","convertDegreesToPulseWidth",  Error_Messaging::Outside_Servo_PWM_Range );
     }
     return -1;
 }
@@ -164,10 +164,10 @@ Motors::Servo_Motor::Servo_Motor(int pinNumber, int degreeOfRotation, int absolu
         usleep(1000 * 100);
         pwm.setPWMFreq (this->getMotorFrequency());
 
-        Logger::Success(Error_Messaging::Servo_Motor_Init_Succeeded);
+        Logger::Success("Servo_Motor" , "Servo_Motor", Error_Messaging::Servo_Motor_Init_Succeeded);
     }
     catch (exception ex) {
-       Logger::Error(Error_Messaging::Servo_Motor_General_Failure);
+       Logger::Error("Servo_Motor" , "Servo_Motor", Error_Messaging::Servo_Motor_General_Failure);
     }
 }
 

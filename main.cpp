@@ -36,7 +36,7 @@ int main() {
     shoulder.turnOnAxis(Relative_Axes::y, Rotation_Direction::Counter_Clockwise, 30);
     shoulder.turnOnAxis(Relative_Axes::z, Rotation_Direction::Counter_Clockwise, 30);
 
-    Logger::Success(Error_Messaging::No_Error);
+    Logger::Success("Main" , "Main", Error_Messaging::No_Error);
 
     return 0;
 }
