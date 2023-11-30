@@ -13,11 +13,11 @@ namespace Utilities {
 
     class Logger {
     public:
-        static void Info(string message);
-        static void Log(string message);
-        static void Success(string message);
-        static void Warn(string message);
-        static void Error(string message);
+        static void Info(string originatingObject, string originatingFunction, string message);
+        static void Log(string originatingObject, string originatingFunction, string message);
+        static void Success(string originatingObject, string originatingFunction, string message);
+        static void Warn(string originatingObject, string originatingFunction, string message);
+        static void Error(string originatingObject, string originatingFunction, string message);
     };
 
 } // Utilities

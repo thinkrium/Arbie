@@ -17,18 +17,33 @@ void Motors::Servo_Motor::Turn_Motor(Rotation_Direction rotationDirection, int d
 
     int pulseWidthAdjustment;
 
-    if (rotationDirection == Rotation_Direction::Counter_Clockwise) {
+    try {
 
-      pulseWidthAdjustment = this->getNeutralPulseWidth() - pulseWidth;
+
+
+        if (rotationDirection == Rotation_Direction::Counter_Clockwise) {
+
+            pulseWidthAdjustment = this->getNeutralPulseWidth() - pulseWidth;
+        } else {
+            pulseWidthAdjustment = this->getNeutralPulseWidth() + pulseWidth;
+        }
+
+
+        if(
+                pulseWidthAdjustment < this->getMinimumPulseWidth()
+                ||
+                pulseWidthAdjustment > this->getMaximumPulseWidth()
+                )
+        {
+            throw exception(  );
+        }
+
+        pwm.setPWM(this->getPinNumber(), 0, pulseWidthAdjustment);
+
     }
-    else {
-        pulseWidthAdjustment = this->getNeutralPulseWidth() + pulseWidth;
+    catch (exception ex) {
+        Logger::Warn( "Servo_Motor","TurnMotor", Error_Messaging::Outside_Servo_PWM_Range);
     }
-
-    pwm.setPWM(this->getPinNumber(), 0, pulseWidthAdjustment);
-
-
-    Logger::Warn(  Error_Messaging::Outside_Servo_PWM_Range);
 
 
 }
@@ -61,6 +76,7 @@ Motors::Servo_Motor::Servo_Motor(int pinNumber, int initialDegreeOfRotation, Ser
 
 Motors::Servo_Motor::~Servo_Motor() {
 
+
 }
 
 
@@ -78,7 +94,7 @@ int Motors::Servo_Motor::convertDegreesToPulseWidth(int degrees) {
        return pulse_width;
     }
     catch (exception ex) {
-       Logger::Error(  Error_Messaging::Outside_Servo_PWM_Range );
+       Logger::Error( "[ConvertDegreesToPulseWidth]" +  Error_Messaging::Outside_Servo_PWM_Range );
     }
     return -1;
 }
