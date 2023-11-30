@@ -5,7 +5,12 @@
 #include "Axis.h"
 #include "../../Utilities/Enumerations.h"
 #include "../Motors/Servo/Servo_Motor.h"
+#include "../../Utilities/Error_Messaging.h"
+#include "../../Utilities/Logger/Logger.h"
 
+
+using namespace Utilities::Enumerations;
+using namespace Utilities;
 using namespace Motors;
 
 namespace Body {
@@ -13,9 +18,17 @@ namespace Body {
 
 
         Axis::Axis(const Servo_Motor &motor, Relative_Axes orientationAxes) : motor(motor),
+
                                                                               orientation_axes(orientationAxes) {
-            this->setMotor(motor);
-            this->setOrientationAxes(orientationAxes);
+           try {
+                this->setMotor(motor);
+                this->setOrientationAxes(orientationAxes);
+
+                Logger::Success("Axis", "Axis", Error_Messaging::Axis_Init_Succeeded);
+           }
+           catch (exception e) {
+               Logger::Error("Axis", "Axis", Error_Messaging::Axis_General_Failure);
+           }
         }
 
         Axis::Axis() {}
