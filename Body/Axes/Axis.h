@@ -32,6 +32,8 @@ namespace Body {
 
             void setOrientationAxes(Relative_Axes orientationAxes);
 
+            void turnMotor(Rotation_Direction direction, int degrees);
+
         private:
             Relative_Axes orientation_axes;
             Servo_Motor motor;

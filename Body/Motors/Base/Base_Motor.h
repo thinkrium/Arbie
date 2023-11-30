@@ -26,7 +26,7 @@ namespace Motors {
 
         void setDegreeOfRotation(int degreeOfRotation);
 
-        virtual void Turn_Motor(Rotation_Direction rotationDirection, float degrees, float speed) = 0;
+        virtual void Turn_Motor(Rotation_Direction rotationDirection, int degrees, float speed) = 0;
 
         virtual ~Base_Motor();
 

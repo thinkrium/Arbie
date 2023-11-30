@@ -40,5 +40,12 @@ namespace Body {
             this->setMotor(motor);
 
         }
+
+        void Axis::turnMotor(Rotation_Direction direction, int degrees) {
+            // TODO: Upgrade servo motors so i can control speed
+            float dummySpeed = 0;
+            motor.Turn_Motor(direction, degrees, dummySpeed);
+
+        }
     } // Body
 } // Axes

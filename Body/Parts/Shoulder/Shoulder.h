@@ -29,8 +29,9 @@ namespace Body {
             Axis getAxis(Relative_Axes orientationAxis);
             map<Relative_Axes, Axis> getAxes();
             void setAxes(map<Relative_Axes, Axis> axes);
-            void addAxis(Relative_Axes orientationAxes, Axis axis);
+            void addAxis(Relative_Axes orientationAxis, Axis axis);
 
+            void turnShoulderOnAxis(Relative_Axes orientationAxis, Rotation_Direction direction, int degrees);
             ~Shoulder() override;
 
         };

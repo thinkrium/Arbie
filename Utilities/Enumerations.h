@@ -18,6 +18,7 @@ namespace Utilities {
             inline static int motorFrequency = 200;
             inline static int minimumPulseWidth = 500;
             inline static int maximumPulseWidth = 2500;
+            inline static int neutralPulseWidth = 1500;
             inline static int absoluteDegreeRange = 135;
         };
 

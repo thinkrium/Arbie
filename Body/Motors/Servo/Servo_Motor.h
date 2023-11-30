@@ -26,7 +26,7 @@ namespace Motors {
 
         explicit Servo_Motor(int pinNumber, int initialDegreeOfRotation, Servo_Motor_Profile servoMotorProfile);
 
-        void Turn_Motor( Rotation_Direction rotationDirection, float degrees, float speed) override;
+        void Turn_Motor( Rotation_Direction rotationDirection, int degrees, float speed) override;
 
         ~Servo_Motor() override;
 
@@ -42,13 +42,32 @@ namespace Motors {
 
         void setMotorFrequency(int motorFrequency);
 
+        int getAbsoluteRangeOfDegrees() const;
+
+        void setAbsoluteRangeOfDegrees(int absoluteRangeOfDegrees);
+
+        int getNeutralPulseWidth() const;
+
+        void setNeutralPulseWidth(int neutralPulseWidth);
+
+        int determineNeutralPulseWidth(int maximumPulseWidth, int minimumPulseWidth);
     private:
 
         PCA9685 pwm;
 
+        // TODO: CHECK IF THESE FUNCTIONS ARE SUPPOSE TO BE PRIVATE
+
+        float getPulseWidthFromDegreeStep() const;
+
+        void setPulseWidthFromDegreeStep(float pulseWidthFromDegreeStep);
+
+        int getMinimumPulseWidth() const;
+
+        void setMinimumPulseWidth(int minimumPulseWidth);
+
         void  determinePulseWidthDegreeStep();
 
-        int convertDegreesToPulseWidth(float degrees);
+        int convertDegreesToPulseWidth(int degrees);
 
         int determinePulseWidth(float onTimePercentage);
 
@@ -60,21 +79,10 @@ namespace Motors {
 
         float pulse_width_from_degree_step;
 
-
-        float getPulseWidthFromDegreeStep() const;
-
-        void setPulseWidthFromDegreeStep(float pulseWidthFromDegreeStep);
-
-        int absolute_range_of_degrees;
-    public:
-        int getAbsoluteRangeOfDegrees() const;
-
-        void setAbsoluteRangeOfDegrees(int absoluteRangeOfDegrees);
+        int neutral_pulse_width;
 
     private:
-        int getMinimumPulseWidth() const;
-
-        void setMinimumPulseWidth(int minimumPulseWidth);
+        int absolute_range_of_degrees;
 
         int motor_frequency;
     };

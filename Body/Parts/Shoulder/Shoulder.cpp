@@ -16,8 +16,8 @@ namespace Body {
             this->axes = axes;
         }
 
-        void Shoulder::addAxis(Relative_Axes orientationAxes, Axis axis) {
-            this->axes.insert({orientationAxes, axis});
+        void Shoulder::addAxis(Relative_Axes orientationAxis, Axis axis) {
+            this->axes.insert({orientationAxis, axis});
         }
 
         map<Relative_Axes, Axis> Shoulder::getAxes() {
@@ -28,6 +28,10 @@ namespace Body {
 
         Shoulder::~Shoulder() {
 
+        }
+
+        void Shoulder::turnShoulderOnAxis(Relative_Axes orientationAxis, Rotation_Direction direction, int degrees) {
+            this->axes[orientationAxis].turnMotor(direction, degrees);
         }
 
     } // Body
