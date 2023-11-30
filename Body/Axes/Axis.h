@@ -18,7 +18,7 @@ namespace Body {
         class Axis {
 
          public:
-            Axis(const Servo_Motor &motor,  Orientation_Axes orientationAxes);
+            Axis(const Servo_Motor &motor, Relative_Axes orientationAxes);
 
             Axis();
 
@@ -28,12 +28,12 @@ namespace Body {
 
             void setMotor(const Servo_Motor &motor);
 
-            Orientation_Axes getOrientationAxes() const;
+            Relative_Axes getOrientationAxes() const;
 
-            void setOrientationAxes( Orientation_Axes orientationAxes);
+            void setOrientationAxes(Relative_Axes orientationAxes);
 
         private:
-            Orientation_Axes orientation_axes;
+            Relative_Axes orientation_axes;
             Servo_Motor motor;
 
         };

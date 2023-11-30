@@ -18,14 +18,14 @@ int main() {
         yawServoMotor(1, 0,profile ),
         rollServoMotor(2, 0,profile ) ;
 
-    Axis pitchAxis( pitchServoMotor),
-         yawAxis(yawServoMotor),
-         rollAxis(rollServoMotor);
+    Axis xAxis(pitchServoMotor),
+         yAxis(yawServoMotor),
+         zAxis(rollServoMotor);
 
-    map<Orientation_Axes, Axis> axes = {
-            {Orientation_Axes::pitch,   pitchAxis},
-            {Orientation_Axes::yaw,     yawAxis  },
-            {Orientation_Axes::roll,    rollAxis }
+    map<Relative_Axes, Axis> axes = {
+            {Relative_Axes::x, xAxis},
+            {Relative_Axes::y, yAxis  },
+            {Relative_Axes::z, zAxis }
     };
 
     Shoulder shoulder(

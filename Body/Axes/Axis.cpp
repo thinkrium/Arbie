@@ -12,8 +12,8 @@ namespace Body {
     namespace Axes {
 
 
-        Axis::Axis(const Servo_Motor &motor, Orientation_Axes orientationAxes) : motor(motor),
-                                                                                 orientation_axes(orientationAxes) {
+        Axis::Axis(const Servo_Motor &motor, Relative_Axes orientationAxes) : motor(motor),
+                                                                              orientation_axes(orientationAxes) {
             this->setMotor(motor);
             this->setOrientationAxes(orientationAxes);
         }
@@ -28,11 +28,11 @@ namespace Body {
             Axis::motor = motor;
         }
 
-        Orientation_Axes Axis::getOrientationAxes() const {
+        Relative_Axes Axis::getOrientationAxes() const {
             return orientation_axes;
         }
 
-        void Axis::setOrientationAxes(Orientation_Axes orientationAxes) {
+        void Axis::setOrientationAxes(Relative_Axes orientationAxes) {
             orientation_axes = orientationAxes;
         }
 

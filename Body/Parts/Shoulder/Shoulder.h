@@ -18,18 +18,18 @@ namespace Body {
 
         private:
 
-            map<Orientation_Axes, Axis> axes;
+            map<Relative_Axes, Axis> axes;
 
         public:
 
             Shoulder();
 
-            explicit Shoulder(const map<Orientation_Axes, Axis> &axes);
+            explicit Shoulder(const map<Relative_Axes, Axis> &axes);
 
-            Axis getAxis(Orientation_Axes orientationAxis);
-            map<Orientation_Axes, Axis> getAxes();
-            void setAxes(map<Orientation_Axes, Axis> axes);
-            void addAxis(Orientation_Axes orientationAxes, Axis axis);
+            Axis getAxis(Relative_Axes orientationAxis);
+            map<Relative_Axes, Axis> getAxes();
+            void setAxes(map<Relative_Axes, Axis> axes);
+            void addAxis(Relative_Axes orientationAxes, Axis axis);
 
             ~Shoulder() override;
 
