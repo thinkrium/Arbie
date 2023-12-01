@@ -33,14 +33,14 @@ add_executable(Arbie main.cpp
         Body/Parts/Arm/Arm.h
         Brain/CoreTech/CoreTech.cpp
         Brain/CoreTech/CoreTech.h
-        Brain/Movement/Movement.cpp
-        Brain/Movement/Movement.h
         Body/Whole_Body/Whole_Body.cpp
         Body/Whole_Body/Whole_Body.h
         Body/Parts/Leg/Leg.cpp
         Body/Parts/Leg/Leg.h
         Body/Parts/Knee/Knee.cpp
         Body/Parts/Knee/Knee.h
+        Brain/Processes/Movement/Movement.cpp
+        Brain/Processes/Movement/Movement.h
 )
 
 

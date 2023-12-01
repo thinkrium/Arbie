@@ -5,4 +5,6 @@
 #include "Movement.h"
 
 namespace Brain {
-} // Brain
+    namespace Processes {
+    } // Brain
+} // Processes
