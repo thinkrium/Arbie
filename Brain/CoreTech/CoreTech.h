@@ -8,7 +8,7 @@
 namespace Brain {
 
     class CoreTech {
-
+        void processMovement();
     };
 
 } // Brain

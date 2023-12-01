@@ -5,4 +5,6 @@
 #include "CoreTech.h"
 
 namespace Brain {
+    void CoreTech::processMovement() {}
+
 } // Brain
