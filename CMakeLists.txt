@@ -25,12 +25,16 @@ add_executable(Arbie main.cpp
         Body/Axes/Axis.h
         Body/Parts/Joint/Joint.cpp
         Body/Parts/Joint/Joint.h
-        Brain/Functionality/Functionality.cpp
-        Brain/Functionality/Functionality.h
+        Brain/Activity/Activity.cpp
+        Brain/Activity/Activity.h
         Body/Parts/Elbow/Elbow.cpp
         Body/Parts/Elbow/Elbow.h
         Body/Parts/Arm/Arm.cpp
         Body/Parts/Arm/Arm.h
+        Brain/CoreTech/CoreTech.cpp
+        Brain/CoreTech/CoreTech.h
+        Brain/Movement/Movement.cpp
+        Brain/Movement/Movement.h
 )
 
 

@@ -16,14 +16,14 @@ using namespace Body::Parts;
 using namespace Body::Axes;
 
 namespace Brain {
-    namespace Functionality {
+    namespace Activity {
 
-        class Functionality {
+        class Activity  {
         public:
             static void Run();
         };
 
     } // Brain
-} // Functionality
+} // Activity
 
 #endif //ARBIE_FUNCTIONALITY_H

@@ -1,10 +1,10 @@
-#include "Brain/Functionality/Functionality.h"
+#include "Brain/Activity/Activity.h"
 
-using namespace Brain::Functionality;
+using namespace Brain::Activity;
 
 int main() {
 
-    Brain::Functionality::Functionality::Run();
+    Brain::Activity::Activity::Run();
 
     return 0;
 }

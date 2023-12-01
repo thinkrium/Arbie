@@ -24,7 +24,11 @@ namespace Body {
             catch (exception e) {
                 Logger::Error("Joint", "getAxis", Error_Messaging::Generic_Error);
             }
+
+            // TODO: How to fix this it should return something but the try prevents it
+            //       but i want the try;
         }
+
         void Joint::setAxes(map<Relative_Axes, Axis> axes) {
             this->axes = axes;
         }

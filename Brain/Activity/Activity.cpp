@@ -2,11 +2,11 @@
 // Created by thome on 11/30/2023.
 //
 
-#include "Functionality.h"
+#include "Activity.h"
 
 namespace Brain {
-    namespace Functionality {
-        void Functionality::Run() {
+    namespace Activity {
+        void Activity::Run() {
 
             try {
                 Servo_Motor_Profile profile;
@@ -34,12 +34,12 @@ namespace Brain {
                 shoulder.turnOnAxis(Relative_Axes::y, Rotation_Direction::Counter_Clockwise, 30);
                 shoulder.turnOnAxis(Relative_Axes::z, Rotation_Direction::Counter_Clockwise, 30);
 
-                Logger::Success("Brain", "Run", Error_Messaging::No_Error);
+                Logger::Success("Brain::Activity", "Run", Error_Messaging::No_Error);
             }
             catch (exception e) {
-                Logger::Success("Brain", "Run", Error_Messaging::Generic_Error);
+                Logger::Success("Brain::Activity", "Run", Error_Messaging::Generic_Error);
 
             }
         }
     } // Brain
-} // Functionality
+} // Activity
