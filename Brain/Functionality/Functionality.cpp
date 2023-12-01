@@ -12,12 +12,12 @@ namespace Brain {
                 Servo_Motor_Profile profile;
 
                 Servo_Motor
-                        pitchServoMotor(0, 0, profile),
-                        yawServoMotor(1, 0, profile),
+                        shoulderPitchServoMotor(0, 0, profile),
+                        shoulderYawServoMotor(1, 0, profile),
                         rollServoMotor(2, 0, profile);
 
-                Axis xAxis(pitchServoMotor),
-                        yAxis(yawServoMotor),
+                Axis xAxis(shoulderPitchServoMotor),
+                        yAxis(shoulderYawServoMotor),
                         zAxis(rollServoMotor);
 
                 map<Relative_Axes, Axis> axes = {
