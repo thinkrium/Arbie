@@ -6,5 +6,10 @@
 
 namespace Body {
     namespace Parts {
+        Leg::Leg() {}
+
+        Leg::~Leg() {
+
+        }
     } // Body
 } // Parts

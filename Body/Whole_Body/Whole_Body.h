@@ -17,6 +17,7 @@ namespace Body {
     class Whole_Body {
 
         map<Body_Side, Arm> arms;
+        // TODO : This line causes an error ??? why ???
         map<Body_Side, Leg> legs;
 
     };

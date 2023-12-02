@@ -11,8 +11,11 @@ namespace Body {
     namespace Parts {
 
         class Leg : public Base_Body_Part  {
-            ~Leg();
+
+        public:
             Leg();
+
+            ~Leg() override;
         };
 
     } // Body

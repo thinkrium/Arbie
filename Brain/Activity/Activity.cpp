@@ -8,6 +8,12 @@ namespace Brain {
     namespace Activity {
         void Activity::Run() {
 
+            CoreTechs coreTechs;
+            coreTechs.process();
+
+            Logger::Info("Acc", "DDFD", "Test");
+
+/*
             try {
                 Servo_Motor_Profile profile;
 
@@ -40,6 +46,7 @@ namespace Brain {
                 Logger::Success("Brain::Activity", "Run", Error_Messaging::Generic_Error);
 
             }
+*/
         }
     } // Brain
 } // Activity

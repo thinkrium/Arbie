@@ -10,6 +10,10 @@
 #include "../../Utilities/Logger/Logger.h"
 #include "../../Body/Axes/Axis.h"
 
+#include "../../Brain/CoreTechs/CoreTechs.h"
+
+using namespace Brain::Processes;
+
 using namespace Utilities::Enumerations;
 using namespace Utilities;
 using namespace Body::Parts;
@@ -19,6 +23,9 @@ namespace Brain {
     namespace Activity {
 
         class Activity  {
+
+        private:
+
         public:
             static void Run();
         };

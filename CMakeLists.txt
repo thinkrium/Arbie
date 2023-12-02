@@ -31,8 +31,6 @@ add_executable(Arbie main.cpp
         Body/Parts/Elbow/Elbow.h
         Body/Parts/Arm/Arm.cpp
         Body/Parts/Arm/Arm.h
-        Brain/CoreTech/CoreTech.cpp
-        Brain/CoreTech/CoreTech.h
         Body/Whole_Body/Whole_Body.cpp
         Body/Whole_Body/Whole_Body.h
         Body/Parts/Leg/Leg.cpp
@@ -41,6 +39,10 @@ add_executable(Arbie main.cpp
         Body/Parts/Knee/Knee.h
         Brain/Processes/Movement/Movement.cpp
         Brain/Processes/Movement/Movement.h
+        Brain/Processes/Base/Base_Process.cpp
+        Brain/Processes/Base/Base_Process.h
+        Brain/CoreTechs/CoreTechs.h
+        Brain/CoreTechs/CoreTechs.cpp
 )
 
 
