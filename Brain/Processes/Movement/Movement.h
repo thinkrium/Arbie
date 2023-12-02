@@ -9,6 +9,16 @@
 #include "../../../Body/Whole_Body/Whole_Body.h"
 #include "../Base/Base_Process.h"
 
+#include "../../../Utilities/Error_Messaging.h"
+#include "../../../Body/Parts/Shoulder/Shoulder.h"
+#include "../../../Utilities/Logger/Logger.h"
+#include "../../../Body/Axes/Axis.h"
+
+
+using namespace Utilities::Enumerations;
+using namespace Utilities;
+using namespace Body::Parts;
+using namespace Body::Axes;
 
 using namespace Body;
 
