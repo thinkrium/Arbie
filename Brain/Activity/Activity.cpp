@@ -10,7 +10,6 @@ namespace Brain {
 
             CoreTechs coreTechs;
             coreTechs.process();
-
             Logger::Info("Acc", "DDFD", "Test");
 
 /*

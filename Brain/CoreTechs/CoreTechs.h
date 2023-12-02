@@ -22,7 +22,7 @@ namespace Brain {
 
         void process();
 
-        void runProcess(  Base_Process *process  );
+        void runProcess(  Base_Process &process  );
 
         virtual ~CoreTechs();
 

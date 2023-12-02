@@ -12,14 +12,14 @@ namespace Brain {
 
     }
 
-    void CoreTechs::runProcess(Base_Process *process) {
-         process->Start();
+    void CoreTechs::runProcess(Base_Process  &process) {
+         process.Start();
     }
 
     void CoreTechs::process() {
 
-//        Movement  *movement;
-//        runProcess(movement);
+        Movement   movement;
+        runProcess(movement);
     }
 
 } // Brain
