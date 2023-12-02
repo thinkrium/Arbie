@@ -20,7 +20,7 @@ namespace Body {
         private:
             Body_Part part_name ;
 
-            Body_Side body_side;
+            Side_Of_Body body_side;
 
             int part_length;
 
@@ -39,9 +39,9 @@ namespace Body {
 
             void setPartName(Body_Part partName);
 
-            Body_Side getBodySide() const;
+            Side_Of_Body getBodySide() const;
 
-            void setBodySide(Body_Side bodySide);
+            void setBodySide(Side_Of_Body bodySide);
 
             int getPartLength() const;
 

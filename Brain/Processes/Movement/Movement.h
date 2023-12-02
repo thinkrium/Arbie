@@ -34,9 +34,6 @@ namespace Brain {
 
             const Whole_Body &getWholeBody() const;
 
-            void setWholeBody(const Whole_Body &wholeBody);
-
-
             void Start() override;
 
             ~Movement() override;

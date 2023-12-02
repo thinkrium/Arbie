@@ -27,11 +27,11 @@ namespace Body {
             part_name = partName;
         }
 
-        Body_Side Base_Body_Part::getBodySide() const {
+        Side_Of_Body Base_Body_Part::getBodySide() const {
             return body_side;
         }
 
-        void Base_Body_Part::setBodySide(Body_Side bodySide) {
+        void Base_Body_Part::setBodySide(Side_Of_Body bodySide) {
             body_side = bodySide;
         }
 

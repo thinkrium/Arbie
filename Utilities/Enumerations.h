@@ -9,7 +9,7 @@ namespace Utilities {
     namespace Enumerations {
         enum Rotation_Direction {Clockwise, Counter_Clockwise};
         enum Pin_Number {zero, one, two};
-        enum Body_Side {left, right};
+        enum Side_Of_Body {left, right};
         enum Relative_Axes {x, z, y};
         enum Body_Part {upper_arm, fore_arm, elbow, shoulder, neck, hip, upper_leg, lower_leg, knee, ankle, instep, toes, head};
 

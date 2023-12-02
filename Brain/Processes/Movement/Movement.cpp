@@ -12,12 +12,11 @@ namespace Brain {
             return whole_body;
         }
 
-        void Movement::setWholeBody(const Whole_Body &wholeBody) {
-            whole_body = wholeBody;
-        }
-
         void Movement::Start() {
             try {
+
+                this->whole_body.getArms();
+
                 Servo_Motor_Profile profile;
 
                 Servo_Motor

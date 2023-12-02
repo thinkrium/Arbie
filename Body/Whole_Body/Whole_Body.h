@@ -16,9 +16,17 @@ namespace Body {
 
     class Whole_Body {
 
-        map<Body_Side, Arm> arms;
+        map<Side_Of_Body, Arm> arms;
         // TODO : This line causes an error ??? why ???
-        map<Body_Side, Leg> legs;
+        map<Side_Of_Body, Leg> legs;
+    public:
+        const map<Side_Of_Body, Arm> &getArms() const;
+
+        void setArms(const map<Side_Of_Body, Arm> &arms);
+
+        const map<Side_Of_Body, Leg> &getLegs() const;
+
+        void setLegs(const map<Side_Of_Body, Leg> &legs);
 
     };
 
