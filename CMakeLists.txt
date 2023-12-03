@@ -43,6 +43,8 @@ add_executable(Arbie main.cpp
         Brain/Processes/Base/Base_Process.h
         Brain/CoreTechs/CoreTechs.h
         Brain/CoreTechs/CoreTechs.cpp
+        Body/Parts/Wrist/Wrist.cpp
+        Body/Parts/Wrist/Wrist.h
 )
 
 

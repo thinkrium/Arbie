@@ -10,6 +10,7 @@
 namespace Body {
     namespace Parts {
         class Elbow : public Joint {
+        public:
             Elbow();
 
             ~Elbow() override;

@@ -6,13 +6,62 @@
 #define ARBIE_ARM_H
 
 #include "../Base/Base_Body_Part.h"
+#include "../../../Body/Parts/Shoulder/Shoulder.h"
+#include "../../../Body/Parts/Elbow/Elbow.h"
+#include "../../../Body/Parts/Wrist/Wrist.h"
 
+#include "../../../Utilities/Error_Messaging.h"
+#include "../../../Utilities/Enumerations.h"
+
+#include "map"
+
+using namespace std;
+using namespace Utilities::Enumerations;
+using namespace Utilities;
 
 namespace Body {
     namespace Parts {
 
         class Arm : public Base_Body_Part {
 
+        private:
+            map<Side_Of_Body, Shoulder> shoulders;
+
+            map<Side_Of_Body, Elbow> elbows;
+
+            map<Side_Of_Body, Wrist> wrists;
+
+        public:
+            Arm();
+
+            Arm(const map<Side_Of_Body, Shoulder> &shoulders, const map<Side_Of_Body, Elbow> &elbows,
+                const map<Side_Of_Body, Wrist> &wrists);
+
+            ~Arm() override;
+
+            Shoulder getShoulderBySideOfBody(Side_Of_Body sideOfBody);
+
+            Elbow getElbowBySideOfBody(Side_Of_Body sideOfBody);
+
+            Wrist getWristBySideOfBody(Side_Of_Body sideOfBody);
+
+            void setShoulderBySideOfBody(Side_Of_Body sideOfBody, Shoulder shoulder);
+
+            void setElbowBySideOfBody(Side_Of_Body sideOfBody, Elbow elbow);
+
+            void setWristBySideOfBody(Side_Of_Body sideOfBody, Wrist wrist);
+
+            const map<Side_Of_Body, Shoulder> &getShoulders() const;
+
+            void setShoulders(const map<Side_Of_Body, Shoulder> &shoulders);
+
+            const map<Side_Of_Body, Elbow> &getElbows() const;
+
+            void setElbows(const map<Side_Of_Body, Elbow> &elbows);
+
+            const map<Side_Of_Body, Wrist> &getWrists() const;
+
+            void setWrists(const map<Side_Of_Body, Wrist> &wrists);
         };
 
     } // Body
