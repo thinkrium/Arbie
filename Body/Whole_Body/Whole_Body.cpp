@@ -21,4 +21,32 @@ namespace Body {
 
         Whole_Body::legs = legs;
     }
+
+    Whole_Body::~Whole_Body() {
+
+    }
+
+    Whole_Body::Whole_Body() {
+        try{
+            Arm leftArm, rightArm;
+
+            this->setArms({
+                                  {Side_Of_Body::left,  leftArm},
+                                  {Side_Of_Body::right, rightArm}
+                          });
+
+            Leg leftLeg, rightLeg;
+
+            this->setLegs({
+                                  {Side_Of_Body::left,  leftLeg},
+                                  {Side_Of_Body::right, rightLeg}
+                          });
+
+            Logger::Success("Whole_Body", "Whole_Body", Error_Messaging::Object_Initiated_Successfully);
+        }
+        catch(exception e) {
+            Logger::Error("Whole_Body", "Whole_Body", Error_Messaging::Object_Failed_To_Initiated);
+        }
+
+    }
 } // Body

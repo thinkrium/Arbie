@@ -67,10 +67,10 @@ Motors::Servo_Motor::Servo_Motor(int pinNumber, int initialDegreeOfRotation, Ser
 
         pwm.setPWMFreq (this->getMotorFrequency());
 
-        Logger::Success("Servo","Servo", Error_Messaging::Servo_Motor_Init_Succeeded);
+        Logger::Success("Servo","Servo", Error_Messaging::Object_Initiated_Successfully);
     }
     catch (exception ex) {
-        Logger::Error("Servo","Servo",Error_Messaging::Servo_Motor_General_Failure);
+        Logger::Error("Servo","Servo",Error_Messaging::Object_Failed_To_Initiated);
     }
 }
 

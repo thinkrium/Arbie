@@ -6,7 +6,27 @@
 
 namespace Body {
     namespace Parts {
-        Arm::Arm() {}
+        Arm::Arm() {
+            Wrist leftWrist, rightWrist;
+            Elbow leftElbow, rightElbow;
+            Shoulder leftShoulder, rightShoulder;
+
+            setWrists({
+                {Side_Of_Body::left, leftWrist}
+               ,{Side_Of_Body::right, rightWrist}
+            });
+
+            setElbows({
+               {Side_Of_Body::left, leftElbow}
+              ,{Side_Of_Body::right, rightElbow}
+            });
+
+            setShoulders({
+               {Side_Of_Body::left, leftShoulder}
+              ,{Side_Of_Body::right, rightShoulder}
+            });
+
+        }
 
         Arm::~Arm() {
 

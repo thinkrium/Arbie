@@ -17,6 +17,8 @@ namespace Utilities {
         public:
 
             inline static const string No_Error = "No error found";
+            inline static const string Object_Initiated_Successfully = "The object was initiated [and/or] values were set successfully";
+            inline static const string Object_Failed_To_Initiated = "The object was failed in its attempt to initiate [and/or] set its values";
             inline static const string Generic_Error = "There was a generic error";
             inline static const string Axis_General_Failure = "There was a generic failure in the servo motor";
             inline static const string Axis_Init_Succeeded = "The values of the axis have been set successfully";
