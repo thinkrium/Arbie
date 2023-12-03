@@ -21,6 +21,8 @@ using namespace Body::Parts;
 using namespace Body::Axes;
 
 using namespace Body;
+using namespace Utilities::Enumerations;
+using namespace Utilities;
 
 namespace Brain {
     namespace Processes {
@@ -35,6 +37,14 @@ namespace Brain {
             const Whole_Body &getWholeBody() const;
 
             void Start() override;
+
+            void moveBodyPartBySide(Body_Part bodyPart, Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis);
+
+            void moveShoulderBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis);
+
+            void moveWristBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis);
+
+            void moveElbowBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis);
 
             ~Movement() override;
 

@@ -18,6 +18,7 @@ namespace Body {
     }
 
     void Whole_Body::setLegs(const map<Side_Of_Body, Leg> &legs) {
+
         Whole_Body::legs = legs;
     }
 } // Body

@@ -56,5 +56,38 @@ namespace Brain {
         }
 
         Movement::Movement() {}
+
+        void Movement::moveBodyPartBySide(Body_Part bodyPart, Side_Of_Body sideOfBody,
+                                          map<Relative_Axes, int> degreesByAxis) {
+
+            switch (bodyPart) {
+                case Body_Part::shoulder :
+
+                    break;
+                case Body_Part::elbow :
+
+                    break;
+                case Body_Part::wrist :
+
+                    break;
+                default:
+                    Logger::Error("Movement", "moveBodyPartBySide", Error_Messaging::Generic_Error);
+
+            }
+        }
+
+        void Movement::moveShoulderBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis) {
+
+
+        }
+
+        void Movement::moveWristBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis) {
+
+        }
+
+        void Movement::moveElbowBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis) {
+
+        }
+
     } // Brain
 } // Processes
