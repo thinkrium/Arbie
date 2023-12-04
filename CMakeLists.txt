@@ -45,6 +45,8 @@ add_executable(Arbie main.cpp
         Brain/CoreTechs/CoreTechs.cpp
         Body/Parts/Wrist/Wrist.cpp
         Body/Parts/Wrist/Wrist.h
+        Utilities/Pinouts/Arm_Pinout/Arm_Pinout.cpp
+        Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h
 )
 
 
