@@ -7,9 +7,9 @@
 namespace Body {
     namespace Parts {
         Arm::Arm(Arm_Pinout armPinout) {
-            Wrist leftWrist, rightWrist;
-            Elbow leftElbow, rightElbow;
-            Shoulder leftShoulder, rightShoulder;
+            Wrist leftWrist(armPinout), rightWrist(armPinout);
+            Elbow leftElbow(armPinout), rightElbow(armPinout);
+            Shoulder leftShoulder(armPinout), rightShoulder(armPinout);
 
             setWrists({
                 {Side_Of_Body::left, leftWrist}

@@ -13,7 +13,7 @@ namespace Body {
 
         Shoulder::Shoulder(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
 
-        Shoulder::Shoulder() {
+        Shoulder::Shoulder(Arm_Pinout armPinout) {
 
             Servo_Motor_Profile profile;
             Servo_Motor

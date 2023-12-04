@@ -6,6 +6,9 @@
 #define ARBIE_SHOULDER_H
 
 #include "../Joint/Joint.h"
+#include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+
+using namespace Utilities::Pinouts;
 
 namespace Body {
     namespace Parts {
@@ -14,7 +17,7 @@ namespace Body {
 
         public:
 
-            Shoulder();
+            Shoulder(Arm_Pinout armPinout);
 
             ~Shoulder() override;
 

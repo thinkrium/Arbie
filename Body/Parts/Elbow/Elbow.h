@@ -7,11 +7,15 @@
 
 #include "../Joint/Joint.h"
 
+#include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+
+using namespace Utilities::Pinouts;
+
 namespace Body {
     namespace Parts {
         class Elbow : public Joint {
         public:
-            Elbow();
+            Elbow(Arm_Pinout armPinout);
 
             ~Elbow() override;
 

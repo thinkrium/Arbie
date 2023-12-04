@@ -7,12 +7,16 @@
 
 #include "../../../Body/Parts/Base/Base_Body_Part.h"
 
+#include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+
+using namespace Utilities::Pinouts;
+
 namespace Body {
     namespace Parts {
 
         class Wrist : public Base_Body_Part {
         public:
-            Wrist();
+            Wrist(Arm_Pinout armPinout);
 
             ~Wrist() override;
 

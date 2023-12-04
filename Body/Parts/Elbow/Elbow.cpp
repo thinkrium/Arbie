@@ -13,7 +13,7 @@ namespace Body {
 
         Elbow::Elbow(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
 
-        Elbow::Elbow() {
+        Elbow::Elbow(Arm_Pinout armPinout) {
 
         }
 

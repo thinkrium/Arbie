@@ -6,7 +6,7 @@
 
 namespace Body {
     namespace Parts {
-        Wrist::Wrist() {}
+        Wrist::Wrist(Arm_Pinout armPinout) {}
 
         Wrist::~Wrist() {
 
