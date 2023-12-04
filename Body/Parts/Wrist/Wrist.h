@@ -8,6 +8,9 @@
 #include "../Joints/Arm_Joint/Arm_Joint.h"
 
 #include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+#include "../../../Utilities/Error_Messaging.h"
+
+using namespace Utilities;
 
 using namespace Utilities::Pinouts;
 

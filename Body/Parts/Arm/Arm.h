@@ -33,12 +33,14 @@ namespace Body {
 
         private:
 
+            Arm_Pinout armPinout;
+
             Shoulder shoulder;
             Elbow elbow;
             Wrist wrist;
 
-            Arm_Pinout armPinout;
-         public:
+
+        public:
             Arm();
 
 
