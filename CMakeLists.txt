@@ -47,6 +47,10 @@ add_executable(Arbie main.cpp
         Body/Parts/Wrist/Wrist.h
         Utilities/Pinouts/Arm_Pinout/Arm_Pinout.cpp
         Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h
+        Body/Parts/Joints/Base_Joint/Base_Joint.cpp
+        Body/Parts/Joints/Base_Joint/Base_Joint.h
+        Body/Parts/Joints/Arm_Joint/Arm_Joint.cpp
+        Body/Parts/Joints/Arm_Joint/Arm_Joint.h
 )
 
 
