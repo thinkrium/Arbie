@@ -5,7 +5,7 @@
 #ifndef ARBIE_ELBOW_H
 #define ARBIE_ELBOW_H
 
-#include "../Joint/Joint.h"
+#include "../Joints/Arm_Joint/Arm_Joint.h"
 
 #include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
 
@@ -13,16 +13,17 @@ using namespace Utilities::Pinouts;
 
 namespace Body {
     namespace Parts {
-        class Elbow : public Joint {
-        public:
-            Elbow(Arm_Pinout armPinout);
+        namespace Joints {
+            class Elbow : public Arm_Joint {
+            public:
+                Elbow(Arm_Pinout armPinout);
 
-            ~Elbow() override;
+                ~Elbow() override;
 
-            explicit Elbow(const map<Relative_Axes, Axis> &axes);
+                explicit Elbow(const map<Relative_Axes, Axis> &axes);
 
-        };
-
+            };
+        }
     }
 }
 

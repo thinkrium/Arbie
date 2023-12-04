@@ -13,6 +13,9 @@
 #include "../../../Utilities/Error_Messaging.h"
 #include "../../../Utilities/Enumerations.h"
 #include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+#include "../../Parts/Shoulder/Shoulder.h"
+#include "../../Parts/Elbow/Elbow.h"
+#include "../../Parts/Wrist/Wrist.h"
 
 #include "map"
 
@@ -20,6 +23,7 @@ using namespace Utilities::Pinouts;
 using namespace std;
 using namespace Utilities::Enumerations;
 using namespace Utilities;
+using namespace Body::Parts::Joints;
 
 namespace Body {
     namespace Parts {

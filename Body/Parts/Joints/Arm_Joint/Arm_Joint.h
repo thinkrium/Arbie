@@ -18,6 +18,16 @@ namespace Body {
             class Arm_Joint : Base_Joint {
 
             private:
+            public:
+                Arm_Joint();
+
+                ~Arm_Joint() override;
+
+                const Arm_Pinout &getArmPinout() const;
+
+                void setArmPinout(const Arm_Pinout &armPinout);
+
+            private:
                 Arm_Pinout armPinout;
 
             };
