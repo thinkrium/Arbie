@@ -11,6 +11,8 @@ namespace Body {
 
             Wrist::~Wrist() {
             }
+
+            Wrist::Wrist() {}
         }
     } // Body
 } // Parts

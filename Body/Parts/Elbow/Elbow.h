@@ -16,6 +16,8 @@ namespace Body {
         namespace Joints {
             class Elbow : public Arm_Joint {
             public:
+                Elbow();
+
                 Elbow(Arm_Pinout armPinout);
 
                 ~Elbow() override;

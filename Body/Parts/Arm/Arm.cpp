@@ -6,25 +6,11 @@
 
 namespace Body {
     namespace Parts {
+        Arm::Arm() {
+
+        }
+
         Arm::Arm(Arm_Pinout armPinout) {
-            Wrist leftWrist(armPinout), rightWrist(armPinout);
-            Elbow leftElbow(armPinout), rightElbow(armPinout);
-            Shoulder leftShoulder(armPinout), rightShoulder(armPinout);
-
-            setWrists({
-                {Side_Of_Body::left, leftWrist}
-               ,{Side_Of_Body::right, rightWrist}
-            });
-
-            setElbows({
-               {Side_Of_Body::left, leftElbow}
-              ,{Side_Of_Body::right, rightElbow}
-            });
-
-            setShoulders({
-               {Side_Of_Body::left, leftShoulder}
-              ,{Side_Of_Body::right, rightShoulder}
-            });
 
         }
 
@@ -32,30 +18,36 @@ namespace Body {
 
         }
 
-        const map<Side_Of_Body, Shoulder> &Arm::getShoulders() const {
-            return shoulders;
+        const Shoulder &Arm::getShoulder() const {
+            return shoulder;
         }
 
-        void Arm::setShoulders(const map<Side_Of_Body, Shoulder> &shoulders) {
-            Arm::shoulders = shoulders;
+        void Arm::setShoulder(const Shoulder &shoulder) {
+            Arm::shoulder = shoulder;
         }
 
-        const map<Side_Of_Body, Elbow> &Arm::getElbows() const {
-            return elbows;
+        const Elbow &Arm::getElbow() const {
+            return elbow;
         }
 
-        void Arm::setElbows(const map<Side_Of_Body, Elbow> &elbows) {
-            Arm::elbows = elbows;
+        void Arm::setElbow(const Elbow &elbow) {
+            Arm::elbow = elbow;
         }
 
-        const map<Side_Of_Body, Wrist> &Arm::getWrists() const {
-            return wrists;
+        const Wrist &Arm::getWrist() const {
+            return wrist;
         }
 
-        void Arm::setWrists(const map<Side_Of_Body, Wrist> &wrists) {
-            Arm::wrists = wrists;
+        void Arm::setWrist(const Wrist &wrist) {
+            Arm::wrist = wrist;
         }
 
-        Arm::Arm() {}
+        const Arm_Pinout &Arm::getArmPinout() const {
+            return armPinout;
+        }
+
+        void Arm::setArmPinout(const Arm_Pinout &armPinout) {
+            Arm::armPinout = armPinout;
+        }
     } // Body
 } // Parts

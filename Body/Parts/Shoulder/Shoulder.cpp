@@ -32,6 +32,8 @@ namespace Body {
                         {Relative_Axes::z, zAxis}
                 };
             }
+
+            Shoulder::Shoulder() {}
         }
 
 

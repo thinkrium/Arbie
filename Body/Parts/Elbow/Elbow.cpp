@@ -16,6 +16,8 @@ namespace Body {
             Elbow::Elbow(Arm_Pinout armPinout) {
 
             }
+
+            Elbow::Elbow() {}
         }
 
     } // Body

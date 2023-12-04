@@ -20,6 +20,8 @@ namespace Body {
 
                 Shoulder(Arm_Pinout armPinout);
 
+                Shoulder();
+
                 ~Shoulder() override;
 
 //                explicit Shoulder(const map<Relative_Axes, Axis> &axes);

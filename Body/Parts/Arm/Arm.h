@@ -30,47 +30,39 @@ namespace Body {
 
         class Arm : public Base_Body_Part {
 
+
         private:
+
+            Shoulder shoulder;
+            Elbow elbow;
+            Wrist wrist;
+
+            Arm_Pinout armPinout;
          public:
             Arm();
 
-        private:
-            map<Side_Of_Body, Shoulder> shoulders;
 
-            map<Side_Of_Body, Elbow> elbows;
-
-            map<Side_Of_Body, Wrist> wrists;
-
-            Arm_Pinout armPinout;
-
-        public:
             Arm(Arm_Pinout armPinout);
+
 
             ~Arm() override;
 
-            Shoulder getShoulderBySideOfBody(Side_Of_Body sideOfBody);
+            const Shoulder &getShoulder() const;
 
-            Elbow getElbowBySideOfBody(Side_Of_Body sideOfBody);
+            void setShoulder(const Shoulder &shoulder);
 
-            Wrist getWristBySideOfBody(Side_Of_Body sideOfBody);
+            const Elbow &getElbow() const;
 
-            void setShoulderBySideOfBody(Side_Of_Body sideOfBody, Shoulder shoulder);
+            void setElbow(const Elbow &elbow);
 
-            void setElbowBySideOfBody(Side_Of_Body sideOfBody, Elbow elbow);
+            const Wrist &getWrist() const;
 
-            void setWristBySideOfBody(Side_Of_Body sideOfBody, Wrist wrist);
+            void setWrist(const Wrist &wrist);
 
-            const map<Side_Of_Body, Shoulder> &getShoulders() const;
+            const Arm_Pinout &getArmPinout() const;
 
-            void setShoulders(const map<Side_Of_Body, Shoulder> &shoulders);
+            void setArmPinout(const Arm_Pinout &armPinout);
 
-            const map<Side_Of_Body, Elbow> &getElbows() const;
-
-            void setElbows(const map<Side_Of_Body, Elbow> &elbows);
-
-            const map<Side_Of_Body, Wrist> &getWrists() const;
-
-            void setWrists(const map<Side_Of_Body, Wrist> &wrists);
         };
 
     } // Body

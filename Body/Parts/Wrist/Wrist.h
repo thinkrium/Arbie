@@ -19,6 +19,8 @@ namespace Body {
             public:
                 Wrist(Arm_Pinout armPinout);
 
+                Wrist();
+
                 ~Wrist() override;
 
             };

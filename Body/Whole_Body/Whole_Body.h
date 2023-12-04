@@ -29,6 +29,7 @@ namespace Body {
         map<Side_Of_Body, Leg> legs;
 
     public:
+
         Whole_Body();
 
         Arm getArmBySideOfBody(Side_Of_Body sideOfBody);
