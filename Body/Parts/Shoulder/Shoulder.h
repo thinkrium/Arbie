@@ -22,7 +22,7 @@ namespace Body {
 
                 ~Shoulder() override;
 
-                explicit Shoulder(const map<Relative_Axes, Axis> &axes);
+//                explicit Shoulder(const map<Relative_Axes, Axis> &axes);
 
             };
         }

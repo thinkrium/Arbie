@@ -14,6 +14,7 @@ namespace Brain {
 
         void Movement::Start() {
             try {
+/*
 
                 this->whole_body.getArms();
 
@@ -42,6 +43,7 @@ namespace Brain {
                 shoulder.turnOnAxis(Relative_Axes::y, Rotation_Direction::Counter_Clockwise, 30);
                 shoulder.turnOnAxis(Relative_Axes::z, Rotation_Direction::Counter_Clockwise, 30);
 
+*/
                 Logger::Success("Brain::Activity", "Run", Error_Messaging::No_Error);
             }
             catch (exception e) {

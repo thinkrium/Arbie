@@ -20,7 +20,7 @@ namespace Body {
 
                 ~Elbow() override;
 
-                explicit Elbow(const map<Relative_Axes, Axis> &axes);
+//                explicit Elbow(const map<Relative_Axes, Axis> &axes);
 
             };
         }

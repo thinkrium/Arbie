@@ -6,17 +6,17 @@
 
 namespace Body {
     namespace Parts {
+        namespace Joints {
+            Elbow::~Elbow() {
 
-        Elbow::~Elbow() {
+            }
 
+//        Elbow::Elbow(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
+
+            Elbow::Elbow(Arm_Pinout armPinout) {
+
+            }
         }
-
-        Elbow::Elbow(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
-
-        Elbow::Elbow(Arm_Pinout armPinout) {
-
-        }
-
 
     } // Body
 } // Parts
