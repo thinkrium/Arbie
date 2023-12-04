@@ -13,6 +13,10 @@ namespace Body {
 
         Shoulder::Shoulder(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
 
+        Shoulder::Shoulder() {
+
+        }
+
 
     } // Body
 } // Parts
