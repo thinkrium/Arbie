@@ -14,6 +14,8 @@ namespace Body {
         Shoulder::Shoulder(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
 
         Shoulder::Shoulder() {
+
+            Servo_Motor_Profile profile;
             Servo_Motor
                     shoulderPitchServoMotor(0, 0, profile),
                     shoulderYawServoMotor(1, 0, profile),
