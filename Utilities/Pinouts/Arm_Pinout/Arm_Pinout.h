@@ -8,11 +8,11 @@ namespace Utilities {
     namespace Pinouts {
 
         class Arm_Pinout {
-            int shoulder_x_axis;
-            int shoulder_y_axis;
-            int shoulder_z_axis;
-            int elbow;
-            int wrist;
+            int shoulder_x_axis_pin_number;
+            int shoulder_y_axis_pin_number;
+            int shoulder_z_axis_pin_number;
+            int elbow_pin_number;
+            int wrist_pin_number;
         public:
             Arm_Pinout();
 
@@ -20,25 +20,25 @@ namespace Utilities {
 
             virtual ~Arm_Pinout();
 
-            int getShoulderXAxis() const;
+            int getShoulderXAxisPinNumber() const;
 
-            void setShoulderXAxis(int shoulderXAxis);
+            void setShoulderXAxisPinNumber(int shoulderXAxis);
 
-            int getShoulderYAxis() const;
+            int getShoulderYAxisPinNumber() const;
 
-            void setShoulderYAxis(int shoulderYAxis);
+            void setShoulderYAxisPinNumber(int shoulderYAxis);
 
-            int getShoulderZAxis() const;
+            int getShoulderZAxisPinNumber() const;
 
-            void setShoulderZAxis(int shoulderZAxis);
+            void setShoulderZAxisPinNumber(int shoulderZAxis);
 
-            int getElbow() const;
+            int getElbowPinNumber() const;
 
-            void setElbow(int elbow);
+            void setElbowPinNumber(int elbow);
 
-            int getWrist() const;
+            int getWristPinNumber() const;
 
-            void setWrist(int wrist);
+            void setWristPinNumber(int wrist);
         };
 
     } // Pinouts

@@ -18,13 +18,13 @@ namespace Body {
 
                 Servo_Motor_Profile profile;
                 Servo_Motor
-                        shoulderPitchServoMotor(0, 0, profile),
-                        shoulderYawServoMotor(1, 0, profile),
-                        rollServoMotor(2, 0, profile);
+                        shoulderXServoMotor(armPinout.getShoulderXAxisPinNumber(), 0, profile),
+                        shoulderYServoMotor(armPinout.getShoulderYAxisPinNumber(), 0, profile),
+                        shoulderZServoMotor(armPinout.getShoulderZAxisPinNumber(), 0, profile);
 
-                Axis xAxis(shoulderPitchServoMotor),
-                        yAxis(shoulderYawServoMotor),
-                        zAxis(rollServoMotor);
+                Axis xAxis(shoulderXServoMotor),
+                        yAxis(shoulderYServoMotor),
+                        zAxis(shoulderZServoMotor);
 
                 map<Relative_Axes, Axis> axes = {
                         {Relative_Axes::x, xAxis},

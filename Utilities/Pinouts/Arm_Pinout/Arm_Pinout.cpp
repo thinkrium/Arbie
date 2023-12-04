@@ -11,48 +11,48 @@ namespace Utilities {
 
         }
 
-        int Arm_Pinout::getShoulderXAxis() const {
-            return shoulder_x_axis;
+        int Arm_Pinout::getShoulderXAxisPinNumber() const {
+            return shoulder_x_axis_pin_number;
         }
 
-        void Arm_Pinout::setShoulderXAxis(int shoulderXAxis) {
-            shoulder_x_axis = shoulderXAxis;
+        void Arm_Pinout::setShoulderXAxisPinNumber(int shoulderXAxis) {
+            shoulder_x_axis_pin_number = shoulderXAxis;
         }
 
-        int Arm_Pinout::getShoulderYAxis() const {
-            return shoulder_y_axis;
+        int Arm_Pinout::getShoulderYAxisPinNumber() const {
+            return shoulder_y_axis_pin_number;
         }
 
         Arm_Pinout::Arm_Pinout(int shoulderXAxis, int shoulderYAxis, int shoulderZAxis, int elbow, int wrist)
-                : shoulder_x_axis(shoulderXAxis), shoulder_y_axis(shoulderYAxis), shoulder_z_axis(shoulderZAxis),
-                  elbow(elbow), wrist(wrist) {}
+                : shoulder_x_axis_pin_number(shoulderXAxis), shoulder_y_axis_pin_number(shoulderYAxis), shoulder_z_axis_pin_number(shoulderZAxis),
+                  elbow_pin_number(elbow), wrist_pin_number(wrist) {}
 
-        void Arm_Pinout::setShoulderYAxis(int shoulderYAxis) {
-            shoulder_y_axis = shoulderYAxis;
+        void Arm_Pinout::setShoulderYAxisPinNumber(int shoulderYAxis) {
+            shoulder_y_axis_pin_number = shoulderYAxis;
         }
 
-        int Arm_Pinout::getShoulderZAxis() const {
-            return shoulder_z_axis;
+        int Arm_Pinout::getShoulderZAxisPinNumber() const {
+            return shoulder_z_axis_pin_number;
         }
 
-        void Arm_Pinout::setShoulderZAxis(int shoulderZAxis) {
-            shoulder_z_axis = shoulderZAxis;
+        void Arm_Pinout::setShoulderZAxisPinNumber(int shoulderZAxis) {
+            shoulder_z_axis_pin_number = shoulderZAxis;
         }
 
-        int Arm_Pinout::getElbow() const {
-            return elbow;
+        int Arm_Pinout::getElbowPinNumber() const {
+            return elbow_pin_number;
         }
 
-        void Arm_Pinout::setElbow(int elbow) {
-            Arm_Pinout::elbow = elbow;
+        void Arm_Pinout::setElbowPinNumber(int elbow) {
+            Arm_Pinout::elbow_pin_number = elbow;
         }
 
-        int Arm_Pinout::getWrist() const {
-            return wrist;
+        int Arm_Pinout::getWristPinNumber() const {
+            return wrist_pin_number;
         }
 
-        void Arm_Pinout::setWrist(int wrist) {
-            Arm_Pinout::wrist = wrist;
+        void Arm_Pinout::setWristPinNumber(int wrist) {
+            Arm_Pinout::wrist_pin_number = wrist;
         }
     } // Pinouts
 }
