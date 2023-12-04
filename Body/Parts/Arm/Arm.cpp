@@ -56,6 +56,6 @@ namespace Body {
             Arm::wrists = wrists;
         }
 
-
+        Arm::Arm() {}
     } // Body
 } // Parts

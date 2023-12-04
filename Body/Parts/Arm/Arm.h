@@ -31,6 +31,10 @@ namespace Body {
         class Arm : public Base_Body_Part {
 
         private:
+         public:
+            Arm();
+
+        private:
             map<Side_Of_Body, Shoulder> shoulders;
 
             map<Side_Of_Body, Elbow> elbows;

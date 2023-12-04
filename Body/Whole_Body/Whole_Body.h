@@ -22,11 +22,18 @@ namespace Body {
 
     class Whole_Body {
 
+    private:
+
         map<Side_Of_Body, Arm> arms;
         // TODO : This line causes an error ??? why ???
         map<Side_Of_Body, Leg> legs;
+
     public:
         Whole_Body();
+
+        Arm getArmBySideOfBody(Side_Of_Body sideOfBody);
+
+        Leg getLegBySideOfBody(Side_Of_Body sideOfBody);
 
         const map<Side_Of_Body, Arm> &getArms() const;
 

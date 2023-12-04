@@ -52,4 +52,18 @@ namespace Body {
         }
 
     }
+
+    Arm Whole_Body::getArmBySideOfBody(Side_Of_Body sideOfBody) {
+
+        map<Side_Of_Body, Arm> arms = this->getArms();
+
+        return arms[sideOfBody];
+    }
+
+    Leg Whole_Body::getLegBySideOfBody(Side_Of_Body sideOfBody) {
+        map<Side_Of_Body, Leg> legs = this->getLegs();
+
+        return legs[sideOfBody];
+
+    }
 } // Body
