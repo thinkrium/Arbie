@@ -28,7 +28,10 @@ namespace Body {
 
     Whole_Body::Whole_Body() {
         try{
-            Arm leftArm, rightArm;
+
+            Arm_Pinout leftArmPinout, rightArmPinout;
+
+            Arm leftArm( leftArmPinout ), rightArm(rightArmPinout);
 
             this->setArms({
                                   {Side_Of_Body::left,  leftArm},

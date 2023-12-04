@@ -6,7 +6,7 @@
 
 namespace Body {
     namespace Parts {
-        Arm::Arm() {
+        Arm::Arm(Arm_Pinout armPinout) {
             Wrist leftWrist, rightWrist;
             Elbow leftElbow, rightElbow;
             Shoulder leftShoulder, rightShoulder;
@@ -56,13 +56,6 @@ namespace Body {
             Arm::wrists = wrists;
         }
 
-        Arm::Arm(const map<Side_Of_Body, Shoulder> &shoulders, const map<Side_Of_Body, Elbow> &elbows,
-                 const map<Side_Of_Body, Wrist> &wrists) : shoulders(shoulders), elbows(elbows), wrists(wrists) {
-
-            setShoulders(shoulders);
-            setElbows(elbows);
-            setWrists(wrists);
-        }
 
     } // Body
 } // Parts

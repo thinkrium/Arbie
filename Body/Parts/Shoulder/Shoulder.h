@@ -12,9 +12,6 @@ namespace Body {
 
         class Shoulder : public Joint {
 
-        private:
-
-
         public:
 
             Shoulder();

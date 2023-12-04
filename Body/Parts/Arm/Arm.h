@@ -12,9 +12,11 @@
 
 #include "../../../Utilities/Error_Messaging.h"
 #include "../../../Utilities/Enumerations.h"
+#include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
 
 #include "map"
 
+using namespace Utilities::Pinouts;
 using namespace std;
 using namespace Utilities::Enumerations;
 using namespace Utilities;
@@ -31,11 +33,10 @@ namespace Body {
 
             map<Side_Of_Body, Wrist> wrists;
 
-        public:
-            Arm();
+            Arm_Pinout armPinout;
 
-            Arm(const map<Side_Of_Body, Shoulder> &shoulders, const map<Side_Of_Body, Elbow> &elbows,
-                const map<Side_Of_Body, Wrist> &wrists);
+        public:
+            Arm(Arm_Pinout armPinout);
 
             ~Arm() override;
 
