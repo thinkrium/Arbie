@@ -25,6 +25,7 @@ namespace Body {
                 Wrist();
 
                 ~Wrist() override;
+                void setAxisMotor();
 
             };
         }

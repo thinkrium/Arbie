@@ -21,6 +21,7 @@ namespace Body {
                 Elbow(Arm_Pinout armPinout);
 
                 ~Elbow() override;
+                void setAxisMotor() ;
 
 //                explicit Elbow(const map<Relative_Axes, Axis> &axes);
 

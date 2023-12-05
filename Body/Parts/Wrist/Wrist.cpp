@@ -15,6 +15,10 @@ namespace Body {
             Wrist::Wrist() {
 
             }
+
+            void Wrist::setAxisMotor() {
+
+            }
         }
     } // Body
 } // Parts

@@ -9,7 +9,7 @@
 #include "../../../Body/Parts/Shoulder/Shoulder.h"
 #include "../../../Body/Parts/Elbow/Elbow.h"
 #include "../../../Body/Parts/Wrist/Wrist.h"
-
+#include "../../../Utilities/Logger/Logger.h"
 #include "../../../Utilities/Error_Messaging.h"
 #include "../../../Utilities/Enumerations.h"
 #include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"

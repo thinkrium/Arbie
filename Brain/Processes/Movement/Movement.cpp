@@ -15,7 +15,7 @@ namespace Brain {
         void Movement::Start() {
             try {
 
-                this->whole_body.getArmBySideOfBody(Side_Of_Body::right);
+                this->whole_body.getArmBySideOfBody(Side_Of_Body::right).getShoulder();
  /*
 
                 this->whole_body.getArms();

@@ -7,7 +7,10 @@
 
 #include "../Joints/Arm_Joint/Arm_Joint.h"
 #include "../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+#include "../../../Utilities/Logger/Logger.h"
+#include "../../../Utilities/Error_Messaging.h"
 
+using namespace Utilities;
 using namespace Utilities::Pinouts;
 
 namespace Body {
@@ -24,7 +27,9 @@ namespace Body {
 
                 ~Shoulder() override;
 
-//                explicit Shoulder(const map<Relative_Axes, Axis> &axes);
+                virtual void setAxisMotor();
+
+                //                explicit Shoulder(const map<Relative_Axes, Axis> &axes);
 
             };
         }

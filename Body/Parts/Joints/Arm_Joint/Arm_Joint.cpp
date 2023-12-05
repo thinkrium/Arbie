@@ -7,7 +7,7 @@
 namespace Body {
     namespace Parts {
         namespace Joints {
-            Arm_Joint::Arm_Joint() {}
+            Arm_Joint::Arm_Joint() : Base_Joint() {}
 
             Arm_Joint::~Arm_Joint() {
 
@@ -18,7 +18,13 @@ namespace Body {
             }
 
             void Arm_Joint::setArmPinout(const Arm_Pinout &armPinout) {
-                Arm_Joint::armPinout = armPinout;
+                try {
+                    Arm_Joint::armPinout = armPinout;
+                    Logger::Success("Arm_Joint", "setArmPinout", Error_Messaging::Object_Initiated_Successfully);
+                }
+                catch (exception e) {
+                    Logger::Error("Arm_Joint", "setArmPinout", Error_Messaging::Object_Failed_To_Initiated);
+                }
             }
         } // Body
     } // Parts

@@ -18,6 +18,10 @@ namespace Body {
             }
 
             Elbow::Elbow() {}
+
+            void Elbow::setAxisMotor() {
+
+            }
         }
 
     } // Body

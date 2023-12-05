@@ -14,7 +14,7 @@ namespace Body {
 
 //            Shoulder::Shoulder(const map<Relative_Axes, Axis> &axes) : Arm_Joint(axes) {}
 
-            Shoulder::Shoulder(Arm_Pinout armPinout) {
+            Shoulder::Shoulder(Arm_Pinout armPinout) : Arm_Joint() {
 
                 Servo_Motor_Profile profile;
                 Servo_Motor
@@ -33,7 +33,31 @@ namespace Body {
                 };
             }
 
-            Shoulder::Shoulder() {}
+            Shoulder::Shoulder() {
+                Logger::Success("Shoulder", "Shoulder", Error_Messaging::Object_Initiated_Successfully);
+            }
+
+            void Shoulder::setAxisMotor() {
+
+                try {
+                    Servo_Motor_Profile profile;
+                    Servo_Motor
+                            xAxisServoMotor(getArmPinout().getShoulderXAxisPinNumber(), 0, profile)
+                            , yAxisServoMotor(getArmPinout().getShoulderYAxisPinNumber(), 0, profile)
+                            , zAxisServoMotor(getArmPinout().getShoulderZAxisPinNumber(), 0, profile);
+
+                    this->getAxes()[Relative_Axes::x].setMotor(xAxisServoMotor);
+                    this->getAxes()[Relative_Axes::y].setMotor(yAxisServoMotor);
+                    this->getAxes()[Relative_Axes::z].setMotor(zAxisServoMotor);
+
+                    Logger::Success("Shoulder", "setAxisMotor", Error_Messaging::Object_Initiated_Successfully);
+
+                }
+                catch (exception e) {
+                    Logger::Error("Shoulder", "setAxisMotor", Error_Messaging::Object_Failed_To_Initiated);
+                }
+
+            }
         }
 
 

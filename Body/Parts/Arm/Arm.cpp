@@ -11,7 +11,18 @@ namespace Body {
         }
 
         Arm::Arm(Arm_Pinout armPinout) {
+            try {
 
+                shoulder.setArmPinout(armPinout);
+                shoulder.setAxisMotor();
+
+                elbow.setArmPinout(armPinout);
+                wrist.setArmPinout(armPinout);
+                Logger::Success("Arm", "Arm", Error_Messaging::Object_Initiated_Successfully);
+            }
+            catch (exception ex) {
+                Logger::Error("Arm", "Arm", Error_Messaging::Object_Failed_To_Initiated);
+            }
         }
 
         Arm::~Arm() {

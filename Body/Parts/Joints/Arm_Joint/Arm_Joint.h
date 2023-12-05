@@ -7,7 +7,10 @@
 
 #include "../Base_Joint/Base_Joint.h"
 #include "../../../../Utilities/Pinouts/Arm_Pinout/Arm_Pinout.h"
+#include "../../../../Utilities/Logger/Logger.h"
+#include "../../../../Utilities/Error_Messaging.h"
 
+using namespace Utilities;
 using namespace Utilities::Pinouts;
 
 namespace Body {
@@ -15,10 +18,9 @@ namespace Body {
         namespace Joints {
 
 
-            class Arm_Joint : Base_Joint {
+            class Arm_Joint : public Base_Joint {
 
-            private:
-            public:
+             public:
                 Arm_Joint();
 
                 ~Arm_Joint() override;
@@ -27,6 +29,7 @@ namespace Body {
 
                 void setArmPinout(const Arm_Pinout &armPinout);
 
+                virtual void setAxisMotor() = 0;
             private:
                 Arm_Pinout armPinout;
 
