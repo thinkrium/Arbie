@@ -17,7 +17,11 @@ namespace Body {
                 shoulder.setAxisMotor();
 
                 elbow.setArmPinout(armPinout);
+                elbow.setAxisMotor();
+
                 wrist.setArmPinout(armPinout);
+                wrist.setAxisMotor();
+                
                 Logger::Success("Arm", "Arm", Error_Messaging::Object_Initiated_Successfully);
             }
             catch (exception ex) {

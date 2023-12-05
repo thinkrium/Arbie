@@ -7,6 +7,9 @@
 
 #include "../Processes/Movement/Movement.h"
 #include "../Processes/Base/Base_Process.h"
+#include "thread"
+
+using namespace std;
 
 using namespace Brain::Processes;
 
@@ -16,6 +19,8 @@ namespace Brain {
 
     private:
 
+        thread processThread;
+
     public:
 
         CoreTechs();
@@ -23,6 +28,8 @@ namespace Brain {
         void process();
 
         void runProcess(  Base_Process &process  );
+
+        void joinProcess();
 
         virtual ~CoreTechs();
 

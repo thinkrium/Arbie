@@ -20,6 +20,20 @@ namespace Body {
             Elbow::Elbow() {}
 
             void Elbow::setAxisMotor() {
+                try {
+                    Servo_Motor_Profile profile;
+                    Servo_Motor
+                            xAxisServoMotor(getArmPinout().getElbowPinNumber(), 0, profile);
+
+                    this->getAxes()[Relative_Axes::x].setMotor(xAxisServoMotor);
+
+
+                    Logger::Success("Elbow", "setAxisMotor", Error_Messaging::Object_Initiated_Successfully);
+
+                }
+                catch (exception e) {
+                    Logger::Error("Elbow", "setAxisMotor", Error_Messaging::Object_Failed_To_Initiated);
+                }
 
             }
         }
