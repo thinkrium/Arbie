@@ -29,7 +29,8 @@ namespace Body {
     Whole_Body::Whole_Body() {
         try{
 
-            Arm_Pinout leftArmPinout, rightArmPinout;
+            Arm_Pinout leftArmPinout(0,1,2,3,4),
+                       rightArmPinout(5,6,7,8,9);
 
             Arm leftArm( leftArmPinout ), rightArm(rightArmPinout);
 

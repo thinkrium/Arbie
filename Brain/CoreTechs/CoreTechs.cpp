@@ -2,6 +2,7 @@
 // Created by thome on 12/1/2023.
 //
 
+
 #include "CoreTechs.h"
 
 namespace Brain {
@@ -22,12 +23,17 @@ namespace Brain {
     void CoreTechs::process() {
 
         Movement   movement;
-        runProcess(movement);
+        movement.Start();
+
+        Console_Input consoleInput;
+//        consoleInput.Start();
+        thread cI = thread(&Base_Process::Start, consoleInput);
+        cI.join();
     }
 
     void CoreTechs::joinProcess() {
-        this->processThread.joinable();
-        this->processThread.join();
+//        this->processThread.joinable();
+//        this->processThread.join();
     }
 
 } // Brain

@@ -5,13 +5,14 @@
 #ifndef ARBIE_CORETECHS_H
 #define ARBIE_CORETECHS_H
 
+#include "../Senses/Console_Input/Console_Input.h"
 #include "../Processes/Movement/Movement.h"
 #include "../Processes/Base/Base_Process.h"
 #include "thread"
 
 using namespace std;
-
 using namespace Brain::Processes;
+using namespace Brain::Senses;
 
 namespace Brain {
 
