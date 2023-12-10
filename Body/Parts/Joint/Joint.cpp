@@ -43,7 +43,7 @@ namespace Body {
     }
 
         map<Relative_Axes, Axis> Joint::getAxes() {
-            return map<Relative_Axes, Axis>();
+            return this->axes;
         }
 
 
