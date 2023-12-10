@@ -14,6 +14,20 @@ namespace Body {
 //        Elbow::Elbow(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
 
             Elbow::Elbow(Arm_Pinout armPinout) {
+                Servo_Motor_Profile profile;
+                Servo_Motor
+                        singleAxisServoMotor(getArmPinout().getElbowPinNumber(), 0, profile);
+
+                Axis singleAxis(singleAxisServoMotor);
+
+                map<Relative_Axes, Axis> axes = {
+                        {Relative_Axes::single, singleAxis}
+                };
+
+                this->setAxes(axes);
+
+
+
 
             }
 
@@ -25,7 +39,7 @@ namespace Body {
                     Servo_Motor
                             xAxisServoMotor(getArmPinout().getElbowPinNumber(), 0, profile);
 
-                    this->getAxes()[Relative_Axes::x].setMotor(xAxisServoMotor);
+                    this->getAxis( Relative_Axes::single).setMotor(xAxisServoMotor);
 
 
                     Logger::Success("Elbow", "setAxisMotor", Error_Messaging::Object_Initiated_Successfully);

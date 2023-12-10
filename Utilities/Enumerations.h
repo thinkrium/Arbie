@@ -10,7 +10,7 @@ namespace Utilities {
         enum Rotation_Direction {Clockwise, Counter_Clockwise};
         enum Pin_Number {zero, one, two};
         enum Side_Of_Body {left, right};
-        enum Relative_Axes {x, z, y};
+        enum Relative_Axes {x, z, y, single};
         enum Body_Part {upper_arm, fore_arm, elbow, wrist, shoulder, neck, hip, upper_leg, lower_leg, knee, ankle, instep, toes, head};
 
         struct Servo_Motor_Profile {

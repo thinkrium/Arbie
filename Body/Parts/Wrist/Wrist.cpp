@@ -7,12 +7,31 @@
 namespace Body {
     namespace Parts {
         namespace Joints {
-            Wrist::Wrist(Arm_Pinout armPinout) {}
+            Wrist::Wrist(Arm_Pinout armPinout) {
+
+                Servo_Motor_Profile profile;
+                Servo_Motor
+                        singleAxisServoMotor(getArmPinout().getElbowPinNumber(), 0, profile);
+
+                Axis singleAxis(singleAxisServoMotor);
+
+                map<Relative_Axes, Axis> axes = {
+                        {Relative_Axes::single, singleAxis}
+                };
+
+                this->setAxes(axes);
+
+
+
+
+            }
 
             Wrist::~Wrist() {
             }
 
             Wrist::Wrist() {
+
+
 
             }
 
@@ -22,7 +41,7 @@ namespace Body {
                     Servo_Motor
                             xAxisServoMotor(getArmPinout().getWristPinNumber(), 0, profile);
 
-                    this->getAxes()[Relative_Axes::x].setMotor(xAxisServoMotor);
+                    this->getAxis( Relative_Axes::single).setMotor(xAxisServoMotor);
 
 
                     Logger::Success("Wrist", "setAxisMotor", Error_Messaging::Object_Initiated_Successfully);

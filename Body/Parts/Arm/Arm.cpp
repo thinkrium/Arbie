@@ -13,14 +13,14 @@ namespace Body {
         Arm::Arm(Arm_Pinout armPinout) {
             try {
 
-                shoulder.setArmPinout(armPinout);
-                shoulder.setAxisMotor();
+                shoulder = Shoulder(armPinout);
+//                shoulder.setAxisMotor();
 
-                elbow.setArmPinout(armPinout);
-                elbow.setAxisMotor();
+                elbow = Elbow (armPinout);
+//                elbow.setAxisMotor();
 
-                wrist.setArmPinout(armPinout);
-                wrist.setAxisMotor();
+                wrist = Wrist(armPinout);
+//                wrist.setAxisMotor();
                 
                 Logger::Success("Arm", "Arm", Error_Messaging::Object_Initiated_Successfully);
             }

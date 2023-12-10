@@ -17,6 +17,7 @@ namespace Brain {
 
                 Shoulder rightShoulder = this->whole_body.getArmBySideOfBody(Side_Of_Body::right).getShoulder();
 
+
                 rightShoulder.getAxis(Relative_Axes::x).turnMotor(Rotation_Direction::Clockwise, 30);
 
                 Logger::Success("Brain::Activity", "Run", Error_Messaging::No_Error);

@@ -5,12 +5,14 @@
 #ifndef ARBIE_KNEE_H
 #define ARBIE_KNEE_H
 
-#include "../../../Body/Parts/Joint/Joint.h"
+#include "../../../Body/Parts/Joints/Base_Joint/Base_Joint.h"
+
+using  namespace Body::Parts::Joints;
 
 namespace Body {
     namespace Parts {
 
-        class Knee : public Joint {
+        class Knee : public Base_Joint {
             Knee();
             ~Knee();
 

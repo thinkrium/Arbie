@@ -31,9 +31,17 @@ namespace Body {
                         {Relative_Axes::y, yAxis},
                         {Relative_Axes::z, zAxis}
                 };
+
+                this->setAxes(axes);
             }
 
             Shoulder::Shoulder() {
+//                Axis xAxis, yAxis, zAxis;
+//                this->setAxes({
+//                      {Relative_Axes::x, xAxis}
+//                      ,{Relative_Axes::y, xAxis}
+//                      ,{Relative_Axes::z, xAxis}
+//                });
                 Logger::Success("Shoulder", "Shoulder", Error_Messaging::Object_Initiated_Successfully);
             }
 
@@ -46,9 +54,9 @@ namespace Body {
                             , yAxisServoMotor(getArmPinout().getShoulderYAxisPinNumber(), 0, profile)
                             , zAxisServoMotor(getArmPinout().getShoulderZAxisPinNumber(), 0, profile);
 
-                    this->getAxes()[Relative_Axes::x].setMotor(xAxisServoMotor);
-                    this->getAxes()[Relative_Axes::y].setMotor(yAxisServoMotor);
-                    this->getAxes()[Relative_Axes::z].setMotor(zAxisServoMotor);
+                    this->getAxis( Relative_Axes::x).setMotor(xAxisServoMotor);
+                    this->getAxis( Relative_Axes::y).setMotor(yAxisServoMotor);
+                    this->getAxis( Relative_Axes::z).setMotor(zAxisServoMotor);
 
                     Logger::Success("Shoulder", "setAxisMotor", Error_Messaging::Object_Initiated_Successfully);
 

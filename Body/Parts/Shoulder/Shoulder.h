@@ -21,13 +21,13 @@ namespace Body {
 
             public:
 
-                Shoulder(Arm_Pinout armPinout);
+                explicit Shoulder(Arm_Pinout armPinout);
 
                 Shoulder();
 
                 ~Shoulder() override;
 
-                virtual void setAxisMotor();
+                void setAxisMotor() override;
 
                 //                explicit Shoulder(const map<Relative_Axes, Axis> &axes);
 
