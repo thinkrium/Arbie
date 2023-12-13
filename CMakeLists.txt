@@ -52,6 +52,8 @@ add_executable(Arbie main.cpp
         Body/Parts/Joints/Arm_Joint/Arm_Joint.h
         Brain/Senses/Console_Input/Console_Input.cpp
         Brain/Senses/Console_Input/Console_Input.h
+        Body/Parts/Bones/Bone.cpp
+        Body/Parts/Bones/Bone.h
 )
 
 

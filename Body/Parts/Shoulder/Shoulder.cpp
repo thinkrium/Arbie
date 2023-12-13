@@ -12,8 +12,6 @@ namespace Body {
 
             }
 
-//            Shoulder::Shoulder(const map<Relative_Axes, Axis> &axes) : Arm_Joint(axes) {}
-
             Shoulder::Shoulder(Arm_Pinout armPinout) : Arm_Joint() {
 
                 Servo_Motor_Profile profile;
@@ -36,12 +34,7 @@ namespace Body {
             }
 
             Shoulder::Shoulder() {
-//                Axis xAxis, yAxis, zAxis;
-//                this->setAxes({
-//                      {Relative_Axes::x, xAxis}
-//                      ,{Relative_Axes::y, xAxis}
-//                      ,{Relative_Axes::z, xAxis}
-//                });
+
                 Logger::Success("Shoulder", "Shoulder", Error_Messaging::Object_Initiated_Successfully);
             }
 
@@ -66,6 +59,18 @@ namespace Body {
                 }
 
             }
+
+            void Shoulder::rotateUpperArmSection(Joint_Turning_Instructions xAxisJointTurningInstructions,
+                                                 Joint_Turning_Instructions yAxisJointTurningInstructions,
+                                                 Joint_Turning_Instructions zAxisJointTurningInstructions) {
+
+            }
+
+            void Shoulder::rotateForeArmSection(Joint_Turning_Instructions singleAxisJointTurningInstructions) {
+
+            }
+
+
         }
 
 

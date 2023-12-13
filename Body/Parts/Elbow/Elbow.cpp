@@ -11,8 +11,6 @@ namespace Body {
 
             }
 
-//        Elbow::Elbow(const map<Relative_Axes, Axis> &axes) : Joint(axes) {}
-
             Elbow::Elbow(Arm_Pinout armPinout) {
                 Servo_Motor_Profile profile;
                 Servo_Motor

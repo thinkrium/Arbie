@@ -26,9 +26,8 @@ namespace Brain {
         movement.Start();
 
         Console_Input consoleInput;
-//        consoleInput.Start();
-        thread cI = thread(&Base_Process::Start, consoleInput);
-        cI.join();
+        thread consoleInputThread = thread(&Base_Process::Start, consoleInput);
+        consoleInputThread.join();
     }
 
     void CoreTechs::joinProcess() {

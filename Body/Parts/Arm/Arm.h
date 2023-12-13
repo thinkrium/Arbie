@@ -16,6 +16,7 @@
 #include "../../Parts/Shoulder/Shoulder.h"
 #include "../../Parts/Elbow/Elbow.h"
 #include "../../Parts/Wrist/Wrist.h"
+#include "../../Parts/Bones/Bone.h"
 
 #include "map"
 
@@ -24,6 +25,7 @@ using namespace std;
 using namespace Utilities::Enumerations;
 using namespace Utilities;
 using namespace Body::Parts::Joints;
+using namespace Body::Parts::Bones;
 
 namespace Body {
     namespace Parts {
@@ -38,14 +40,27 @@ namespace Body {
             Shoulder shoulder;
             Elbow elbow;
             Wrist wrist;
-
+            Bone upper_arm_bone;
+            Bone fore_arm_bone;
 
         public:
             Arm();
 
 
+            /**
+             * calls the constructor for the shoulder, elbow and writs using
+             * using the arm pinout constructor for each
+             * @param armPinout
+             */
             Arm(Arm_Pinout armPinout);
 
+            const Bone &getUpperArmBone() const;
+
+            void setUpperArmBone(const Bone &upperArmBone);
+
+            const Bone &getForeArmBone() const;
+
+            void setForeArmBone(const Bone &foreArmBone);
 
             ~Arm() override;
 

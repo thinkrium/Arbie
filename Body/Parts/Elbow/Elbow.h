@@ -18,12 +18,15 @@ namespace Body {
             public:
                 Elbow();
 
+                /**
+                 * Creates a motor profile and an axis and assigns the axis to the elbow
+                 * @param armPinout
+                 */
                 Elbow(Arm_Pinout armPinout);
 
                 ~Elbow() override;
-                void setAxisMotor() ;
 
-//                explicit Elbow(const map<Relative_Axes, Axis> &axes);
+                void setAxisMotor() ;
 
             };
         }

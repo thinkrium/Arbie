@@ -29,6 +29,15 @@ namespace Body {
 
                 void setAxisMotor() override;
 
+                void rotateUpperArmSection(
+                        Joint_Turning_Instructions xAxisJointTurningInstructions,
+                        Joint_Turning_Instructions yAxisJointTurningInstructions,
+                        Joint_Turning_Instructions zAxisJointTurningInstructions
+                        );
+
+                void rotateForeArmSection(
+                        Joint_Turning_Instructions singleAxisJointTurningInstructions
+                        );
                 //                explicit Shoulder(const map<Relative_Axes, Axis> &axes);
 
             };

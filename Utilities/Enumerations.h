@@ -11,7 +11,22 @@ namespace Utilities {
         enum Pin_Number {zero, one, two};
         enum Side_Of_Body {left, right};
         enum Relative_Axes {x, z, y, single};
-        enum Body_Part {upper_arm, fore_arm, elbow, wrist, shoulder, neck, hip, upper_leg, lower_leg, knee, ankle, instep, toes, head};
+        enum Body_Part {
+            upper_arm_bone,
+            fore_arm_bone,
+            elbow,
+            wrist,
+            shoulder,
+            neck,
+            hip,
+            upper_leg_bone,
+            shin_bone,
+            knee,
+            ankle,
+            instep,
+            toes,
+            head
+        };
 
         struct Servo_Motor_Profile {
         public:
@@ -20,6 +35,23 @@ namespace Utilities {
             inline static int maximumPulseWidth = 2500;
             inline static int neutralPulseWidth = 1500;
             inline static int absoluteDegreeRange = 135;
+        };
+
+        // Might move this into its own file
+        // I dont know semantically the best place for it yet
+        class Joint_Turning_Instructions {
+            Rotation_Direction rotation_direction;
+            int degrees_of_rotation;
+        public:
+            Joint_Turning_Instructions(Rotation_Direction rotationDirection, int degreesOfRotation) {
+                this->rotation_direction = rotationDirection;
+                this->degrees_of_rotation = degreesOfRotation;
+            }
+
+            Rotation_Direction getRotationDirection() {return this->rotation_direction;}
+            int getDegreesOfRotation() const {return  this->degrees_of_rotation;}
+
+            ~Joint_Turning_Instructions() = default;
         };
 
     }
