@@ -39,7 +39,8 @@ namespace Utilities {
 
         // Might move this into its own file
         // I dont know semantically the best place for it yet
-        class Joint_Turning_Instructions {
+        class
+        Joint_Turning_Instructions {
             Rotation_Direction rotation_direction;
             int degrees_of_rotation;
         public:
