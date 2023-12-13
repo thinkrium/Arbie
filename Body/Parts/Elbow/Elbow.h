@@ -26,6 +26,10 @@ namespace Body {
 
                 ~Elbow() override;
 
+                void rotate(
+                        Joint_Turning_Instructions singleAxisJointTurningInstructions
+                );
+
                 void setAxisMotor() ;
 
             };

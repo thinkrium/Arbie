@@ -26,8 +26,12 @@ namespace Body {
 
 
 
+            }
+
+            void Elbow::rotate(Joint_Turning_Instructions singleAxisJointTurningInstructions) {
 
             }
+
 
             Elbow::Elbow() {}
 

@@ -60,15 +60,27 @@ namespace Body {
 
             }
 
-            void Shoulder::rotateUpperArmSection(Joint_Turning_Instructions xAxisJointTurningInstructions,
-                                                 Joint_Turning_Instructions yAxisJointTurningInstructions,
-                                                 Joint_Turning_Instructions zAxisJointTurningInstructions) {
+            void Shoulder::rotate(Joint_Turning_Instructions xAxisJointTurningInstructions,
+                                  Joint_Turning_Instructions yAxisJointTurningInstructions,
+                                  Joint_Turning_Instructions zAxisJointTurningInstructions) {
+
+                this->getAxis(Relative_Axes::x).turnMotor(
+                        xAxisJointTurningInstructions.getRotationDirection(),
+                        xAxisJointTurningInstructions.getDegreesOfRotation()
+                        );
+
+                this->getAxis(Relative_Axes::y).turnMotor(
+                        yAxisJointTurningInstructions.getRotationDirection(),
+                        yAxisJointTurningInstructions.getDegreesOfRotation()
+                );
+
+                this->getAxis(Relative_Axes::z).turnMotor(
+                        zAxisJointTurningInstructions.getRotationDirection(),
+                        zAxisJointTurningInstructions.getDegreesOfRotation()
+                );
 
             }
 
-            void Shoulder::rotateForeArmSection(Joint_Turning_Instructions singleAxisJointTurningInstructions) {
-
-            }
 
 
         }
