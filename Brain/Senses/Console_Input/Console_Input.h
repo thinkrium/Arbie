@@ -16,15 +16,11 @@ namespace Brain {
     namespace Senses {
 
         class Console_Input : public Base_Process {
-        public:
-            Console_Input();
-
-            ~Console_Input() override;
-
-            void Start() override;
         private:
             int axis;
             int deg;
+            bool consoleInputComplete;
+
         public:
             int getAxis() const;
 
@@ -33,6 +29,16 @@ namespace Brain {
             int getDeg() const;
 
             void setDeg(int deg);
+
+            bool isConsoleInputComplete() const;
+
+            void setConsoleInputComplete(bool consoleInputComplete);
+
+            Console_Input();
+
+            ~Console_Input() override;
+
+            void Start() override;
 
         };
 

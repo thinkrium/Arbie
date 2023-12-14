@@ -15,11 +15,24 @@ namespace Brain {
         void Movement::Start() {
             try {
 
+                bool shouldMove = true;
+
                 Shoulder rightShoulder = this->whole_body.getArmBySideOfBody(Side_Of_Body::right).getShoulder();
 
+                int degrees = NULL;
+                int axis = NULL;
 
-                rightShoulder.getAxis(Relative_Axes::x).turnMotor(Rotation_Direction::Clockwise, 30);
+                while (!this->getConsoleInput().isConsoleInputComplete()) {
+                    if(axis == NULL || axis != this->getConsoleInput().getAxis()) {
 
+                        if (degrees == NULL || degrees != this->getConsoleInput().getDeg()) {
+                            degrees = this->getConsoleInput().getDeg();
+                            rightShoulder.getAxis(Relative_Axes::x).turnMotor(Rotation_Direction::Clockwise, 30);
+                        }
+                    }
+
+
+                }
                 Logger::Success("Brain::Activity", "Run", Error_Messaging::No_Error);
             }
             catch (exception e) {
@@ -65,6 +78,18 @@ namespace Brain {
 
         void Movement::moveElbowBySide(Side_Of_Body sideOfBody, map<Relative_Axes, int> degreesByAxis) {
 
+        }
+
+        const Brain::Senses::Console_Input &Movement::getConsoleInput() const {
+            return consoleInput;
+        }
+
+        void Movement::setConsoleInput(const Brain::Senses::Console_Input &consoleInput) {
+            Movement::consoleInput = consoleInput;
+        }
+
+        void Movement::setInputProcessMap(Brain::Senses::Console_Input consoleInput) {
+             this->setConsoleInput(consoleInput);
         }
 
     } // Brain

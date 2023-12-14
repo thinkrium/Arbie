@@ -11,6 +11,7 @@ namespace Utilities {
         enum Pin_Number {zero, one, two};
         enum Side_Of_Body {left, right};
         enum Relative_Axes {x, z, y, single};
+        enum Processes {Movement, Console_Input};
         enum Body_Part {
             upper_arm_bone,
             fore_arm_bone,
