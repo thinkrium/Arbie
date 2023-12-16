@@ -24,13 +24,12 @@ namespace Brain {
 
 
         Brain::Senses::Console_Input consoleInput;
-        thread consoleInputThread = thread(&Base_Process::Start, consoleInput);
+        thread consoleInputThread = thread(&Base_Process::Start, std::ref(consoleInput));
 
-        Brain::Processes::Movement   movement;
+        Brain::Processes::Movement movement(consoleInput );
 
 
-        movement.setInputProcessMap(consoleInput);
-        movement.Start();
+         movement.Start();
 
         consoleInputThread.join();
     }

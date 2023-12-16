@@ -31,12 +31,12 @@ namespace Brain {
         class Movement : public Base_Process {
 
         private:
-            Brain::Senses::Console_Input consoleInput;
+            Brain::Senses::Console_Input &consoleInput;
         public:
             const map<Utilities::Enumerations::Processes, Base_Process> &getInputProcessMap() const;
 
             // TODO: set this argument to a map it should not be so tightly coupled
-            void setInputProcessMap(Brain::Senses::Console_Input consoleInput);
+            void setInputProcessMap(Brain::Senses::Console_Input &consoleInput);
 
             const Brain::Senses::Console_Input &getConsoleInput() const;
 
@@ -45,7 +45,7 @@ namespace Brain {
         private:
             Whole_Body whole_body;
         public:
-            Movement();
+            Movement(Senses::Console_Input & consoleInput);
 
             const Whole_Body &getWholeBody() const;
 

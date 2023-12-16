@@ -46,7 +46,9 @@ namespace Brain {
 
         }
 
-        Movement::Movement() {}
+        Movement::Movement(Senses::Console_Input &consoleInput) : consoleInput(consoleInput) {
+            this->consoleInput = consoleInput;
+        }
 
         void Movement::moveBodyPartBySide(Body_Part bodyPart, Side_Of_Body sideOfBody,
                                           map<Relative_Axes, int> degreesByAxis) {
@@ -81,14 +83,14 @@ namespace Brain {
         }
 
         const Brain::Senses::Console_Input &Movement::getConsoleInput() const {
-            return consoleInput;
+            return this->consoleInput;
         }
 
         void Movement::setConsoleInput(const Brain::Senses::Console_Input &consoleInput) {
-            Movement::consoleInput = consoleInput;
+            this->consoleInput = consoleInput;
         }
 
-        void Movement::setInputProcessMap(Brain::Senses::Console_Input consoleInput) {
+        void Movement::setInputProcessMap(Brain::Senses::Console_Input &consoleInput) {
              this->setConsoleInput(consoleInput);
         }
 
