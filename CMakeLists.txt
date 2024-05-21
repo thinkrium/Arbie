@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_definitions(-I/usr/include -L/usr/lib )
 
+add_compile_definitions(FromRobot)
+
 add_executable(Arbie main.cpp
         Body/Motors/Base/Base_Motor.cpp
         Body/Motors/Base/Base_Motor.h
@@ -56,8 +58,13 @@ add_executable(Arbie main.cpp
         Body/Parts/Bones/Bone.h
 )
 
-
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
-target_link_libraries(Arbie PRIVATE Threads::Threads)
+#
+set(OpenCV_DIR  C:/Development/Libraries/opencv/build)
+find_package(OpenCV REQUIRED)
+
+
+target_link_libraries(Arbie PRIVATE Threads::Threads ${OpenCV_LIBS})
+
 
