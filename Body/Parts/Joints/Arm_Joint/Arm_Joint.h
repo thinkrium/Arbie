@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/4/2023.
 //
-
 #ifndef ARBIE_ARM_JOINT_H
+
 #define ARBIE_ARM_JOINT_H
 
 #include "../Base_Joint/Base_Joint.h"
@@ -40,3 +41,4 @@ namespace Body {
 } // Joints
 
 #endif //ARBIE_ARM_JOINT_H
+#endif

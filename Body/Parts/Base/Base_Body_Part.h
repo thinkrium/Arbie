@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 11/27/2023.
 //
-
 #ifndef ARBIE_BASE_BODY_PART_H
+
 #define ARBIE_BASE_BODY_PART_H
 #include "iostream"
 #include "../../../Utilities/Enumerations.h"
@@ -55,3 +56,4 @@ namespace Body {
 } // Parts
 
 #endif //ARBIE_BASE_BODY_PART_H
+#endif

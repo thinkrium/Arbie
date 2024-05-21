@@ -1,13 +1,13 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 11/9/2023.
 //
-
 #include <unistd.h>
+
 #include "Servo_Motor.h"
 #include "../Base/Base_Motor.h"
 #include "../../Libraries/PCA9685/PCA9685.h"
 #include "../../../Utilities/Logger/Logger.h"
-
 using namespace Utilities;
 
 Motors::Servo_Motor::Servo_Motor() {}
@@ -79,7 +79,6 @@ Motors::Servo_Motor::~Servo_Motor() {
 
 }
 
-
 /**
  * The
  * @param degrees
@@ -98,6 +97,7 @@ int Motors::Servo_Motor::convertDegreesToPulseWidth(int degrees) {
     }
     return -1;
 }
+
 
 /**
  * The definition of pulse width is % of on time / frequency
@@ -142,7 +142,6 @@ int Motors::Servo_Motor::getMinimumPulseWidth() const {
     return minimum_pulse_width;
 }
 
-
 Motors::Servo_Motor::Servo_Motor(int pinNumber, int degreeOfRotation, int absoluteRangeOfDegrees, int minimumPulseWidth, int maximumPulseWidth,
                                  int motorFrequency) : Base_Motor(pinNumber) {
     try {
@@ -170,6 +169,7 @@ Motors::Servo_Motor::Servo_Motor(int pinNumber, int degreeOfRotation, int absolu
        Logger::Error("Servo_Motor" , "Servo_Motor", Error_Messaging::Servo_Motor_General_Failure);
     }
 }
+
 
 void Motors::Servo_Motor::setMinimumPulseWidth(int minimumPulseWidth) {
     minimum_pulse_width = minimumPulseWidth;
@@ -208,6 +208,8 @@ void Motors::Servo_Motor::setNeutralPulseWidth(int neutralPulseWidth) {
 int Motors::Servo_Motor::determineNeutralPulseWidth(int maximumPulseWidth, int minimumPulseWidth) {
     return ((maximumPulseWidth - minimumPulseWidth) / 2) + minimumPulseWidth;
 }
+
+#endif
 
 
 

@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 11/28/2023.
 //
-
 #ifndef ARBIE_SHOULDER_H
+
 #define ARBIE_SHOULDER_H
 
 #include "../Joints/Arm_Joint/Arm_Joint.h"
@@ -43,3 +44,4 @@ namespace Body {
 } // Parts
 
 #endif //ARBIE_SHOULDER_H
+#endif

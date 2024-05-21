@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/13/2023.
 //
-
 #ifndef ARBIE_BONE_H
+
 #define ARBIE_BONE_H
 
 #include "../../Parts/Base/Base_Body_Part.h"
@@ -35,3 +36,4 @@ namespace Body {
 } // Bones
 
 #endif //ARBIE_BONE_H
+#endif

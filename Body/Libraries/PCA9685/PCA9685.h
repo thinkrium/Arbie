@@ -1,3 +1,4 @@
+#ifndef _WINDOWS
 /*
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,8 +22,8 @@
  *
  * Copyright © 2012 Georgi Todorov  <terahz@geodar.com>
  */
-
 #ifndef _PCA9685_H
+
 #define _PCA9685_H
 #include <inttypes.h>
 
@@ -69,6 +70,7 @@ private:
 
 
 };
+#endif
 #endif
 
 

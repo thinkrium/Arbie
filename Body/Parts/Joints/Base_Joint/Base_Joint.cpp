@@ -1,18 +1,16 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/4/2023.
 //
-
 #include "Base_Joint.h"
 
 #include "../../../../Utilities/Logger/Logger.h"
+
 #include "../../../../Utilities/Error_Messaging.h"
 #include "../../../../Utilities/Enumerations.h"
-
 using namespace Utilities;
+
 using namespace Utilities::Enumerations;
-
-
-
 namespace Body {
     namespace Parts {
         namespace Joints {
@@ -73,3 +71,7 @@ namespace Body {
         } // Body
     } // Parts
 } // Joints
+
+
+
+#endif

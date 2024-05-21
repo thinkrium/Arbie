@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/1/2023.
 //
-
 #ifndef ARBIE_KNEE_H
+
 #define ARBIE_KNEE_H
 
 #include "../../../Body/Parts/Joints/Base_Joint/Base_Joint.h"
@@ -22,3 +23,4 @@ namespace Body {
 } // Parts
 
 #endif //ARBIE_KNEE_H
+#endif

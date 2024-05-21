@@ -1,7 +1,7 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/13/2023.
 //
-
 #include "Bone.h"
 
 namespace Body {
@@ -25,3 +25,5 @@ namespace Body {
         } // Body
     } // Parts
 } // Bones
+
+#endif

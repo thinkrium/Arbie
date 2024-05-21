@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/1/2023.
 //
-
 #ifndef ARBIE_WHOLE_BODY_H
+
 #define ARBIE_WHOLE_BODY_H
 
 #include "../../Body/Parts/Arm/Arm.h"
@@ -51,3 +52,4 @@ namespace Body {
 } // Body
 
 #endif //ARBIE_WHOLE_BODY_H
+#endif

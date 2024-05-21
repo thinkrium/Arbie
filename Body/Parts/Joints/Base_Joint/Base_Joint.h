@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/4/2023.
 //
-
 #ifndef ARBIE_BASE_JOINT_H
+
 #define ARBIE_BASE_JOINT_H
 
 #include "../../Base/Base_Body_Part.h"
@@ -75,3 +76,4 @@ namespace Body {
 } // Joints
 
 #endif //ARBIE_BASE_JOINT_H
+#endif

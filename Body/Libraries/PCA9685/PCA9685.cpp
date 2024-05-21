@@ -1,3 +1,4 @@
+#ifndef _WINDOWS
 /*
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,8 +22,8 @@
  *
  * Copyright © 2012 Georgi Todorov  <terahz@geodar.com>
  */
-
 #include <sys/stat.h>
+
 #include <sys/ioctl.h>
 #include <unistd.h>
 #include <linux/i2c-dev.h>
@@ -35,10 +36,10 @@
 #include <stdio.h>
 #include <unistd.h>
 //
-
 #include "PCA9685.h"
 
 //! Constructor takes bus and address arguments
+
 /*!
  \param bus the bus to use in /dev/i2c-%d.
  \param address the device address on bus
@@ -51,7 +52,6 @@ void PCA9685::init(int bus, int address) {
 	reset();
 	//usleep(10*1000);
 }
-
 PCA9685::PCA9685() {
 
 }
@@ -59,6 +59,7 @@ PCA9685::PCA9685() {
 PCA9685::~PCA9685() {
 	reset();
 }
+
 //! Sets PCA9685 mode to 00
 void PCA9685::reset() {
 	int fd = openfd();
@@ -66,7 +67,7 @@ void PCA9685::reset() {
 		write_byte(fd, MODE1, 0x00); //Normal mode
 		write_byte(fd, MODE2, 0x04); //Normal mode
 		close(fd);
-	} 
+	}
 }
 //! Set the frequency of PWM
 /*!
@@ -90,8 +91,8 @@ void PCA9685::setPWMFreq(int freq) {
 		close(fd);
 	}
 }
-
 //! PWM a single channel
+
 /*!
  \param led channel to set PWM value for
  \param value 0-4095 value for PWM
@@ -108,21 +109,21 @@ void PCA9685::setPWM(uint8_t led, int value) {
 void PCA9685::setPWM(uint8_t led, int on_value, int off_value) {
 	int fd = openfd();
 	if (fd != -1) {
-		
+
 		write_byte(fd, LED0_ON_L + LED_MULTIPLYER * led, on_value & 0xFF);
-		
+
 		write_byte(fd, LED0_ON_H + LED_MULTIPLYER * led, on_value >> 8);
-				
+
 		write_byte(fd, LED0_OFF_L + LED_MULTIPLYER * led, off_value & 0xFF);
-		
+
 		write_byte(fd, LED0_OFF_H + LED_MULTIPLYER * led, off_value >> 8);
-		
+
 		close(fd);
-	} 
+	}
 
 }
-
 //! Read a single byte from PCA9685
+
 /*!
  \param fd file descriptor for I/O
  \param address register address to read from
@@ -142,7 +143,7 @@ uint8_t PCA9685::read_byte(int fd, uint8_t address) {
 			return (-1);
 		}
 	}
-	
+
 
 }
 //! Write a single byte from PCA9685
@@ -179,4 +180,5 @@ int PCA9685::openfd() {
 
 	return fd;
 }
+#endif
 

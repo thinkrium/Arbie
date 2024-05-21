@@ -1,7 +1,7 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/2/2023.
 //
-
 #include "Wrist.h"
 
 namespace Body {
@@ -55,3 +55,5 @@ namespace Body {
         }
     } // Body
 } // Parts
+
+#endif

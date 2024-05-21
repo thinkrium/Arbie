@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 11/9/2023.
 //
-
 #ifndef ARBIE_SERVO_MOTOR_H
+
 #define ARBIE_SERVO_MOTOR_H
 
 #include "../Base/Base_Motor.h"
@@ -89,3 +90,4 @@ namespace Motors {
 }
 
 #endif //ARBIE_SERVO_MOTOR_H
+#endif

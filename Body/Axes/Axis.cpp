@@ -1,7 +1,7 @@
 //
 // Created by thome on 11/28/2023.
 //
-
+#ifndef _WINDOWS
 #include "Axis.h"
 #include "../../Utilities/Enumerations.h"
 #include "../Motors/Servo/Servo_Motor.h"
@@ -62,3 +62,4 @@ namespace Body {
         }
     } // Body
 } // Axes
+#endif

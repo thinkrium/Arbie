@@ -23,15 +23,17 @@ namespace Brain {
     void CoreTechs::process() {
 
 
-        Brain::Senses::Console_Input consoleInput;
-        thread consoleInputThread = thread(&Base_Process::Start, std::ref(consoleInput));
+//        Brain::Senses::Console_Input consoleInput;
+//        thread consoleInputThread = thread(&Base_Process::Start, std::ref(consoleInput));
+
+#ifndef _WINDOWS
 
         Brain::Processes::Movement movement(consoleInput );
 
 
-         movement.Start();
-
-        consoleInputThread.join();
+        movement.Start();
+#endif
+//        consoleInputThread.join();
     }
 
     void CoreTechs::joinProcess() {

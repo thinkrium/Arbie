@@ -1,7 +1,7 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 12/4/2023.
 //
-
 #include "Arm_Joint.h"
 
 namespace Body {
@@ -29,3 +29,5 @@ namespace Body {
         } // Body
     } // Parts
 } // Joints
+
+#endif

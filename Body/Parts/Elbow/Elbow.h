@@ -1,8 +1,9 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 11/30/2023.
 //
-
 #ifndef ARBIE_ELBOW_H
+
 #define ARBIE_ELBOW_H
 
 #include "../Joints/Arm_Joint/Arm_Joint.h"
@@ -39,3 +40,4 @@ namespace Body {
 
 
 #endif //ARBIE_ELBOW_H
+#endif

@@ -1,7 +1,7 @@
+#ifndef _WINDOWS
 //
 // Created by thome on 11/28/2023.
 //
-
 #include "Shoulder.h"
 
 namespace Body {
@@ -88,3 +88,5 @@ namespace Body {
 
     } // Body
 } // Parts
+
+#endif

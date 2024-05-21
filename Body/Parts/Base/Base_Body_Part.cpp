@@ -1,7 +1,7 @@
- //
+#ifndef _WINDOWS
+//
 // Created by thome on 11/27/2023.
 //
-
 #include "Base_Body_Part.h"
 
 namespace Body {
@@ -50,3 +50,5 @@ namespace Body {
 
     } // Body
 } // Parts
+
+#endif
