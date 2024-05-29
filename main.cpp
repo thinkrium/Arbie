@@ -11,7 +11,7 @@ using namespace Brain::Activity;
 
 int main() {
 
-//     string protoFile = "C:\\Development\\Robotics\\Assets\\pose_deploy_linevec_faster_4_stages.prototxt";
+ //     string protoFile = "C:\\Development\\Robotics\\Assets\\pose_deploy_linevec_faster_4_stages.prototxt";
 //     string weightsFile = "C:\\Development\\Robotics\\Assets\\pose_iter_160000.caffemodel";
 
 //     cv::VideoCapture cap(0);
