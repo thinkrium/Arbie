@@ -171,7 +171,6 @@ if __name__ == '__main__':
                         body_language_prob = model.predict_proba(X)[0]
 
 
-
                         if(  round(body_language_prob[np.argmax(body_language_prob)], 2) > .75):
                             cv2.rectangle(image, (0, 0), (250, 60), (245, 117, 16), -1)
 
