@@ -68,7 +68,7 @@ namespace Arbie {
 
                 if (bytesReceived == 0)
                 {
-                    cout << "Client disconnected " << endl;
+                    cout << "Client disconnected; Good bye! " << endl;
                     break;
                 }
 

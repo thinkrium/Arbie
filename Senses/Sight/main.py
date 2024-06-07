@@ -20,9 +20,9 @@ import pickle
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(socket.gethostname(),  1234 )
-s.listen(5)
-clientSocket, address = s.accept()
+#s.bind(socket.gethostname(),  51234 )
+s.connect((socket.gethostname(),  54000 ))
+#clientSocket, address = s.accept()
 
 mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic
@@ -197,8 +197,8 @@ if __name__ == '__main__':
 
                             if(messageToSend != body_language_class.split(' ')[0]):
                                 messageToSend = body_language_class.split(' ')[0]
-                                clientSocket.send(bytes(messageToSend))
-###############################################################################################
+                                s.sendall(str(messageToSend).encode())
+  ###############################################################################################
             except Exception  as e:
                 print(e)
 
