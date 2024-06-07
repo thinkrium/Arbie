@@ -17,6 +17,13 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import accuracy_score # Accuracy metrics
 import pickle
 
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(socket.gethostname(),  1234 )
+s.listen(5)
+clientSocket, address = s.accept()
+
 mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic
 
@@ -36,6 +43,8 @@ if __name__ == '__main__':
         teaching = False
         training = False
         new_model = False
+
+        messageToSend = ''
 
         global row
         while cap.isOpened():
@@ -186,6 +195,9 @@ if __name__ == '__main__':
                             cv2.putText(image, str(round(body_language_prob[np.argmax(body_language_prob)], 2))
                                         , (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
 
+                            if(messageToSend != body_language_class.split(' ')[0]):
+                                messageToSend = body_language_class.split(' ')[0]
+                                clientSocket.send(bytes(messageToSend))
 ###############################################################################################
             except Exception  as e:
                 print(e)
