@@ -20,10 +20,13 @@ import pickle
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#s.bind(socket.gethostname(),  51234 )
-s.connect((socket.gethostname(),  54000 ))
-#clientSocket, address = s.accept()
 
+try:
+    #s.bind(socket.gethostname(),  51234 )
+    s.connect((socket.gethostname(),  54000 ))
+    #clientSocket, address = s.accept()
+except:
+    pass
 mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic
 
@@ -39,10 +42,11 @@ if __name__ == '__main__':
     # Initiate holistic model
     with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
 
-        class_name = "Greeting"
+        class_name = "Sad"
         teaching = False
         training = False
         new_model = False
+        drawOnImage = False
 
         messageToSend = ''
 
@@ -64,7 +68,7 @@ if __name__ == '__main__':
             image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
              #drawing utilities
 
-            if (teaching):
+            if (drawOnImage):
                 #
                 # 1. Draw face landmarks
                 mp_drawing.draw_landmarks(image, results.face_landmarks, mp_holistic.FACEMESH_CONTOURS,
