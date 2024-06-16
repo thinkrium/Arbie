@@ -38,14 +38,18 @@ mp_holistic = mp.solutions.holistic
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("http://192.168.1.2:4747/video")
+
     # Initiate holistic model
     with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
 
-        class_name = "Sad"
-        teaching = False
+        class_name = "Happy"
+        # tea/ching = True
         training = False
-        new_model = False
+        teaching = False
+        # training = True
+        # new_model = False
+        # drawOnImage = True
         drawOnImage = False
 
         messageToSend = ''
