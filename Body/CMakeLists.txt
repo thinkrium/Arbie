@@ -7,4 +7,6 @@ add_executable(Body main.cpp
         NervousSystem/NervousSystem.cpp
         NervousSystem/NervousSystem.h
         Parts/Joints/Base/BaseJoint.cpp
-        Parts/Joints/Base/BaseJoint.h)
+        Parts/Joints/Base/BaseJoint.h
+        Movement/Motors/Base/BaseMotor.cpp
+        Movement/Motors/Base/BaseMotor.h)
