@@ -35,7 +35,7 @@ public:
     BaseMotor() = default;
 
     int initiateControllerConnection();
-    int sendControllerInstructions(int speedPercentage, int destination);
+    int sendControllerInstructions(int speedPercentage, int destinationAngle, int rotationalDirection);
     int closeControllerConnection();
 
     ~BaseMotor() = default;

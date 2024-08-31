@@ -24,11 +24,16 @@ namespace Motors {
         }
     }
 
-    int BaseMotor::sendControllerInstructions(int speedPercentage, int destination) {
+    int BaseMotor::sendControllerInstructions(int speedPercentage, int destinationAngle, int rotationalDirection) {
         this->canFrame.can_id = 0x123;
         this->canFrame.can_dlc = 3;
         this->canFrame.data[0] = speedPercentage;
-        this->canFrame.data[1] = destination;
+        this->canFrame.data[1] = destinationAngle;
+        this->canFrame.data[2] = rotationalDirection;
+
+        if(write(this->s, &this->canFrame, sizeof( this->canFrame)) != sizeof(  this->canFrame)) {
+
+        }
 
     }
 
