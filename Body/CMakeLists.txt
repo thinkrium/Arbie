@@ -9,4 +9,5 @@ add_executable(Body main.cpp
         Parts/Joints/Base/BaseJoint.cpp
         Parts/Joints/Base/BaseJoint.h
         Movement/Motors/Base/BaseMotor.cpp
-        Movement/Motors/Base/BaseMotor.h)
+        Movement/Motors/Base/BaseMotor.h
+        ../Common/MotorIDs.h)
