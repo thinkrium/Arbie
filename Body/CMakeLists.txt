@@ -10,4 +10,7 @@ add_executable(Body main.cpp
         Parts/Joints/Base/BaseJoint.h
         Movement/Motors/Base/BaseMotor.cpp
         Movement/Motors/Base/BaseMotor.h
-        ../Common/MotorIDs.h)
+        ../Common/MotorIDs.h
+        Movement/Motors/Stepper/StepperMotor.cpp
+        Movement/Motors/Stepper/StepperMotor.h
+        ../Common/ErrorCodes.h)
