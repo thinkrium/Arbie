@@ -27,6 +27,8 @@ namespace Motors {
         if (bind(this->socketID, (struct sockaddr *) &this->canSocket, sizeof(canSocket)) < 0) {
             return -1;
         }
+
+        return 0;
     }
 
     int BaseMotor::send_controller_instructions(int speedPercentage, int destinationAngle, int rotationalDirection) {
@@ -39,11 +41,12 @@ namespace Motors {
         if(write(this->socketID, &this->canFrame, sizeof( this->canFrame)) != sizeof(  this->canFrame)) {
 
         }
-
+        return 0;
     }
 
     int BaseMotor::close_controller_connection() {
         close(this->socketID);
+        return 0;
     }
 
 
