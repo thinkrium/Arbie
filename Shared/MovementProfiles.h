@@ -14,8 +14,11 @@
 using namespace std;
 namespace Shared {
     namespace Profiles {
-        static struct  MovementProfiles {
+        class MovementProfiles {
         public:
+            MovementProfiles() = default;
+
+            ~MovementProfiles() = default;
 
             class IndividualAxisMovement {
             public:

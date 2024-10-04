@@ -11,8 +11,9 @@ using namespace Movement::Motors;
 using namespace Shared::Profiles;
 
 int main() {
-    // float a = MovementProfiles::ForwardMovement.move.at( MovementProfiles::MovementStages::stage1)
-    //         .relative_joint_movement.at(BodyPart.LeftKnee);
+
+    MovementProfiles profiles;
+     profiles.ForwardMovement.move.at( "MovementProfiles ").relative_joint_movement.at("tests").;
 
     StepperMotor stepper_motor;
     stepper_motor.set_motor_id(0x001);
