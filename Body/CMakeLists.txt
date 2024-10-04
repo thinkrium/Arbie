@@ -12,4 +12,7 @@ add_executable(Body main.cpp
         Movement/Motors/Base/BaseMotor.h
         Movement/Motors/Stepper/StepperMotor.cpp
         Movement/Motors/Stepper/StepperMotor.h
+        ../Shared/MovementProfiles.h
+        ../Shared/BodyPartProfiles.h
+        ../Shared/MotorAxis.h
 )
