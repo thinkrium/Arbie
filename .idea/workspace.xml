@@ -28,7 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added tf libs" />
+    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added tf libs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +131,7 @@
       <updated>1746825914866</updated>
       <workItem from="1746825916162" duration="5643000" />
       <workItem from="1746847666813" duration="4773000" />
-      <workItem from="1746926225701" duration="900000" />
+      <workItem from="1746926225701" duration="1894000" />
     </task>
     <task id="LOCAL-00001" summary="starting sight added base sense">
       <option name="closed" value="true" />
@@ -203,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746926607985</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added tf libs">
+      <option name="closed" value="true" />
+      <created>1746927755864</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746927755864</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
