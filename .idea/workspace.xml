@@ -29,14 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added tf libs">
-      <change afterPath="$PROJECT_DIR$/Libraries/tensorflow_prebuilt/lib/libtensorflowlite.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Sight/removable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/tflite.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/tflite.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +97,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "StartingSenses",
-    "last_opened_file_path": "/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/CMakeLists.txt",
+    "last_opened_file_path": "/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,9 +109,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Senses/Sight" />
       <recent name="$PROJECT_DIR$/Libraries/tensorflow_prebuilt/lib" />
       <recent name="$PROJECT_DIR$/Libraries" />
-      <recent name="$PROJECT_DIR$/Senses/Sight" />
       <recent name="$PROJECT_DIR$/Senses/Sight/Assets/TFliteModel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -164,7 +158,7 @@
       <workItem from="1746825916162" duration="5643000" />
       <workItem from="1746847666813" duration="4773000" />
       <workItem from="1746926225701" duration="5476000" />
-      <workItem from="1746973174882" duration="5621000" />
+      <workItem from="1746973174882" duration="6655000" />
     </task>
     <task id="LOCAL-00001" summary="starting sight added base sense">
       <option name="closed" value="true" />
@@ -270,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746929821636</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added tf libs">
+      <option name="closed" value="true" />
+      <created>1746979785549</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746979785549</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,9 +303,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="starting sight added base sense" />
-    <MESSAGE value="added tf libs" />
     <MESSAGE value="test&#10;&#10;lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="test&#10;&#10;lib" />
+    <MESSAGE value="added tf libs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tf libs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
