@@ -17,7 +17,19 @@ namespace Tensorflow {
 namespace Pipeline {
 
 class Pipe {
+
+public:
+    [[nodiscard]] const char * get_model_path() const;
+
+    void set_model_path(const char *model_path);
+
+private:
+
+    const char* model_path;
+
     Pipe() = default;
+
+    void PreparePipeLine();
 
     ~Pipe() = default;
 };
