@@ -20,6 +20,18 @@ namespace Pipeline {
         this->model_path = model_path;
     }
 
+    void Pipe::preprocess_pipeline() {
+        ;
+    }
+
+    int Pipe::get_number_of_detections() const {
+        return number_of_detections;
+    }
+
+    void Pipe::set_number_of_detections(int number_of_detections) {
+        this->number_of_detections = number_of_detections;
+    }
+
     void Pipe::PreparePipeLineInterpreter() {
 
 

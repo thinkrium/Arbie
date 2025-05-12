@@ -39,6 +39,7 @@ public:
 
     void set_model_path(const char *model_path);
 
+    void preprocess_pipeline();
 
     ~Pipe() = default;
 
@@ -49,6 +50,12 @@ private:
 
     const char* model_path;
 
+    int number_of_detections;
+
+public:
+    [[nodiscard]] int get_number_of_detections() const;
+
+    void set_number_of_detections(int number_of_detections);
 };
 
 } // Pipeline
