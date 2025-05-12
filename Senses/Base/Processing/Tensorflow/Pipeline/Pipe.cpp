@@ -44,8 +44,13 @@ namespace Pipeline {
         this->interpreter = std::move(interpreter);
     }
 
-    float * Pipe::get_input_data(int input_tensor_index){
+    float * Pipe::get_input_tensor_data(int input_tensor_index){
         return this->get_interpreter()->input_tensor(input_tensor_index)->data.f;
+
+    };
+
+    float * Pipe::get_output_tensor_data(int output_tensor_index){
+        return this->get_interpreter()->input_tensor(output_tensor_index)->data.f;
 
     };
 } // Pipeline

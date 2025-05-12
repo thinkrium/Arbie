@@ -31,7 +31,9 @@ public:
 
     void set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter);
 
-    float * get_input_data(int input_tensor_index);
+    float * get_input_tensor_data(int input_tensor_index);
+
+    float * get_output_tensor_data(int output_tensor_index);
 
     [[nodiscard]] const char * get_model_path() const;
 
