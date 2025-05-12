@@ -8,7 +8,7 @@
 #ifndef PIPE_H
 #define PIPE_H
 
-namespace Arbe {
+namespace Arbie {
 namespace Senses {
 namespace Sight {
 namespace Base {
@@ -18,20 +18,35 @@ namespace Pipeline {
 
 class Pipe {
 
+
+
 public:
+
+
+    Pipe() = default;
+
+    void PreparePipeLineInterpreter();
+
+    std::unique_ptr<tflite::Interpreter>& get_interpreter();
+
+    void set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter);
+
+    float * get_input_data(int input_tensor_index);
+
     [[nodiscard]] const char * get_model_path() const;
 
     void set_model_path(const char *model_path);
 
+
+    ~Pipe() = default;
+
 private:
+
+    std::unique_ptr<tflite::Interpreter> interpreter;
+
 
     const char* model_path;
 
-    Pipe() = default;
-
-    void PreparePipeLine();
-
-    ~Pipe() = default;
 };
 
 } // Pipeline
