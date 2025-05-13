@@ -35,6 +35,10 @@ public:
 
     float * get_output_tensor_data(int output_tensor_index);
 
+    TfLiteTensor * get_input_tensor(int input_tensor_index);
+
+    TfLiteTensor * get_output_tensor(int output_tensor_index);
+
     [[nodiscard]] const char * get_model_path() const;
 
     void set_model_path(const char *model_path);

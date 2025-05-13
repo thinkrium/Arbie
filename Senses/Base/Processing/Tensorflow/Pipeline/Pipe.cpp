@@ -65,6 +65,19 @@ namespace Pipeline {
         return this->get_interpreter()->input_tensor(output_tensor_index)->data.f;
 
     };
+
+    TfLiteTensor * Pipe::get_input_tensor(int input_tensor_index){
+        return this->get_interpreter()->input_tensor(input_tensor_index);
+
+    };
+
+    TfLiteTensor * Pipe::get_output_tensor(int output_tensor_index){
+        return this->get_interpreter()->input_tensor(output_tensor_index);
+
+    };
+
+
+
 } // Pipeline
 } // Tensorflow
 } // Processing
