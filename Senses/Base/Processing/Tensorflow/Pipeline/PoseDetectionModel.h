@@ -4,6 +4,7 @@
 
 #ifndef POSEDETECTIONMODEL_H
 #define POSEDETECTIONMODEL_H
+#include "Model.h"
 
 namespace Arbie {
 namespace Senses {
@@ -13,8 +14,17 @@ namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
 
-class PoseDetectionModel {
+class PoseDetectionModel : public Model {
+public:
+    void Preprocess() override;
 
+    void Process() override;
+
+    void Postprocess() override;
+
+    PoseDetectionModel() = default;
+
+    ~PoseDetectionModel() = default;
 };
 
 } // Pipeline

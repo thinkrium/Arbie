@@ -14,7 +14,7 @@ namespace Tensorflow {
     namespace Pipeline {
         class Model {
         public:
-            virtual ~Model() = default;
+              ~Model() = default;
 
 
             virtual void Preprocess() = 0;

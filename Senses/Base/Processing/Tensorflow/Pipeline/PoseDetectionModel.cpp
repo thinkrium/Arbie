@@ -11,6 +11,14 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+    void PoseDetectionModel::Preprocess() {
+    }
+
+    void PoseDetectionModel::Process() {
+    }
+
+    void PoseDetectionModel::Postprocess() {
+    }
 } // Pipeline
 } // Tensorflow
 } // Processing
