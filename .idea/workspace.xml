@@ -29,9 +29,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="removed removable">
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +109,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "StartingSenses",
-    "last_opened_file_path": "/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight",
+    "last_opened_file_path": "/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,12 +121,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline" />
       <recent name="$PROJECT_DIR$/Senses/Sight" />
       <recent name="$PROJECT_DIR$/Libraries/tensorflow_prebuilt/lib" />
       <recent name="$PROJECT_DIR$/Libraries" />
       <recent name="$PROJECT_DIR$/Senses/Sight/Assets/TFliteModel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline" />
       <recent name="$PROJECT_DIR$/Senses/Sight" />
       <recent name="$PROJECT_DIR$/Senses/Base/Sense" />
       <recent name="$PROJECT_DIR$/Senses/Base/" />
@@ -160,7 +172,7 @@
       <workItem from="1746825916162" duration="5643000" />
       <workItem from="1746847666813" duration="4773000" />
       <workItem from="1746926225701" duration="5476000" />
-      <workItem from="1746973174882" duration="22674000" />
+      <workItem from="1746973174882" duration="34452000" />
     </task>
     <task id="LOCAL-00001" summary="starting sight added base sense">
       <option name="closed" value="true" />
@@ -338,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747088847896</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="removed removable">
+      <option name="closed" value="true" />
+      <created>1747141386379</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1747141386379</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

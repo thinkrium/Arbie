@@ -12,6 +12,18 @@ add_executable( Sight
         ../../Shared/ErrorCodes.h
         ../Base/Processing/Tensorflow/Pipeline/Pipe.cpp
         ../Base/Processing/Tensorflow/Pipeline/Pipe.h
+        ../Base/Processing/Tensorflow/Pipeline/Model.cpp
+        ../Base/Processing/Tensorflow/Pipeline/Model.h
+        ../Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h
 )
 
 target_include_directories(Sight PUBLIC ${TFLITE_INC})
