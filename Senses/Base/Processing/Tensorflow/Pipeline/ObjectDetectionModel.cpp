@@ -11,6 +11,14 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+    void ObjectDetectionModel::Preprocess() {
+    }
+
+    void ObjectDetectionModel::Process() {
+    }
+
+    void ObjectDetectionModel::Postprocess() {
+    }
 } // Pipeline
 } // Tensorflow
 } // Processing

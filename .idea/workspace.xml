@@ -28,20 +28,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="removed removable">
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h" afterDir="false" />
+    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="Adding model objects">
       <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +163,7 @@
       <workItem from="1746825916162" duration="5643000" />
       <workItem from="1746847666813" duration="4773000" />
       <workItem from="1746926225701" duration="5476000" />
-      <workItem from="1746973174882" duration="34452000" />
+      <workItem from="1746973174882" duration="35959000" />
     </task>
     <task id="LOCAL-00001" summary="starting sight added base sense">
       <option name="closed" value="true" />
@@ -358,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747141386379</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Adding model objects">
+      <option name="closed" value="true" />
+      <created>1747156908617</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747156908617</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +391,8 @@
     <MESSAGE value="test&#10;&#10;lib" />
     <MESSAGE value="added tf libs" />
     <MESSAGE value="removed removable" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed removable" />
+    <MESSAGE value="Adding model objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding model objects" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

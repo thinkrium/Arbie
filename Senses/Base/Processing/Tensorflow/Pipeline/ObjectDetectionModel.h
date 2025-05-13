@@ -4,6 +4,7 @@
 
 #ifndef OBJECTDETECTIONMODEL_H
 #define OBJECTDETECTIONMODEL_H
+#include "Model.h"
 
 namespace Arbie {
 namespace Senses {
@@ -13,8 +14,17 @@ namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
 
-class ObjectDetectionModel {
+class ObjectDetectionModel : public Model {
+public:
+ObjectDetectionModel() = default;
 
+    void Preprocess() override;
+
+    void Process() override;
+
+    void Postprocess() override;
+
+~ObjectDetectionModel() override = default;
 };
 
 } // Pipeline
