@@ -22,6 +22,14 @@ namespace Tensorflow {
             virtual void Postprocess() = 0;
 
             Model() = default;
+
+        private:
+            char * model_path;
+
+          public:
+              char * get_model_path() const;
+
+              void set_model_path(char *model_path);
         };
     }
 } // Tensorflow
