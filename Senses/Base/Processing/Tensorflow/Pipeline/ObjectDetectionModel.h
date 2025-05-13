@@ -24,7 +24,7 @@ ObjectDetectionModel() = default;
 
     void Postprocess() override;
 
-~ObjectDetectionModel() override = default;
+~ObjectDetectionModel()   = default;
 };
 
 } // Pipeline

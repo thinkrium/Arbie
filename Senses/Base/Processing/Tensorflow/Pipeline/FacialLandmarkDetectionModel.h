@@ -18,7 +18,7 @@ class FacialLandmarkDetectionModel : public Model {
 public:
 FacialLandmarkDetectionModel() = default;
 
-~FacialLandmarkDetectionModel() override = default;
+~FacialLandmarkDetectionModel()   = default;
 
 void Preprocess() override;
 
