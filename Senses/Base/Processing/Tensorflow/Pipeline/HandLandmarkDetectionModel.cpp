@@ -11,6 +11,14 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+    void HandLandmarkDetectionModel::Preprocess() {
+    }
+
+    void HandLandmarkDetectionModel::Process() {
+    }
+
+    void HandLandmarkDetectionModel::Postprocess() {
+    }
 } // Pipeline
 } // Tensorflow
 } // Processing

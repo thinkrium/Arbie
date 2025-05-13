@@ -4,6 +4,7 @@
 
 #ifndef HANDLANDMARKDETECTIONMODEL_H
 #define HANDLANDMARKDETECTIONMODEL_H
+#include "Model.h"
 
 namespace Arbie {
 namespace Senses {
@@ -13,8 +14,16 @@ namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
 
-class HandLandmarkDetectionModel {
+class HandLandmarkDetectionModel : public Model {
+public:
+    HandLandmarkDetectionModel() = default;
+ void Preprocess() override;
 
+    void Process() override;
+
+    void Postprocess() override;
+
+      ~HandLandmarkDetectionModel() = default;
 };
 
 } // Pipeline

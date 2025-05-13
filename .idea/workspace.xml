@@ -29,11 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="Adding model objects">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +162,7 @@
       <workItem from="1746825916162" duration="5643000" />
       <workItem from="1746847666813" duration="4773000" />
       <workItem from="1746926225701" duration="5476000" />
-      <workItem from="1746973174882" duration="36246000" />
+      <workItem from="1746973174882" duration="37677000" />
     </task>
     <task id="LOCAL-00001" summary="starting sight added base sense">
       <option name="closed" value="true" />
@@ -366,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747159009280</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Adding model objects">
+      <option name="closed" value="true" />
+      <created>1747159294720</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747159294720</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
