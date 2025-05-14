@@ -21,7 +21,7 @@ namespace Tensorflow {
             virtual void Process();
             virtual void Postprocess();
 
-            Model() = default;
+            Model();
 
         private:
             char * model_path;

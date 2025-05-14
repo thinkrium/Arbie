@@ -23,6 +23,10 @@ namespace Pipeline {
     void Model::Postprocess() {
     }
 
+    Model::Model() {
+        this->set_model_path("");
+    }
+
     char * Model::get_model_path() const {
         return model_path;
     }

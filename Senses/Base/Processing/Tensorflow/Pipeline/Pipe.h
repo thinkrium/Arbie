@@ -24,6 +24,8 @@ public:
 
     Pipe() = default;
 
+    Pipe(char * model_path_parameter)  ;
+
     [[nodiscard]] int get_number_of_detections() const;
 
     void set_number_of_detections(int number_of_detections);
@@ -42,9 +44,9 @@ public:
 
     TfLiteTensor * get_output_tensor(int output_tensor_index);
 
-    [[nodiscard]] const char * get_model_path() const;
+    Model get_ai_model() const;
 
-    void set_model_path(const char *model_path);
+    void set_ai_model(const Model &ai_model);
 
     void preprocess_pipeline();
 
@@ -56,11 +58,6 @@ private:
 
     Model ai_model;
 
-    Model get_ai_model() const;
-
-    void set_ai_model(const Model &ai_model);
-
-    const char* model_path;
 
     int number_of_detections;
 

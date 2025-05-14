@@ -12,13 +12,6 @@ namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
 
-    const char * Pipe::get_model_path() const {
-        return model_path;
-    }
-
-    void Pipe::set_model_path(const char *model_path) {
-        this->model_path = model_path;
-    }
 
     void Pipe::preprocess_pipeline() {
         ;
@@ -32,6 +25,12 @@ namespace Pipeline {
         this->ai_model = ai_model;
     }
 
+    Pipe::Pipe(char *model_path_parameter) {
+        Model ai_model;
+        ai_model.set_model_path(model_path_parameter);
+        this->set_ai_model(ai_model);
+    }
+
     int Pipe::get_number_of_detections() const {
         return number_of_detections;
     }
@@ -43,10 +42,11 @@ namespace Pipeline {
     void Pipe::PreparePipeLineInterpreter() {
 
 
+        if (this->get_ai_model().get_model_path() == "") { exit(7); }
         // const char* landmark_model_path = "../face_landmark_small.tflite";
 
         // Load TFLite model
-        auto model = tflite::FlatBufferModel::BuildFromFile(this->get_model_path());
+        auto model = tflite::FlatBufferModel::BuildFromFile(this->get_ai_model().get_model_path());
         tflite::ops::builtin::BuiltinOpResolver resolver;
         std::unique_ptr<tflite::Interpreter> interpreter;
 
