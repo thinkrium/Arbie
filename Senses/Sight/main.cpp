@@ -6,7 +6,9 @@
 using namespace Arbie::Senses::Sight::Base::Processing::Tensorflow;
 int main( ) {
 
-    Pipeline::Pipe face_detection_pipe("Senses/Sight/Assets/TFliteModel/face_detection_short_range.tflite");
-    // p->
+    Pipeline::Pipe face_detection_pipe("../../Sight/Assets/TFliteModel/face_detection_short_range.tflite");
+    face_detection_pipe.PreparePipeLineInterpreter();
+
+
     return 0;
 }
