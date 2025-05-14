@@ -30,8 +30,21 @@
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="Adding model objects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,31 +97,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.main.cpp.executor": "Run",
-    "CMake Application.Sight.executor": "Run",
-    "Google Test.Sight.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "StartingSenses",
-    "last_opened_file_path": "/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.qodana",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Sight.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.Sight.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;StartingSenses&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline" />
@@ -125,15 +138,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Google Test.Sight">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Sight" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Sight" TARGET_NAME="Sight" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Sight" RUN_TARGET_NAME="Sight" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Arbie" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
@@ -162,7 +175,8 @@
       <workItem from="1746825916162" duration="5643000" />
       <workItem from="1746847666813" duration="4773000" />
       <workItem from="1746926225701" duration="5476000" />
-      <workItem from="1746973174882" duration="38245000" />
+      <workItem from="1746973174882" duration="43331000" />
+      <workItem from="1747172502417" duration="2552000" />
     </task>
     <task id="LOCAL-00001" summary="starting sight added base sense">
       <option name="closed" value="true" />
@@ -388,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747161329811</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Adding model objects">
+      <option name="closed" value="true" />
+      <created>1747161791560</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747161791560</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

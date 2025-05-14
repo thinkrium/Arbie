@@ -24,7 +24,7 @@ public:
 
     void Postprocess() override;
 
-    ~FaceDetectionModel()   = default;
+  ~FaceDetectionModel()   = default;
 };
 
 } // Pipeline

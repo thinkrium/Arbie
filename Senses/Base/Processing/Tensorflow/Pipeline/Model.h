@@ -14,12 +14,12 @@ namespace Tensorflow {
     namespace Pipeline {
         class Model {
         public:
-              ~Model() = default;
+            virtual ~Model();
 
 
-            virtual void Preprocess() = 0;
-            virtual void Process() = 0;
-            virtual void Postprocess() = 0;
+            virtual void Preprocess();
+            virtual void Process();
+            virtual void Postprocess();
 
             Model() = default;
 

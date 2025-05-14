@@ -11,6 +11,18 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+    Model::~Model() {
+    }
+
+    void Model::Preprocess() {
+    }
+
+    void Model::Process() {
+    }
+
+    void Model::Postprocess() {
+    }
+
     char * Model::get_model_path() const {
         return model_path;
     }

@@ -1,6 +1,7 @@
 //
 // Created by thom on 5/10/25.
 //
+#include "Model.h"
 #include "tensorflow/lite/interpreter.h"
 #include "tensorflow/lite/kernels/register.h"
 #include "tensorflow/lite/model.h"
@@ -17,7 +18,7 @@ namespace Tensorflow {
 namespace Pipeline {
 
 class Pipe {
-
+    Model ai_model;
 
 
 public:
