@@ -14,7 +14,20 @@ namespace Pipeline {
 
 
     void Pipe::preprocess_pipeline() {
-        ;
+
+        int input_index = this->get_interpreter()->inputs()[0];
+        TfLiteIntArray* pipe_dims = this->get_interpreter()->tensor(input_index)->dims;
+        this->get_ai_model().get_model_details().height = pipe_dims->data[1];
+        this->get_ai_model().get_model_details().width = pipe_dims->data[2];
+        this->get_ai_model().get_model_details().channels = pipe_dims->data[3];
+
+
+    }
+
+    void Pipe::process_pipeline() {
+    }
+
+    void Pipe::post_process_pipeline() {
     }
 
     Model Pipe::get_ai_model() const {

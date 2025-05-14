@@ -50,6 +50,10 @@ public:
 
     void preprocess_pipeline();
 
+    void process_pipeline();
+
+    void post_process_pipeline();
+
     ~Pipe() = default;
 
 private:

@@ -24,6 +24,8 @@ add_executable( Sight
         ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h
         ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp
         ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/ModelDetails.cpp
+        ../Base/Processing/Tensorflow/Pipeline/ModelDetails.h
 
 )
 
