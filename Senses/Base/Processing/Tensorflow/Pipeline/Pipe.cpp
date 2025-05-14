@@ -24,6 +24,14 @@ namespace Pipeline {
         ;
     }
 
+    Model Pipe::get_ai_model() const {
+        return ai_model;
+    }
+
+    void Pipe::set_ai_model(const Model &ai_model) {
+        this->ai_model = ai_model;
+    }
+
     int Pipe::get_number_of_detections() const {
         return number_of_detections;
     }

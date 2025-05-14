@@ -18,6 +18,12 @@ add_executable( Sight
         ../Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h
         ../Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.cpp
         ../Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h
+        ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp
+        ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h
 
 )
 

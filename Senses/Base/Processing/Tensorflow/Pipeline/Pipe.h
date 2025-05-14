@@ -18,13 +18,15 @@ namespace Tensorflow {
 namespace Pipeline {
 
 class Pipe {
-    Model ai_model;
-
 
 public:
 
 
     Pipe() = default;
+
+    [[nodiscard]] int get_number_of_detections() const;
+
+    void set_number_of_detections(int number_of_detections);
 
     void PreparePipeLineInterpreter();
 
@@ -52,15 +54,17 @@ private:
 
     std::unique_ptr<tflite::Interpreter> interpreter;
 
+    Model ai_model;
+
+    Model get_ai_model() const;
+
+    void set_ai_model(const Model &ai_model);
 
     const char* model_path;
 
     int number_of_detections;
 
 public:
-    [[nodiscard]] int get_number_of_detections() const;
-
-    void set_number_of_detections(int number_of_detections);
 };
 
 } // Pipeline
