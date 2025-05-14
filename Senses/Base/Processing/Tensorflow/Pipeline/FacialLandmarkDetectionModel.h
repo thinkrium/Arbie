@@ -2,8 +2,8 @@
 // Created by thom on 5/13/25.
 //
 
-#ifndef FACEDETECTIONMODEL_H
-#define FACEDETECTIONMODEL_H
+#ifndef FACIALLANDMARKDETECTIONMODEL_H
+#define FACIALLANDMARKDETECTIONMODEL_H
 #include "Model.h"
 
 namespace Arbie {
@@ -14,17 +14,17 @@ namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
 
-class FaceDetectionModel : public Model {
+class FacialLandmarkDetectionModel : public Model {
 public:
-    FaceDetectionModel() = default;
+FacialLandmarkDetectionModel() = default;
 
-    void Preprocess() override;
+~FacialLandmarkDetectionModel()  override = default;
+
+void Preprocess() override;
 
     void Process() override;
 
     void Postprocess() override;
-
-    ~FaceDetectionModel() override  = default;
 };
 
 } // Pipeline
@@ -35,4 +35,4 @@ public:
 } // Senses
 } // Arbie
 
-#endif //FACEDETECTIONMODEL_H
+#endif //FACIALLANDMARKDETECTIONMODEL_H
