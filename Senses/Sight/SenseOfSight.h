@@ -12,7 +12,15 @@ namespace Arbie {
 namespace Senses {
 
 class SenseOfSight {
+
+private:
+    std::vector<Pipeline::Pipe> pipes;
+
 public:
+    std::vector<Pipeline::Pipe> get_pipes() ;
+
+    void set_pipes(std::vector<Pipeline::Pipe> pipes);
+
     SenseOfSight();
 
     ~SenseOfSight() = default;

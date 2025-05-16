@@ -22,7 +22,7 @@ class Pipe {
 public:
 
 
-    Pipe() = default;
+    Pipe();
 
     Pipe(char * model_path_parameter)  ;
 

@@ -38,6 +38,9 @@ namespace Pipeline {
         this->ai_model = ai_model;
     }
 
+    Pipe::Pipe() {
+    }
+
     Pipe::Pipe(char *model_path_parameter) {
         Model ai_model;
         ai_model.set_model_path(model_path_parameter);
