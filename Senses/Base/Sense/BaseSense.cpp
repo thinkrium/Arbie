@@ -7,6 +7,11 @@
 namespace Arbie {
 namespace Senses {
 namespace Sight {
+    BaseSense::BaseSense() {
+    }
+
+    void BaseSense::process() {
+    }
 } // Sight
 } // Senses
 } // Arbie

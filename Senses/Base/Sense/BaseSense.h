@@ -10,9 +10,12 @@ namespace Senses {
 namespace Sight {
 
 class BaseSense {
-    BaseSense() = default;
+public:
+    BaseSense();
 
-    ~BaseSense() = default;
+    virtual void process();
+
+    virtual ~BaseSense() = default;
 };
 
 } // Sight

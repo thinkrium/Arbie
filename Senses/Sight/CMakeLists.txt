@@ -3,7 +3,11 @@ project(Sight)
 
 set(CMAKE_CXX_STANDARD 17)
 
+
 include(tflite.cmake)
+
+# For OpenCV
+find_package(OpenCV REQUIRED)
 
 add_executable( Sight
         ../Base/Sense/BaseSense.cpp
@@ -31,5 +35,5 @@ add_executable( Sight
 
 )
 
-target_include_directories(Sight PUBLIC ${TFLITE_INC})
-target_link_libraries(Sight PRIVATE ${TFLITE_LIB})
+target_include_directories(Sight PUBLIC ${TFLITE_INC} ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(Sight PRIVATE ${TFLITE_LIB}  ${OpenCV_LIBS})
