@@ -1,6 +1,8 @@
 //
 // Created by thom on 5/10/25.
 //
+#include <opencv2/core/mat.hpp>
+
 #include "Model.h"
 #include "tensorflow/lite/interpreter.h"
 #include "tensorflow/lite/kernels/register.h"
@@ -21,6 +23,9 @@ class Pipe {
 
 public:
 
+    Pipe(Pipe && other);
+
+    Pipe & operator=(Pipe & other);
 
     Pipe();
 
@@ -31,6 +36,8 @@ public:
     void set_number_of_detections(int number_of_detections);
 
     void PreparePipeLineInterpreter();
+
+    cv::Mat resizeImage(cv::Mat input_frame, cv::Mat  resized_image);
 
     std::unique_ptr<tflite::Interpreter>& get_interpreter();
 

@@ -4,6 +4,8 @@
 
 #include "Pipe.h"
 
+#include <opencv2/imgproc.hpp>
+
 namespace Arbie {
 namespace Senses {
 namespace Sight {
@@ -38,6 +40,19 @@ namespace Pipeline {
         this->ai_model = ai_model;
     }
 
+    Pipe::Pipe(Pipe &&other) {
+        this->interpreter = std::move(other.interpreter);
+        this->ai_model = other.ai_model;
+        this->number_of_detections = other.number_of_detections;
+    }
+
+    Pipe & Pipe::operator=(Pipe & other) {
+        this->interpreter = std::move(other.interpreter);
+        this->ai_model = other.ai_model;
+        this->number_of_detections = other.number_of_detections;
+        return *this;
+    }
+
     Pipe::Pipe() {
     }
 
@@ -70,6 +85,14 @@ namespace Pipeline {
         interpreter->AllocateTensors();
 
         this->set_interpreter(interpreter);
+    }
+
+    cv::Mat Pipe::resizeImage(cv::Mat input_frame, cv::Mat  resized_image) {
+        cv::resize(input_frame, resized_image, cv::Size(
+            this->get_ai_model().get_model_details().width,
+            this->get_ai_model().get_model_details().height)
+            );
+        return  resized_image;
     }
 
     std::unique_ptr<tflite::Interpreter>& Pipe::get_interpreter() {

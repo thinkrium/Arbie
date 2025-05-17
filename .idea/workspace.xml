@@ -73,6 +73,11 @@
     &quot;accountId&quot;: &quot;e5d96366-247a-465b-b0d6-8e9d931208a4&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Sense/BaseSense.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Sense/BaseSense.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2025" />
@@ -472,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747404504486</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Adding model objects">
+      <option name="closed" value="true" />
+      <created>1747460870393</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1747460870393</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

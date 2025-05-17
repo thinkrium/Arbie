@@ -2,23 +2,43 @@
 // Created by thom on 5/16/25.
 //
 
+#include <opencv2/opencv.hpp>
 #include "SenseOfSight.h"
 
 namespace Arbie {
 namespace Senses {
-    std::vector<Pipeline::Pipe> SenseOfSight::get_pipes()  {
-        return pipes;
+
+    void SenseOfSight::process() {
+
+        cv::VideoCapture cap(0);
+
+        if (!cap.isOpened()) {
+            std::cerr << "Cannot open webcam\n";
+            return;
+        }
+
+        cv::Mat frame;
+        while (true) {
+            cap >> frame;
+            if (frame.empty()) break;
+            cv::flip(frame, frame, 1);
+
+            // Resize and convert to float
+            cv::Mat resized_img, float_img;
+            cv::cvtColor(resized_img, resized_img, cv::COLOR_BGR2RGB);
+
+            resized_img = face_detection_pipe.resizeImage(frame, resized_img);
+
+            resized_img.convertTo( float_img, CV_32FC3, 1.0f / 255.0f, 0.0f ); // Normalize
+        }
     }
 
-    void SenseOfSight::set_pipes(std::vector<Pipeline::Pipe> pipes) {
-        this->pipes = pipes;
-    }
-
-    SenseOfSight::SenseOfSight() {
-        Pipeline::Pipe face_detection_pipe("../../Sight/Assets/TFliteModel/face_detection_short_range.tflite");
+     SenseOfSight::SenseOfSight() {
+        Pipeline::Pipe temporary_pipe("../../Sight/Assets/TFliteModel/face_detection_short_range.tflite");
+        face_detection_pipe = temporary_pipe;
         face_detection_pipe.PreparePipeLineInterpreter();
 
-         // this->set_pipes({face_detection_pipe});
     }
+
 } // Senses
 } // Arbie

@@ -3,6 +3,8 @@
 //
 
 #include "../Base/Processing/Tensorflow/Pipeline/Pipe.h"
+#include "../Base/Sense/BaseSense.h"
+
 using namespace Arbie::Senses::Sight::Base::Processing::Tensorflow;
 
 #ifndef SIGHT_H
@@ -11,19 +13,17 @@ using namespace Arbie::Senses::Sight::Base::Processing::Tensorflow;
 namespace Arbie {
 namespace Senses {
 
-class SenseOfSight {
+class SenseOfSight : public Sight::BaseSense {
 
-private:
-    std::vector<Pipeline::Pipe> pipes;
+    Pipeline::Pipe face_detection_pipe;
 
 public:
-    std::vector<Pipeline::Pipe> get_pipes() ;
 
-    void set_pipes(std::vector<Pipeline::Pipe> pipes);
+    void process() override;
 
-    SenseOfSight();
+   SenseOfSight() ;
 
-    ~SenseOfSight() = default;
+    ~SenseOfSight() override = default;
 };
 
 } // Senses
