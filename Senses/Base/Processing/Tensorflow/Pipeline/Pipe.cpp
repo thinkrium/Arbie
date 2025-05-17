@@ -19,9 +19,33 @@ namespace Pipeline {
 
         int input_index = this->get_interpreter()->inputs()[0];
         TfLiteIntArray* pipe_dims = this->get_interpreter()->tensor(input_index)->dims;
+
+        this->get_ai_model().set_interpreter(std::move( this->get_interpreter()));
         this->get_ai_model().get_model_details().height = pipe_dims->data[1];
         this->get_ai_model().get_model_details().width = pipe_dims->data[2];
         this->get_ai_model().get_model_details().channels = pipe_dims->data[3];
+
+
+    }
+
+    void Pipe::midprocess_pipeline() {
+        // Copy to input tensor
+        float* input_tensor_data = this->get_input_tensor_data(0);
+        std::memcpy(this->get_input_tensor(0),
+                         this->get_float_image().data,
+                              this->get_ai_model().get_model_details().height
+                              * this->get_ai_model().get_model_details().width
+                              * this->get_ai_model().get_model_details().channels
+                              * sizeof(float)
+                    );
+
+        // Run inference
+        if (this->get_interpreter()->Invoke() != kTfLiteOk) {
+            // std::cerr << "Failed to invoke\n";
+            exit(11);
+        }
+
+
 
 
     }
@@ -32,11 +56,19 @@ namespace Pipeline {
     void Pipe::post_process_pipeline() {
     }
 
-    Model Pipe::get_ai_model() const {
+    cv::Mat & Pipe::get_float_image() {
+        return float_image;
+    }
+
+    void Pipe::set_float_image(cv::Mat float_image) {
+        this->float_image = std::move(float_image);
+    }
+
+    Model & Pipe::get_ai_model()   {
         return ai_model;
     }
 
-    void Pipe::set_ai_model(const Model &ai_model) {
+    void Pipe::set_ai_model(  Model & ai_model) {
         this->ai_model = ai_model;
     }
 
@@ -96,7 +128,7 @@ namespace Pipeline {
     }
 
     std::unique_ptr<tflite::Interpreter>& Pipe::get_interpreter() {
-        return interpreter;
+        return interpreter  ;
     }
 
     void Pipe::set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter) {

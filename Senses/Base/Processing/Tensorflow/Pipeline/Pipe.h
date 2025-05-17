@@ -51,11 +51,18 @@ public:
 
     TfLiteTensor * get_output_tensor(int output_tensor_index);
 
-    Model get_ai_model() const;
+    cv::Mat & get_float_image();
 
-    void set_ai_model(const Model &ai_model);
+    void set_float_image(cv::Mat float_image);
+
+
+    Model & get_ai_model()  ;
+
+    void set_ai_model(  Model & ai_model);
 
     void preprocess_pipeline();
+
+    void midprocess_pipeline();
 
     void process_pipeline();
 
@@ -69,10 +76,13 @@ private:
 
     Model ai_model;
 
+    cv::Mat float_image;
+
 
     int number_of_detections;
 
-public:
+
+
 };
 
 } // Pipeline

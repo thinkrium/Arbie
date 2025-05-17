@@ -14,6 +14,17 @@ namespace Pipeline {
     Model::~Model() {
     }
 
+    Model::Model(Model &&other) {
+    }
+
+    Model & Model::operator=(Model &other) {
+
+
+        return *this;
+
+
+    }
+
     void Model::Preprocess() {
     }
 
@@ -32,6 +43,14 @@ namespace Pipeline {
         details.height = 0;
 
         this->set_model_details(details);
+    }
+
+    std::unique_ptr<tflite::Interpreter> & Model::get_interpreter() {
+        return interpreter;
+    }
+
+    void Model::set_interpreter(std::unique_ptr<tflite::Interpreter> interpreter) {
+        this->interpreter = std::move(interpreter);
     }
 
     ModelDetails & Model::get_model_details() {

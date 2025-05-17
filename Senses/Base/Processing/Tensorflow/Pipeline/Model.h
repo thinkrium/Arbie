@@ -5,6 +5,7 @@
 #ifndef MODEL_H
 #define MODEL_H
 #include "ModelDetails.h"
+#include "tensorflow/lite/interpreter.h"
 
 namespace Arbie {
 namespace Senses {
@@ -16,6 +17,10 @@ namespace Tensorflow {
         class Model {
         public:
             virtual ~Model();
+
+            Model(Model && other);
+
+            Model & operator=(Model & other);
 
             virtual void Preprocess();
 
@@ -39,6 +44,12 @@ namespace Tensorflow {
 
             ModelDetails model_details_;
 
+            std::unique_ptr<tflite::Interpreter> interpreter;
+
+        public:
+            std::unique_ptr<tflite::Interpreter> & get_interpreter();
+
+            void set_interpreter(std::unique_ptr<tflite::Interpreter> interpreter);
         };
     }
 } // Tensorflow

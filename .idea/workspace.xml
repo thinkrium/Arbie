@@ -28,13 +28,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="Adding model objects">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added a copy const">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -485,7 +486,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747460870393</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added a copy const">
+      <option name="closed" value="true" />
+      <created>1747464497650</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1747464497650</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +529,8 @@
     <MESSAGE value="added tf libs" />
     <MESSAGE value="removed removable" />
     <MESSAGE value="Adding model objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding model objects" />
+    <MESSAGE value="added a copy const" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a copy const" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
