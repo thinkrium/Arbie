@@ -4,7 +4,7 @@
 
 #ifndef OBJECTDETECTIONMODEL_H
 #define OBJECTDETECTIONMODEL_H
-#include "Model.h"
+#include "../../../../../../Base/Processing/Tensorflow/Pipeline/Model.h"
 
 namespace Arbie {
 namespace Senses {

@@ -4,7 +4,7 @@
 
 #ifndef FACIALLANDMARKDETECTIONMODEL_H
 #define FACIALLANDMARKDETECTIONMODEL_H
-#include "Model.h"
+#include "../../../../../../Base/Processing/Tensorflow/Pipeline/Model.h"
 
 namespace Arbie {
 namespace Senses {

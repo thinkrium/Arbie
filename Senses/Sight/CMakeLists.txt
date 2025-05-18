@@ -18,16 +18,16 @@ add_executable( Sight
         ../Base/Processing/Tensorflow/Pipeline/Pipe.h
         ../Base/Processing/Tensorflow/Pipeline/Model.cpp
         ../Base/Processing/Tensorflow/Pipeline/Model.h
-        ../Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.cpp
-        ../Base/Processing/Tensorflow/Pipeline/FaceDetectionModel.h
-        ../Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.cpp
-        ../Base/Processing/Tensorflow/Pipeline/FacialLandmarkDetectionModel.h
-        ../Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.cpp
-        ../Base/Processing/Tensorflow/Pipeline/PoseDetectionModel.h
-        ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.cpp
-        ../Base/Processing/Tensorflow/Pipeline/HandLandmarkDetectionModel.h
-        ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.cpp
-        ../Base/Processing/Tensorflow/Pipeline/ObjectDetectionModel.h
+        Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp
+        Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h
+        Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp
+        Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h
+        Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp
+        Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h
+        Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp
+        Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h
+        Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp
+        Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h
         ../Base/Processing/Tensorflow/Pipeline/ModelDetails.cpp
         ../Base/Processing/Tensorflow/Pipeline/ModelDetails.h
         SenseOfSight.cpp

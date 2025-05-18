@@ -4,7 +4,7 @@
 
 #ifndef FACEDETECTIONMODEL_H
 #define FACEDETECTIONMODEL_H
-#include "Model.h"
+#include "../../../../../../Base/Processing/Tensorflow/Pipeline/Model.h"
 #include "tensorflow/lite/c/common.h"
 
 namespace Arbie {

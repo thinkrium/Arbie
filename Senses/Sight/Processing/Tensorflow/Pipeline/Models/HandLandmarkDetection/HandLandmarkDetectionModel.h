@@ -4,7 +4,7 @@
 
 #ifndef HANDLANDMARKDETECTIONMODEL_H
 #define HANDLANDMARKDETECTIONMODEL_H
-#include "Model.h"
+#include "../../../../../../Base/Processing/Tensorflow/Pipeline/Model.h"
 
 namespace Arbie {
 namespace Senses {
