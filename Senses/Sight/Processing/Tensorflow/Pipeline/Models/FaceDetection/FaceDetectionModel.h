@@ -22,9 +22,11 @@ class FaceDetectionModel : public Model {
 
     float* detection_scores;
     float* detection_boxes ;
+
+    std::vector<std::pair<float, float>> anchor_list;
 public:
 
-    void create_anchor_boxes( std::vector<std::pair<float, float>>& anchor_list,int width = 128, int height = 128);
+    void create_anchor_boxes( int width = 128, int height = 128);
 
     float *& get_detection_scores();
 
@@ -40,9 +42,13 @@ public:
 
     TfLiteTensor * get_scores_tensor();
 
+    std::vector<std::pair<float, float>> & get_anchor_list();
+
+    void set_anchor_list(std::vector<std::pair<float, float>> anchor_list);
+
     void set_scores_tensor(TfLiteTensor *scores_tensor);
 
-    FaceDetectionModel() = default;
+    FaceDetectionModel();
 
     void Preprocess() override;
 

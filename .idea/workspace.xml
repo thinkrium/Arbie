@@ -28,7 +28,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added a copy const" />
+    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added a copy const">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,10 +124,11 @@
       <recent name="$PROJECT_DIR$/Senses/Sight/Assets/TFliteModel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline" />
-      <recent name="$PROJECT_DIR$/Senses/Sight" />
-      <recent name="$PROJECT_DIR$/Senses/Base/Sense" />
-      <recent name="$PROJECT_DIR$/Senses/Base/" />
+      <recent name="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection" />
+      <recent name="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection" />
+      <recent name="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection" />
+      <recent name="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection" />
+      <recent name="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection" />
     </key>
   </component>
   <component name="RunManager" selected="Google Test.Sight">
@@ -518,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747532265750</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added a copy const">
+      <option name="closed" value="true" />
+      <created>1747532903844</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1747532903844</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,6 +569,17 @@
     <MESSAGE value="Adding model objects" />
     <MESSAGE value="added a copy const" />
     <option name="LAST_COMMIT_MESSAGE" value="added a copy const" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

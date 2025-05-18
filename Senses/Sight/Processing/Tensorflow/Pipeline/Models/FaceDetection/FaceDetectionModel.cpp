@@ -13,8 +13,10 @@ namespace Tensorflow {
 namespace Pipeline {
 
 
-    void FaceDetectionModel::create_anchor_boxes( std::vector<std::pair<float, float>>& anchor_list,int width, int height)
+    void FaceDetectionModel::create_anchor_boxes(  int width, int height)
     {
+
+        this->set_anchor_list({});
 
 
         std::array<std::pair<int32_t, int32_t>, 2> kAnchorGridSize = { std::pair<int32_t, int32_t>(16, 16), std::pair < int32_t, int32_t>(8, 8) };
@@ -35,7 +37,7 @@ namespace Pipeline {
                 for (int grid_x = 0; grid_x < grid_cols; grid_x++) {
                     anchor.first = stride_x * (grid_x + 0.5f);
                     for (int n = 0; n < anchor_num; n++) {
-                        anchor_list.push_back(anchor);
+                        this->anchor_list.push_back(anchor);
                     }
                 }
             }
@@ -72,8 +74,20 @@ namespace Pipeline {
         return scores_tensor;
     }
 
+    std::vector<std::pair<float, float>> & FaceDetectionModel::get_anchor_list() {
+        return anchor_list;
+    }
+
+    void FaceDetectionModel::set_anchor_list(std::vector<std::pair<float, float>> anchor_list) {
+        this->anchor_list = std::move(anchor_list);
+    }
+
     void FaceDetectionModel::set_scores_tensor(TfLiteTensor *scores_tensor) {
         this->scores_tensor = scores_tensor;
+    }
+
+    FaceDetectionModel::FaceDetectionModel() {
+        this->create_anchor_boxes();
     }
 
     void FaceDetectionModel::Preprocess() {
