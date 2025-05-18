@@ -90,6 +90,8 @@ class FaceDetectionModel : public Model {
 
     void Postprocess() override;
 
+    void DrawDetection(cv::Mat & image) ;
+
     ~FaceDetectionModel() override  = default;
 };
 
