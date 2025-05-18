@@ -11,6 +11,39 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+
+
+    void FaceDetectionModel::create_anchor_boxes( std::vector<std::pair<float, float>>& anchor_list,int width = 128, int height = 128)
+    {
+
+
+        std::array<std::pair<int32_t, int32_t>, 2> kAnchorGridSize = { std::pair<int32_t, int32_t>(16, 16), std::pair < int32_t, int32_t>(8, 8) };
+        std::array<int32_t, 2> kAnchorNum = { 2, 6 };
+
+
+
+        for (size_t i = 0; i < kAnchorGridSize.size(); i++) {
+            int32_t grid_cols = kAnchorGridSize[i].first;
+            int32_t grid_rows = kAnchorGridSize[i].second;
+            float  stride_x = static_cast<float>(width) / grid_cols;
+            float  stride_y = static_cast<float>(height) / grid_rows;
+            int anchor_num = kAnchorNum[i];
+
+            std::pair<float, float> anchor;
+            for (int grid_y = 0; grid_y < grid_rows; grid_y++) {
+                anchor.second = stride_y * (grid_y + 0.5f);
+                for (int grid_x = 0; grid_x < grid_cols; grid_x++) {
+                    anchor.first = stride_x * (grid_x + 0.5f);
+                    for (int n = 0; n < anchor_num; n++) {
+                        anchor_list.push_back(anchor);
+                    }
+                }
+            }
+        }
+
+    }
+
+
     float *& FaceDetectionModel::get_detection_scores() {
         return detection_scores;
     }

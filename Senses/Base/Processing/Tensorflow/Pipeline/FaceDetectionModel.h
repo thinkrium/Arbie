@@ -23,6 +23,9 @@ class FaceDetectionModel : public Model {
     float* detection_scores;
     float* detection_boxes ;
 public:
+
+    void create_anchor_boxes( std::vector<std::pair<float, float>>& anchor_list,int width = 128, int height = 128);
+
     float *& get_detection_scores();
 
     void set_detection_scores(float *detection_scores);
