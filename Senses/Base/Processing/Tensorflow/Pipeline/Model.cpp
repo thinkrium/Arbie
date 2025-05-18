@@ -15,10 +15,16 @@ namespace Pipeline {
     }
 
     Model::Model(Model &&other) {
+        this->interpreter = std::move(other.interpreter);
+        this->model_details_ = other.model_details_;
+        this->model_path = other.model_path;
     }
 
     Model & Model::operator=(Model &other) {
 
+        this->interpreter = std::move(other.interpreter);
+        this->model_details_ = other.model_details_;
+        this->model_path = other.model_path;
 
         return *this;
 
