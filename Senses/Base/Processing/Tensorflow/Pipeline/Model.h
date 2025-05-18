@@ -24,7 +24,7 @@ namespace Tensorflow {
 
             virtual void Preprocess();
 
-            virtual void Process();
+            virtual void Process(int loop_index);
 
             virtual void Postprocess();
 

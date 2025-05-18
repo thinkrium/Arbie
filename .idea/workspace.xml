@@ -30,13 +30,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added a copy const">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/BoundingBox.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/BoundingBox.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -544,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747534652101</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added a copy const">
+      <option name="closed" value="true" />
+      <created>1747537650401</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1747537650401</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -34,7 +34,7 @@ namespace Pipeline {
     void Model::Preprocess() {
     }
 
-    void Model::Process() {
+    void Model::Process(int loop_index) {
     }
 
     void Model::Postprocess() {

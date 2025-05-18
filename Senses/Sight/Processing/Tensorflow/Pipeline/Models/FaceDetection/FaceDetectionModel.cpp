@@ -11,6 +11,7 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+
     int & FaceDetectionModel::get_image_width() {
         return image_width;
     }
@@ -131,51 +132,64 @@ namespace Pipeline {
 
         this->set_bounding_boxes({});
 
+        this->set_number_of_detections( this->get_scores_tensor()->dims->data[1] );
+
     }
 
-    void FaceDetectionModel::Process() {
-       this->set_number_of_detections( this->get_scores_tensor()->dims->data[1] );
+    void FaceDetectionModel::Process(int loop_index) {
 
         float scale ;
 
-        for (int i = 0; i < this->get_number_of_detections(); ++i) {
-            float detection_score = this->get_detection_scores()[i];
-            if (detection_score > 0.85f) {
+
+        if (loop_index >= this->get_number_of_detections()) return;
+
+        float detection_score = this->get_detection_scores()[loop_index];
+
+        if (detection_score > 0.85f) {
 
 
 
-                int32_t detection_index = i * 16;
+            int32_t detection_index = loop_index * 16;
 
 
-                float cx0 = this->get_detection_boxes()[detection_index + 0];
-                float cy0 = this->get_detection_boxes()[detection_index + 1];
+            float cx0 = this->get_detection_boxes()[detection_index + 0];
+            float cy0 = this->get_detection_boxes()[detection_index + 1];
 
-                float cx = cx0 + this->get_anchor_list()[i].first;
-                float cy = cy0 + this->get_anchor_list()[i].second;
+            float cx = cx0 + this->get_anchor_list()[loop_index].first;
+            float cy = cy0 + this->get_anchor_list()[loop_index].second;
 
-                float w0 = this->get_detection_boxes()[detection_index + 2];
-                float h0 = this->get_detection_boxes()[detection_index + 3];
+            float w0 = this->get_detection_boxes()[detection_index + 2];
+            float h0 = this->get_detection_boxes()[detection_index + 3];
 
-                float relative_x_position = static_cast<float>(this->get_image_width()) / this->get_model_details().width;
-                float relative_y_position = static_cast<float>(this->get_image_height()) / this->get_model_details().height;
-
-
-                scale = 1.5; //std::max(scale_x, scale_y);
+            float relative_x_position = static_cast<float>(this->get_image_width()) / this->get_model_details().width;
+            float relative_y_position = static_cast<float>(this->get_image_height()) / this->get_model_details().height;
 
 
-                int x = static_cast<int>((cx - w0 * scale   / 2 ) * relative_x_position);
-                int y = static_cast<int>((cy - h0 * scale   / 2 ) * relative_y_position);
-                int w = static_cast<int>(w0 * relative_x_position * scale);
-                int h = static_cast<int>(h0 * relative_y_position  * scale);
-
-                if (w > h) {h = w;}
-                else if (w < h) {w = h;}
+            scale = 1.5; //std::max(scale_x, scale_y);
 
 
-                this->get_bounding_boxes().push_back({cx,cy, x, y, w, h, detection_score, i});
+            int x = static_cast<int>((cx - w0 * scale   / 2 ) * relative_x_position);
+            int y = static_cast<int>((cy - h0 * scale   / 2 ) * relative_y_position);
+            int w = static_cast<int>(w0 * relative_x_position * scale);
+            int h = static_cast<int>(h0 * relative_y_position  * scale);
+
+            if (w > h) {h = w;}
+            else if (w < h) {w = h;}
 
 
-            }
+            BoundingBox pushable_bounding_box;
+            pushable_bounding_box.center_x = cx;
+            pushable_bounding_box.center_y = cy;
+            pushable_bounding_box.x = x;
+            pushable_bounding_box.y = y;
+            pushable_bounding_box.width = w;
+            pushable_bounding_box.height = h;
+            pushable_bounding_box.detection_score = detection_score;
+            pushable_bounding_box.detection_index = loop_index;
+
+            this->get_bounding_boxes().push_back( pushable_bounding_box );
+
+
         }
 
         std::sort(this->get_bounding_boxes().begin(), this->get_bounding_boxes().end(), [](const BoundingBox& a, const BoundingBox& b) {

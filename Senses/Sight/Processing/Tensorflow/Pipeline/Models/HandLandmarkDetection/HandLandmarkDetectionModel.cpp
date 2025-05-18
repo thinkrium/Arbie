@@ -14,7 +14,7 @@ namespace Pipeline {
     void HandLandmarkDetectionModel::Preprocess() {
     }
 
-    void HandLandmarkDetectionModel::Process() {
+    void HandLandmarkDetectionModel::Process(int loop_index) {
     }
 
     void HandLandmarkDetectionModel::Postprocess() {

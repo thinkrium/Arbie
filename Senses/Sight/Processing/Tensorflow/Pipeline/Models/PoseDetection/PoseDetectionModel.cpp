@@ -14,7 +14,7 @@ namespace Pipeline {
     void PoseDetectionModel::Preprocess() {
     }
 
-    void PoseDetectionModel::Process() {
+    void PoseDetectionModel::Process(int loop_index) {
     }
 
     void PoseDetectionModel::Postprocess() {

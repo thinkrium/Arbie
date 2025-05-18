@@ -19,7 +19,7 @@ public:
     HandLandmarkDetectionModel() = default;
  void Preprocess() override;
 
-    void Process() override;
+    void Process(int loop_index) override;
 
     void Postprocess() override;
 
