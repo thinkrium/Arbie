@@ -13,7 +13,7 @@ namespace Tensorflow {
 namespace Pipeline {
 
 
-    void FaceDetectionModel::create_anchor_boxes( std::vector<std::pair<float, float>>& anchor_list,int width = 128, int height = 128)
+    void FaceDetectionModel::create_anchor_boxes( std::vector<std::pair<float, float>>& anchor_list,int width, int height)
     {
 
 

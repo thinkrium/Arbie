@@ -32,6 +32,8 @@ add_executable( Sight
         ../Base/Processing/Tensorflow/Pipeline/ModelDetails.h
         SenseOfSight.cpp
         SenseOfSight.h
+        ../Base/Processing/Tensorflow/Pipeline/BoundingBox.cpp
+        ../Base/Processing/Tensorflow/Pipeline/BoundingBox.h
 
 )
 
