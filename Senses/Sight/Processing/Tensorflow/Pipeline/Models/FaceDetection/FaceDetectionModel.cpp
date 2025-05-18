@@ -12,6 +12,14 @@ namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
 
+    KalmanSmoothing & FaceDetectionModel::get_kalman_smoothing() {
+        return kalman_smoothing_;
+    }
+
+    void FaceDetectionModel::set_kalman_smoothing(KalmanSmoothing kalman_smoothing) {
+        kalman_smoothing_ = std::move(kalman_smoothing);
+    }
+
     int & FaceDetectionModel::get_image_width() {
         return image_width;
     }
@@ -119,6 +127,8 @@ namespace Pipeline {
 
     FaceDetectionModel::FaceDetectionModel() {
         this->create_anchor_boxes();
+        KalmanSmoothing temporarySmoothing;
+        this->set_kalman_smoothing(temporarySmoothing);
     }
 
     void FaceDetectionModel::Preprocess() {
@@ -207,6 +217,11 @@ namespace Pipeline {
         }
 
         BoundingBox bbox = this->get_bounding_boxes().at(0);
+
+        float prediction_x = this->get_kalman_smoothing().get_prediction_matrix().at<float>(0);
+        float prediction_y = this->get_kalman_smoothing().get_prediction_matrix().at<float>(1);
+        float prediction_w = this->get_kalman_smoothing().get_prediction_matrix().at<float>(2);
+        float prediction_h = this->get_kalman_smoothing().get_prediction_matrix().at<float>(3);
 
     }
 } // Pipeline

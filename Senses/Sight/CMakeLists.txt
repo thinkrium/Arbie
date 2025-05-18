@@ -34,6 +34,8 @@ add_executable( Sight
         SenseOfSight.h
         ../Base/Processing/Tensorflow/Pipeline/BoundingBox.cpp
         ../Base/Processing/Tensorflow/Pipeline/BoundingBox.h
+        ../Base/Output/Smoothing/KalmanSmoothing.cpp
+        ../Base/Output/Smoothing/KalmanSmoothing.h
 
 )
 

@@ -29,20 +29,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added a copy const">
+    <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="adding loop proc">
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Output/Smoothing/KalmanSmoothing.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Senses/Base/Output/Smoothing/KalmanSmoothing.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -558,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747537650401</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="adding loop proc">
+      <option name="closed" value="true" />
+      <created>1747539456279</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1747539456279</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +596,8 @@
     <MESSAGE value="removed removable" />
     <MESSAGE value="Adding model objects" />
     <MESSAGE value="added a copy const" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a copy const" />
+    <MESSAGE value="adding loop proc" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding loop proc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -603,6 +606,11 @@
           <url>file://$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp</url>
           <line>43</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp</url>
+          <line>187</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
