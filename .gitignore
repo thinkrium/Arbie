@@ -364,7 +364,10 @@ FodyWeavers.xsd
 
 Senses/Sight/venv/
 Senses/Sight/.idea/
+Senses/Sight/.idea/*
 Body/.idea/
+Body/.idea/*
 Brain/.idea/
+Brain/.idea/*
 Body/cmake-build*/
 Brain/cmake-build*/
