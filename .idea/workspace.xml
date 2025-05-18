@@ -6,6 +6,7 @@
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="8" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/RefactoringsMru/RenameRefactoring/DoSearchForTextInStrings/@EntryValue" value="true" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
@@ -31,6 +32,9 @@
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="added a copy const">
       <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/BoundingBox.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/BoundingBox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" afterDir="false" />
     </list>
@@ -532,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747532903844</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="added a copy const">
+      <option name="closed" value="true" />
+      <created>1747534652101</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1747534652101</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

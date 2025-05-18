@@ -11,7 +11,37 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
+    int & FaceDetectionModel::get_image_width() {
+        return image_width;
+    }
 
+    std::vector<BoundingBox> & FaceDetectionModel::get_bounding_boxes() {
+        return bounding_boxes_;
+    }
+
+    void FaceDetectionModel::set_bounding_boxes(std::vector<BoundingBox> bounding_boxes) {
+        bounding_boxes_ = std::move(bounding_boxes);
+    }
+
+    void FaceDetectionModel::set_image_width(int image_width) {
+        this->image_width = image_width;
+    }
+
+    int & FaceDetectionModel::get_image_height() {
+        return image_height;
+    }
+
+    void FaceDetectionModel::set_image_height(int image_height) {
+        this->image_height = image_height;
+    }
+
+    int & FaceDetectionModel::get_number_of_detections() {
+        return number_of_detections;
+    }
+
+    void FaceDetectionModel::set_number_of_detections(int number_of_detections) {
+        this->number_of_detections = number_of_detections;
+    }
 
     void FaceDetectionModel::create_anchor_boxes(  int width, int height)
     {
@@ -91,9 +121,6 @@ namespace Pipeline {
     }
 
     void FaceDetectionModel::Preprocess() {
-    }
-
-    void FaceDetectionModel::Process() {
         this->set_scores_tensor(  this->get_interpreter()->tensor(this->get_interpreter()->outputs()[1]) );
         this->set_boxes_tensor(  this->get_interpreter()->tensor(this->get_interpreter()->outputs()[0]) );
 
@@ -101,10 +128,72 @@ namespace Pipeline {
 
         this->set_detection_scores(this->get_scores_tensor()->data.f);
         this->set_detection_boxes(this->get_boxes_tensor()->data.f);
+
+        this->set_bounding_boxes({});
+
+    }
+
+    void FaceDetectionModel::Process() {
+       this->set_number_of_detections( this->get_scores_tensor()->dims->data[1] );
+
+        float scale ;
+
+        for (int i = 0; i < this->get_number_of_detections(); ++i) {
+            float detection_score = this->get_detection_scores()[i];
+            if (detection_score > 0.85f) {
+
+
+
+                int32_t detection_index = i * 16;
+
+
+                float cx0 = this->get_detection_boxes()[detection_index + 0];
+                float cy0 = this->get_detection_boxes()[detection_index + 1];
+
+                float cx = cx0 + this->get_anchor_list()[i].first;
+                float cy = cy0 + this->get_anchor_list()[i].second;
+
+                float w0 = this->get_detection_boxes()[detection_index + 2];
+                float h0 = this->get_detection_boxes()[detection_index + 3];
+
+                float relative_x_position = static_cast<float>(this->get_image_width()) / this->get_model_details().width;
+                float relative_y_position = static_cast<float>(this->get_image_height()) / this->get_model_details().height;
+
+
+                scale = 1.5; //std::max(scale_x, scale_y);
+
+
+                int x = static_cast<int>((cx - w0 * scale   / 2 ) * relative_x_position);
+                int y = static_cast<int>((cy - h0 * scale   / 2 ) * relative_y_position);
+                int w = static_cast<int>(w0 * relative_x_position * scale);
+                int h = static_cast<int>(h0 * relative_y_position  * scale);
+
+                if (w > h) {h = w;}
+                else if (w < h) {w = h;}
+
+
+                this->get_bounding_boxes().push_back({cx,cy, x, y, w, h, detection_score, i});
+
+
+            }
+        }
+
+        std::sort(this->get_bounding_boxes().begin(), this->get_bounding_boxes().end(), [](const BoundingBox& a, const BoundingBox& b) {
+            return a.detection_score > b.detection_score;
+        });
+
+
     }
 
 
     void FaceDetectionModel::Postprocess() {
+        if (this->get_bounding_boxes().empty()) {
+            // std::cout << "No detection\n";
+            exit(33);
+        }
+
+        BoundingBox bbox = this->get_bounding_boxes().at(0);
+
     }
 } // Pipeline
 } // Tensorflow

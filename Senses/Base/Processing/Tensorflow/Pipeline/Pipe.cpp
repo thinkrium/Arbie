@@ -15,7 +15,7 @@ namespace Tensorflow {
 namespace Pipeline {
 
 
-    void Pipe::preprocess_pipeline() {
+    void Pipe::initialize_pipeline() {
 
         int input_index = this->get_interpreter()->inputs()[0];
         TfLiteIntArray* pipe_dims = this->get_interpreter()->tensor(input_index)->dims;
@@ -28,7 +28,7 @@ namespace Pipeline {
 
     }
 
-    void Pipe::midprocess_pipeline() {
+    void Pipe::preprocess_pipeline() {
         // Copy to input tensor
         float* input_tensor_data = this->get_input_tensor_data(0);
         std::memcpy(this->get_input_tensor(0),

@@ -20,6 +20,8 @@ struct  BoundingBox {
     int y;
     int width;
     int height;
+    float detection_score;
+    int detection_index;
 
 };
 

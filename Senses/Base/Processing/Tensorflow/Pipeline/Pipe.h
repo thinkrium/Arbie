@@ -62,7 +62,7 @@ public:
 
     void preprocess_pipeline();
 
-    void midprocess_pipeline();
+    void initialize_pipeline();
 
     void process_pipeline();
 
