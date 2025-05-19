@@ -39,7 +39,7 @@ public:
 
     cv::Mat resizeImage(cv::Mat input_frame, cv::Mat  resized_image);
 
-    std::unique_ptr<tflite::Interpreter>& get_interpreter();
+    tflite::Interpreter * get_interpreter();
 
     void set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter);
 

@@ -30,14 +30,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="adding loop proc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,12 +297,27 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Sense/BaseSense.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Sense/BaseSense.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/SenseOfSight.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Sight/main.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
@@ -405,14 +415,6 @@
       <workItem from="1746926225701" duration="5476000" />
       <workItem from="1746973174882" duration="43331000" />
       <workItem from="1747172502417" duration="22722000" />
-    </task>
-    <task id="LOCAL-00003" summary="added tf libs">
-      <option name="closed" value="true" />
-      <created>1746846717259</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1746846717259</updated>
     </task>
     <task id="LOCAL-00004" summary="added tf libs">
       <option name="closed" value="true" />
@@ -798,7 +800,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747621808872</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="adding loop proc">
+      <option name="closed" value="true" />
+      <created>1747670909050</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1747670909052</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -877,12 +887,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp</url>
-          <line>160</line>
+          <line>153</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp</url>
-          <line>150</line>
+          <line>143</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

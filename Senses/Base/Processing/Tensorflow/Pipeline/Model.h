@@ -47,9 +47,9 @@ namespace Tensorflow {
             std::unique_ptr<tflite::Interpreter> interpreter;
 
         public:
-            std::unique_ptr<tflite::Interpreter> & get_interpreter();
+            tflite::Interpreter * get_interpreter();
 
-            void set_interpreter(std::unique_ptr<tflite::Interpreter> interpreter);
+            void set_interpreter( tflite::Interpreter * interpreter);
         };
     }
 } // Tensorflow

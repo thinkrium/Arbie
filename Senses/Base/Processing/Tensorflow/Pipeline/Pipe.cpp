@@ -22,7 +22,7 @@ namespace Pipeline {
         int input_index = this->get_interpreter()->inputs()[0];
         TfLiteIntArray* pipe_dims = this->get_interpreter()->tensor(input_index)->dims;
 
-        this->get_ai_model().set_interpreter(std::move( this->get_interpreter()));
+        this->get_ai_model().set_interpreter( this->get_interpreter());
         this->get_ai_model().get_model_details().height = pipe_dims->data[1];
         this->get_ai_model().get_model_details().width = pipe_dims->data[2];
         this->get_ai_model().get_model_details().channels = pipe_dims->data[3];
@@ -132,8 +132,8 @@ namespace Pipeline {
         return  resized_image;
     }
 
-    std::unique_ptr<tflite::Interpreter>& Pipe::get_interpreter() {
-        return interpreter  ;
+    tflite::Interpreter * Pipe::get_interpreter() {
+        return interpreter.get( )  ;
     }
 
     void Pipe::set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter) {

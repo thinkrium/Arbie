@@ -51,12 +51,14 @@ namespace Pipeline {
         this->set_model_details(details);
     }
 
-    std::unique_ptr<tflite::Interpreter> & Model::get_interpreter() {
-        return interpreter;
+    tflite::Interpreter * Model::get_interpreter() {
+        return interpreter.get();
     }
 
-    void Model::set_interpreter(std::unique_ptr<tflite::Interpreter> interpreter) {
-        this->interpreter = std::move(interpreter);
+    void Model::set_interpreter( tflite::Interpreter * interpreter) {
+
+        std::unique_ptr<tflite::Interpreter> t(interpreter);
+        this->interpreter = std::move(t) ;//
     }
 
     ModelDetails & Model::get_model_details() {
