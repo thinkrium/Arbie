@@ -44,7 +44,7 @@ namespace Tensorflow {
 
             ModelDetails model_details_;
 
-            std::unique_ptr<tflite::Interpreter> interpreter;
+            std::shared_ptr<tflite::Interpreter> interpreter;
 
         public:
             tflite::Interpreter * get_interpreter();

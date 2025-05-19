@@ -121,7 +121,8 @@ namespace Pipeline {
         tflite::InterpreterBuilder(*model, resolver)(&interpreter);
         interpreter->AllocateTensors();
 
-        this->set_interpreter(interpreter);
+        std::shared_ptr<tflite::Interpreter> shared_ptr(interpreter.get());
+        this->set_interpreter(shared_ptr);
     }
 
     cv::Mat Pipe::resizeImage(cv::Mat input_frame, cv::Mat  resized_image) {
@@ -136,7 +137,7 @@ namespace Pipeline {
         return interpreter.get( )  ;
     }
 
-    void Pipe::set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter) {
+    void Pipe::set_interpreter(std::shared_ptr<tflite::Interpreter> & interpreter) {
         this->interpreter = std::move(interpreter);
     }
 

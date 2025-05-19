@@ -57,7 +57,7 @@ namespace Pipeline {
 
     void Model::set_interpreter( tflite::Interpreter * interpreter) {
 
-        std::unique_ptr<tflite::Interpreter> t(interpreter);
+        std::shared_ptr<tflite::Interpreter> t(interpreter);
         this->interpreter = std::move(t) ;//
     }
 
