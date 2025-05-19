@@ -25,15 +25,17 @@ namespace Senses {
             if (frame.empty()) break;
             cv::flip(frame, frame, 1);
 
+            face_detection_pipe.initialize_pipeline();
+
             // Resize and convert to float
             cv::Mat resized_img, float_img;
-            cv::cvtColor(resized_img, resized_img, cv::COLOR_BGR2RGB);
 
             resized_img = face_detection_pipe.resizeImage(frame, resized_img);
 
+            cv::cvtColor(resized_img, resized_img, cv::COLOR_BGR2RGB);
+
             resized_img.convertTo( float_img, CV_32FC3, 1.0f / 255.0f, 0.0f ); // Normalize
 
-            face_detection_pipe.initialize_pipeline();
 
             face_detection_pipe.preprocess_pipeline();
 

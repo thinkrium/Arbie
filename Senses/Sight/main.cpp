@@ -8,5 +8,7 @@ int main( ) {
 
     Arbie::Senses::SenseOfSight sense_of_sight;
 
+    sense_of_sight.process();
+
     return 0;
 }
