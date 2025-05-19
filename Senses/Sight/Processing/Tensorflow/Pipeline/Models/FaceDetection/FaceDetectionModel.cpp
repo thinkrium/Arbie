@@ -254,7 +254,6 @@ namespace Pipeline {
             cv::Scalar(255, 0, 0), 2);
         }
 
-
 } // Pipeline
 } // Tensorflow
 } // Processing

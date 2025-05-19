@@ -64,7 +64,7 @@ public:
 
     void initialize_pipeline();
 
-    void process_pipeline();
+    void process_pipeline(int loop_index);
 
     void post_process_pipeline();
 

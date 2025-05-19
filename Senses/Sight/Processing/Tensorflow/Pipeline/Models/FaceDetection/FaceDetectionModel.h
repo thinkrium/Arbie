@@ -4,6 +4,7 @@
 
 #ifndef FACEDETECTIONMODEL_H
 #define FACEDETECTIONMODEL_H
+#include "../VisualModel.h"
 #include "../../../../../../Base/Output/Smoothing/KalmanSmoothing.h"
 #include "../../../../../../Base/Processing/Tensorflow/Pipeline/BoundingBox.h"
 #include "../../../../../../Base/Processing/Tensorflow/Pipeline/Model.h"
@@ -20,7 +21,7 @@ namespace Pipeline {
 using namespace Senses::Base::Processing::Tensorflow::Pipeline;
 using namespace Senses::Base::Output::Smoothing;
 
-class FaceDetectionModel : public Model {
+class FaceDetectionModel : public Sight::Processing::Tensorflow::Pipeline::Models::VisualModel {
 
     TfLiteTensor*  boxes_tensor ;
     TfLiteTensor*  scores_tensor;
@@ -38,6 +39,7 @@ class FaceDetectionModel : public Model {
 
     std::vector<BoundingBox> bounding_boxes_;
 
+public:
     KalmanSmoothing kalman_smoothing_;
 
     KalmanSmoothing & get_kalman_smoothing();

@@ -6,6 +6,8 @@
 
 #include <opencv2/imgproc.hpp>
 
+#include "../../../../Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h"
+
 namespace Arbie {
 namespace Senses {
 namespace Sight {
@@ -50,10 +52,13 @@ namespace Pipeline {
 
     }
 
-    void Pipe::process_pipeline() {
+    void Pipe::process_pipeline(int loop_index) {
+        this->get_ai_model().Process(loop_index);
     }
 
     void Pipe::post_process_pipeline() {
+        this->get_ai_model().Preprocess();
+
     }
 
     cv::Mat & Pipe::get_float_image() {

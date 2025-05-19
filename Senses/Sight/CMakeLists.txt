@@ -36,6 +36,8 @@ add_executable( Sight
         ../Base/Processing/Tensorflow/Pipeline/BoundingBox.h
         ../Base/Output/Smoothing/KalmanSmoothing.cpp
         ../Base/Output/Smoothing/KalmanSmoothing.h
+        Processing/Tensorflow/Pipeline/Models/VisualModel.cpp
+        Processing/Tensorflow/Pipeline/Models/VisualModel.h
 
 )
 
