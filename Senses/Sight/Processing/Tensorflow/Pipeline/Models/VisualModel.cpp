@@ -12,8 +12,7 @@ namespace Tensorflow {
 namespace Pipeline {
 namespace Models {
 
-    void VisualModel::DrawDetection(cv::Mat &image) {
-    }
+
 
 } // Models
 } // Pipeline

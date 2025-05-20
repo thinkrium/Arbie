@@ -53,10 +53,16 @@ namespace Senses {
 
             face_detection_pipe.post_process_pipeline();
 
+
+// face_detection_pipe.get_ai_model().DrawDetection(frame, );
+
+
+
+
             cv::imshow("Test", frame);
 
             if (cv::waitKey(1) == 27) break;
-            // face_detection_pipe.get_ai_model().DrawDetection(frame);
+    
         }
 
     }

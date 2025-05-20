@@ -4,6 +4,10 @@
 
 #include "Model.h"
 
+#include <opencv2/imgproc.hpp>
+
+#include "BoundingBox.h"
+
 namespace Arbie {
 namespace Senses {
 namespace Sight {
@@ -49,6 +53,27 @@ namespace Pipeline {
         details.height = 0;
 
         this->set_model_details(details);
+    }
+
+    void Model::DrawDetection(cv::Mat &image , std::vector<Senses::Base::Processing::Tensorflow::Pipeline::BoundingBox> & bounding_boxes) {
+
+
+        if (
+                bounding_boxes.at(0).x <= 0 || bounding_boxes.at(0).y <= 0 ||
+               bounding_boxes.at(0).x + bounding_boxes.at(0).width >= image.cols ||
+               bounding_boxes.at(0).y + bounding_boxes.at(0).height >= image.rows ||
+               bounding_boxes.at(0).width <= 0 || bounding_boxes.at(0).height <= 0) {
+              // this-pfalse; // Reset if out of bounds
+            exit(33);
+   }
+
+         // Draw bounding box
+        cv::rectangle(image, cv::Point(bounding_boxes.at(0).x, bounding_boxes.at(0).y),
+        cv::Point(bounding_boxes.at(0).x + bounding_boxes.at(0).width, bounding_boxes.at(0).y + bounding_boxes.at(0).height),
+        cv::Scalar(255, 0, 0), 2);
+
+
+
     }
 
     tflite::Interpreter * Model::get_interpreter() {

@@ -22,8 +22,6 @@ public:
     VisualModel( ) = default;
 
 
-    virtual void DrawDetection(cv::Mat & image) ;
-
     virtual ~VisualModel()  = default;
 };
 
