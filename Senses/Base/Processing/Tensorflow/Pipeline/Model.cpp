@@ -52,13 +52,13 @@ namespace Pipeline {
     }
 
     tflite::Interpreter * Model::get_interpreter() {
-        return interpreter.get();
+        return interpreter;
     }
 
     void Model::set_interpreter( tflite::Interpreter * interpreter) {
 
-        std::shared_ptr<tflite::Interpreter> t(interpreter);
-        this->interpreter = std::move(t) ;//
+
+        this->interpreter = interpreter ;//
     }
 
     ModelDetails & Model::get_model_details() {

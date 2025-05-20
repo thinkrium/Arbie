@@ -33,9 +33,10 @@ namespace Pipeline {
     void Pipe::preprocess_pipeline() {
         // Copy to input tensor
         float* input_tensor_data = this->get_input_tensor_data(0);
-        std::memcpy(this->get_input_tensor(0),
+        std::memcpy(
+                         input_tensor_data,
                          this->get_float_image().data,
-                              this->get_ai_model().get_model_details().height
+                        this->get_ai_model().get_model_details().height
                               * this->get_ai_model().get_model_details().width
                               * this->get_ai_model().get_model_details().channels
                               * sizeof(float)
@@ -119,10 +120,11 @@ namespace Pipeline {
         std::unique_ptr<tflite::Interpreter> interpreter;
 
         tflite::InterpreterBuilder(*model, resolver)(&interpreter);
-        interpreter->AllocateTensors();
+        this->set_interpreter( interpreter  );
+        this->get_interpreter( )->AllocateTensors();
 
-        std::shared_ptr<tflite::Interpreter> shared_ptr(interpreter.get());
-        this->set_interpreter(shared_ptr);
+        // std::shared_ptr<tflite::Interpreter> shared_ptr(interpreter.get());
+
     }
 
     cv::Mat Pipe::resizeImage(cv::Mat input_frame, cv::Mat  resized_image) {
@@ -134,11 +136,11 @@ namespace Pipeline {
     }
 
     tflite::Interpreter * Pipe::get_interpreter() {
-        return interpreter.get( )  ;
+        return interpreter.get() ;
     }
 
-    void Pipe::set_interpreter(std::shared_ptr<tflite::Interpreter> & interpreter) {
-        this->interpreter = std::move(interpreter);
+    void Pipe::set_interpreter( std::unique_ptr < tflite::Interpreter > & interpreter) {
+        this->interpreter = std::move(interpreter );
     }
 
     float * Pipe::get_input_tensor_data(int input_tensor_index){

@@ -41,7 +41,7 @@ public:
 
     tflite::Interpreter * get_interpreter();
 
-    void set_interpreter(std::shared_ptr<tflite::Interpreter> & interpreter);
+    void set_interpreter( std::unique_ptr<   tflite::Interpreter > & interpreter);
 
     float * get_input_tensor_data(int input_tensor_index);
 
@@ -72,7 +72,7 @@ public:
 
 private:
 
-    std::shared_ptr<tflite::Interpreter> interpreter;
+    std::unique_ptr< tflite::Interpreter > interpreter;
 
     Model ai_model;
 

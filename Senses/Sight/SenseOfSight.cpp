@@ -12,6 +12,9 @@ namespace Senses {
 
     void SenseOfSight::process() {
 
+        face_detection_pipe.initialize_pipeline();
+
+
         cv::VideoCapture cap(0);
 
         if (!cap.isOpened()) {
@@ -25,17 +28,22 @@ namespace Senses {
             if (frame.empty()) break;
             cv::flip(frame, frame, 1);
 
-            face_detection_pipe.initialize_pipeline();
 
             // Resize and convert to float
             cv::Mat resized_img, float_img;
 
-            resized_img = face_detection_pipe.resizeImage(frame, resized_img);
+            // resized_img = face_detection_pipe.resizeImage(frame, resized_img);
+            cv::resize(frame, resized_img,
+                cv::Size(
+                                face_detection_pipe.get_ai_model().get_model_details().width,
+                                face_detection_pipe.get_ai_model().get_model_details().height
+                        ));
 
             cv::cvtColor(resized_img, resized_img, cv::COLOR_BGR2RGB);
 
             resized_img.convertTo( float_img, CV_32FC3, 1.0f / 255.0f, 0.0f ); // Normalize
 
+            face_detection_pipe.set_float_image(float_img);
 
             face_detection_pipe.preprocess_pipeline();
 
@@ -45,6 +53,9 @@ namespace Senses {
 
             face_detection_pipe.post_process_pipeline();
 
+            cv::imshow("Test", frame);
+
+            if (cv::waitKey(1) == 27) break;
             // face_detection_pipe.get_ai_model().DrawDetection(frame);
         }
 
