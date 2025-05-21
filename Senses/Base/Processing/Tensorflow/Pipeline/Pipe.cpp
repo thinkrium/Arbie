@@ -50,6 +50,7 @@ namespace Pipeline {
 
 
 
+        this->get_ai_model()->Preprocess();
 
     }
 
