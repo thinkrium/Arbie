@@ -70,11 +70,11 @@ namespace Pipeline {
         this->float_image = std::move(float_image);
     }
 
-    Model * Pipe::get_ai_model()   {
+    std::shared_ptr< Model> Pipe::get_ai_model()   {
         return ai_model;
     }
 
-    void Pipe::set_ai_model(  Model * ai_model) {
+    void Pipe::set_ai_model(  std::shared_ptr<Model > ai_model) {
         this->ai_model = ai_model;
     }
 
@@ -95,9 +95,9 @@ namespace Pipeline {
     }
 
     Pipe::Pipe(char *model_path_parameter) {
-        Model ai_model;
-        ai_model.set_model_path(model_path_parameter);
-        this->set_ai_model(&ai_model);
+        std::shared_ptr<   Model> ai_model;
+        ai_model->set_model_path(model_path_parameter);
+        this->set_ai_model( ai_model);
     }
 
     int Pipe::get_number_of_detections() const {

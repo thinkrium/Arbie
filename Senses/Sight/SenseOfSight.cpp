@@ -56,7 +56,7 @@ namespace Senses {
 
 // face_detection_pipe.get_ai_model().DrawDetection(frame, );
 
-            ((Pipeline::FaceDetectionModel * )face_detection_pipe.get_ai_model())->DrawDetection(frame);
+            ((Pipeline::FaceDetectionModel * )face_detection_pipe.get_ai_model().get())->DrawDetection(frame);
 
 
             cv::imshow("Test", frame);
@@ -69,10 +69,10 @@ namespace Senses {
 
      SenseOfSight::SenseOfSight() {
         Pipeline::Pipe temporary_pipe ;
-        Pipeline::FaceDetectionModel temporary_face_detection_model;
+        std::shared_ptr< Pipeline::FaceDetectionModel> temporary_face_detection_model = std::make_shared<Pipeline::FaceDetectionModel>();
 
-        temporary_face_detection_model.set_model_path("../../Sight/Assets/TFliteModel/face_detection_short_range.tflite");
-        temporary_pipe.set_ai_model(&temporary_face_detection_model);
+        temporary_face_detection_model->set_model_path("../../Sight/Assets/TFliteModel/face_detection_short_range.tflite");
+        temporary_pipe.set_ai_model( temporary_face_detection_model);
 
         face_detection_pipe = temporary_pipe;
         face_detection_pipe.PreparePipeLineInterpreter();

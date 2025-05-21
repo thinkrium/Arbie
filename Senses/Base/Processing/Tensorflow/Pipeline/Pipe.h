@@ -8,6 +8,7 @@
 #include "tensorflow/lite/kernels/register.h"
 #include "tensorflow/lite/model.h"
 
+
 #ifndef PIPE_H
 #define PIPE_H
 
@@ -56,9 +57,9 @@ public:
     void set_float_image(cv::Mat float_image);
 
 
-    Model * get_ai_model()  ;
+    std::shared_ptr<Pipeline::Model> get_ai_model()  ;
 
-    void set_ai_model(  Model * ai_model);
+    void set_ai_model(  std::shared_ptr<Model > ai_model);
 
     void preprocess_pipeline();
 
@@ -74,7 +75,7 @@ private:
 
     std::unique_ptr< tflite::Interpreter > interpreter;
 
-    Model * ai_model;
+    std::shared_ptr<Model > ai_model;
 
     cv::Mat float_image;
 
