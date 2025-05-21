@@ -46,7 +46,7 @@ namespace Tensorflow {
 
 
 
-            virtual void DrawDetection(cv::Mat &image , std::vector<Senses::Base::Processing::Tensorflow::Pipeline::BoundingBox> & bounding_boxes) ;
+            // virtual void DrawDetection(cv::Mat &image , std::vector<Senses::Base::Processing::Tensorflow::Pipeline::BoundingBox> & bounding_boxes) ;
         private:
 
             char * model_path;

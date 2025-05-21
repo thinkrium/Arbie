@@ -35,8 +35,8 @@ namespace Senses {
             // resized_img = face_detection_pipe.resizeImage(frame, resized_img);
             cv::resize(frame, resized_img,
                 cv::Size(
-                                face_detection_pipe.get_ai_model().get_model_details().width,
-                                face_detection_pipe.get_ai_model().get_model_details().height
+                                face_detection_pipe.get_ai_model()->get_model_details().width,
+                                face_detection_pipe.get_ai_model()->get_model_details().height
                         ));
 
             cv::cvtColor(resized_img, resized_img, cv::COLOR_BGR2RGB);
@@ -56,13 +56,13 @@ namespace Senses {
 
 // face_detection_pipe.get_ai_model().DrawDetection(frame, );
 
-
+            ((Pipeline::FaceDetectionModel * )face_detection_pipe.get_ai_model())->DrawDetection(frame);
 
 
             cv::imshow("Test", frame);
 
             if (cv::waitKey(1) == 27) break;
-    
+
         }
 
     }
@@ -72,7 +72,7 @@ namespace Senses {
         Pipeline::FaceDetectionModel temporary_face_detection_model;
 
         temporary_face_detection_model.set_model_path("../../Sight/Assets/TFliteModel/face_detection_short_range.tflite");
-        temporary_pipe.set_ai_model(temporary_face_detection_model);
+        temporary_pipe.set_ai_model(&temporary_face_detection_model);
 
         face_detection_pipe = temporary_pipe;
         face_detection_pipe.PreparePipeLineInterpreter();

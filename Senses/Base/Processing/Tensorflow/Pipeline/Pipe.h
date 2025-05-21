@@ -56,9 +56,9 @@ public:
     void set_float_image(cv::Mat float_image);
 
 
-    Model & get_ai_model()  ;
+    Model * get_ai_model()  ;
 
-    void set_ai_model(  Model & ai_model);
+    void set_ai_model(  Model * ai_model);
 
     void preprocess_pipeline();
 
@@ -74,7 +74,7 @@ private:
 
     std::unique_ptr< tflite::Interpreter > interpreter;
 
-    Model ai_model;
+    Model * ai_model;
 
     cv::Mat float_image;
 

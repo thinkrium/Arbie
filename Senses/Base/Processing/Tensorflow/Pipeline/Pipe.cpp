@@ -22,10 +22,10 @@ namespace Pipeline {
         int input_index = this->get_interpreter()->inputs()[0];
         TfLiteIntArray* pipe_dims = this->get_interpreter()->tensor(input_index)->dims;
 
-        this->get_ai_model().set_interpreter( this->get_interpreter());
-        this->get_ai_model().get_model_details().height = pipe_dims->data[1];
-        this->get_ai_model().get_model_details().width = pipe_dims->data[2];
-        this->get_ai_model().get_model_details().channels = pipe_dims->data[3];
+        this->get_ai_model()->set_interpreter( this->get_interpreter());
+        this->get_ai_model()->get_model_details().height = pipe_dims->data[1];
+        this->get_ai_model()->get_model_details().width = pipe_dims->data[2];
+        this->get_ai_model()->get_model_details().channels = pipe_dims->data[3];
 
 
     }
@@ -36,9 +36,9 @@ namespace Pipeline {
         std::memcpy(
                          input_tensor_data,
                          this->get_float_image().data,
-                        this->get_ai_model().get_model_details().height
-                              * this->get_ai_model().get_model_details().width
-                              * this->get_ai_model().get_model_details().channels
+                        this->get_ai_model()->get_model_details().height
+                              * this->get_ai_model()->get_model_details().width
+                              * this->get_ai_model()->get_model_details().channels
                               * sizeof(float)
                     );
 
@@ -54,11 +54,11 @@ namespace Pipeline {
     }
 
     void Pipe::process_pipeline(int loop_index) {
-        this->get_ai_model().Process(loop_index);
+        this->get_ai_model()->Process(loop_index);
     }
 
     void Pipe::post_process_pipeline() {
-        this->get_ai_model().Preprocess();
+        this->get_ai_model()->Preprocess();
 
     }
 
@@ -70,11 +70,11 @@ namespace Pipeline {
         this->float_image = std::move(float_image);
     }
 
-    Model & Pipe::get_ai_model()   {
+    Model * Pipe::get_ai_model()   {
         return ai_model;
     }
 
-    void Pipe::set_ai_model(  Model & ai_model) {
+    void Pipe::set_ai_model(  Model * ai_model) {
         this->ai_model = ai_model;
     }
 
@@ -97,7 +97,7 @@ namespace Pipeline {
     Pipe::Pipe(char *model_path_parameter) {
         Model ai_model;
         ai_model.set_model_path(model_path_parameter);
-        this->set_ai_model(ai_model);
+        this->set_ai_model(&ai_model);
     }
 
     int Pipe::get_number_of_detections() const {
@@ -111,11 +111,11 @@ namespace Pipeline {
     void Pipe::PreparePipeLineInterpreter() {
 
 
-        if (this->get_ai_model().get_model_path() == "") { exit(7); }
+        if (this->get_ai_model()->get_model_path() == "") { exit(7); }
         // const char* landmark_model_path = "../face_landmark_small.tflite";
 
         // Load TFLite model
-        auto model = tflite::FlatBufferModel::BuildFromFile(this->get_ai_model().get_model_path());
+        auto model = tflite::FlatBufferModel::BuildFromFile(this->get_ai_model()->get_model_path());
         tflite::ops::builtin::BuiltinOpResolver resolver;
         std::unique_ptr<tflite::Interpreter> interpreter;
 
@@ -129,8 +129,8 @@ namespace Pipeline {
 
     cv::Mat Pipe::resizeImage(cv::Mat input_frame, cv::Mat  resized_image) {
         cv::resize(input_frame, resized_image, cv::Size(
-            this->get_ai_model().get_model_details().width,
-            this->get_ai_model().get_model_details().height)
+            this->get_ai_model()->get_model_details().width,
+            this->get_ai_model()->get_model_details().height)
             );
         return  resized_image;
     }

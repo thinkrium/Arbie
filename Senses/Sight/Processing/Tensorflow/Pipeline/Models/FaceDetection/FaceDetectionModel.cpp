@@ -243,10 +243,11 @@ namespace Pipeline {
                 }
 
 
-        }
+            }
 
 
         }
+
         void FaceDetectionModel::DrawDetection(cv::Mat & image) {
             BoundingBox drawable_box = this->get_bounding_boxes().at(0);
 
