@@ -14,7 +14,7 @@ namespace Pipeline {
     void FacialLandmarkDetectionModel::Preprocess() {
     }
 
-    void FacialLandmarkDetectionModel::Process() {
+    void FacialLandmarkDetectionModel::Process(int loop_index) {
     }
 
     void FacialLandmarkDetectionModel::Postprocess() {

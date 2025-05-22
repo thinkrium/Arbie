@@ -14,7 +14,7 @@ namespace Pipeline {
     void ObjectDetectionModel::Preprocess() {
     }
 
-    void ObjectDetectionModel::Process() {
+    void ObjectDetectionModel::Process(int loop_index) {
     }
 
     void ObjectDetectionModel::Postprocess() {

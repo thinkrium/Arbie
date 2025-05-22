@@ -8,6 +8,7 @@
 #include "tensorflow/lite/kernels/register.h"
 #include "tensorflow/lite/model.h"
 
+
 #ifndef PIPE_H
 #define PIPE_H
 
@@ -39,9 +40,9 @@ public:
 
     cv::Mat resizeImage(cv::Mat input_frame, cv::Mat  resized_image);
 
-    std::unique_ptr<tflite::Interpreter>& get_interpreter();
+    tflite::Interpreter * get_interpreter();
 
-    void set_interpreter(std::unique_ptr<tflite::Interpreter> & interpreter);
+    void set_interpreter( std::unique_ptr<   tflite::Interpreter > & interpreter);
 
     float * get_input_tensor_data(int input_tensor_index);
 
@@ -56,15 +57,15 @@ public:
     void set_float_image(cv::Mat float_image);
 
 
-    Model & get_ai_model()  ;
+    std::shared_ptr<Pipeline::Model> get_ai_model()  ;
 
-    void set_ai_model(  Model & ai_model);
+    void set_ai_model(  std::shared_ptr<Model > ai_model);
 
     void preprocess_pipeline();
 
-    void midprocess_pipeline();
+    void initialize_pipeline();
 
-    void process_pipeline();
+    void process_pipeline(int loop_index);
 
     void post_process_pipeline();
 
@@ -72,9 +73,9 @@ public:
 
 private:
 
-    std::unique_ptr<tflite::Interpreter> interpreter;
+    std::unique_ptr< tflite::Interpreter > interpreter;
 
-    Model ai_model;
+    std::shared_ptr<Model > ai_model;
 
     cv::Mat float_image;
 

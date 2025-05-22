@@ -4,8 +4,14 @@
 
 #ifndef MODEL_H
 #define MODEL_H
+#include <opencv2/core/mat.hpp>
+
 #include "ModelDetails.h"
 #include "tensorflow/lite/interpreter.h"
+
+namespace Arbie::Senses::Base::Processing::Tensorflow::Pipeline {
+    struct BoundingBox;
+}
 
 namespace Arbie {
 namespace Senses {
@@ -24,7 +30,7 @@ namespace Tensorflow {
 
             virtual void Preprocess();
 
-            virtual void Process();
+            virtual void Process(int loop_index);
 
             virtual void Postprocess();
 
@@ -38,18 +44,21 @@ namespace Tensorflow {
 
             Model();
 
+
+
+            // virtual void DrawDetection(cv::Mat &image , std::vector<Senses::Base::Processing::Tensorflow::Pipeline::BoundingBox> & bounding_boxes) ;
         private:
 
             char * model_path;
 
             ModelDetails model_details_;
 
-            std::unique_ptr<tflite::Interpreter> interpreter;
+            tflite::Interpreter * interpreter;
 
         public:
-            std::unique_ptr<tflite::Interpreter> & get_interpreter();
+            tflite::Interpreter * get_interpreter();
 
-            void set_interpreter(std::unique_ptr<tflite::Interpreter> interpreter);
+            void set_interpreter( tflite::Interpreter * interpreter);
         };
     }
 } // Tensorflow
