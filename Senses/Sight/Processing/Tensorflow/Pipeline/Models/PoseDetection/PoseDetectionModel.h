@@ -16,7 +16,7 @@ namespace Pipeline {
 
 class PoseDetectionModel : public Model {
 public:
-    void Preprocess() override;
+    void Preprocess(tflite::Interpreter * interpreter) override;
 
     void Process(int loop_index) override;
 

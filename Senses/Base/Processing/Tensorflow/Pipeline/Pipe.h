@@ -79,7 +79,14 @@ private:
 
     cv::Mat float_image;
 
+    cv::Mat main_image;
 
+public:
+    cv::Mat & get_main_image();
+
+    void set_main_image(cv::Mat main_image);
+
+private:
     int number_of_detections;
 
 

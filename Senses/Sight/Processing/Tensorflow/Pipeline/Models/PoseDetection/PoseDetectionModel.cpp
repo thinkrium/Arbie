@@ -11,7 +11,7 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
-    void PoseDetectionModel::Preprocess() {
+    void PoseDetectionModel::Preprocess(tflite::Interpreter * interpreter) {
     }
 
     void PoseDetectionModel::Process(int loop_index) {

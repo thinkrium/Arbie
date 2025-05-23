@@ -4,6 +4,8 @@
 
 #include "FaceDetectionModel.h"
 
+#include <iostream>
+
 namespace Arbie {
 namespace Senses {
 namespace Sight {
@@ -131,9 +133,9 @@ namespace Pipeline {
         this->set_kalman_smoothing(temporarySmoothing);
     }
 
-    void FaceDetectionModel::Preprocess() {
-        this->set_scores_tensor(  this->get_interpreter()->tensor(this->get_interpreter()->outputs()[1]) );
-        this->set_boxes_tensor(  this->get_interpreter()->tensor(this->get_interpreter()->outputs()[0]) );
+    void FaceDetectionModel::Preprocess(tflite::Interpreter * interpreter) {
+        this->set_scores_tensor(  interpreter->tensor(interpreter->outputs()[1]) );
+        this->set_boxes_tensor(  interpreter->tensor(interpreter->outputs()[0]) );
 
 
 
@@ -209,46 +211,51 @@ namespace Pipeline {
 
     void FaceDetectionModel::Postprocess() {
         if (this->get_bounding_boxes().empty()) {
-            // std::cout << "No detection\n";
-            exit(33);
+            std::cout << "No detection\n";
+            return;
+
+
         }
 
         std::sort(this->get_bounding_boxes().begin(), this->get_bounding_boxes().end(), [](const BoundingBox& a, const BoundingBox& b) {
               return a.detection_score > b.detection_score;
           });
 
-        float prediction_x = this->get_kalman_smoothing().get_prediction_matrix().at<float>(0);
-        float prediction_y = this->get_kalman_smoothing().get_prediction_matrix().at<float>(1);
-        float prediction_w = this->get_kalman_smoothing().get_prediction_matrix().at<float>(2);
-        float prediction_h = this->get_kalman_smoothing().get_prediction_matrix().at<float>(3);
-
-
-        for ( BoundingBox looped_bounding_box: this->get_bounding_boxes() ) {
-            if ( this->get_kalman_smoothing().is_initialized() && prediction_x > 0 && prediction_y > 0 && prediction_w > 0 && prediction_h > 0 ) {
-                looped_bounding_box.x = static_cast<int>(prediction_x - prediction_w / 2);
-                looped_bounding_box.y = static_cast<int>(prediction_y - prediction_h / 2);
-                looped_bounding_box.width = static_cast<int>(prediction_w);
-                looped_bounding_box.height = static_cast<int>(prediction_h);
-            }
-            // // //////////////////////////////////////////////////////////////////////////////////////////////////////
-            // // ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-            if (
-                looped_bounding_box.x <= 0 || looped_bounding_box.y <= 0 ||
-                looped_bounding_box.x + looped_bounding_box.width >= this->get_image_width() ||
-                looped_bounding_box.y + looped_bounding_box.height >= this->get_image_height() ||
-                looped_bounding_box.width <= 0 || looped_bounding_box.height <= 0) {
-                this->get_kalman_smoothing().set_initialized( false); // Reset if out of bounds
-                return;
-                }
-
-
-            }
+        // float prediction_x = this->get_kalman_smoothing().get_prediction_matrix().at<float>(0);
+        // float prediction_y = this->get_kalman_smoothing().get_prediction_matrix().at<float>(1);
+        // float prediction_w = this->get_kalman_smoothing().get_prediction_matrix().at<float>(2);
+        // float prediction_h = this->get_kalman_smoothing().get_prediction_matrix().at<float>(3);
+        //
+        //
+        // for ( BoundingBox looped_bounding_box: this->get_bounding_boxes() ) {
+        //     if ( this->get_kalman_smoothing().is_initialized() && prediction_x > 0 && prediction_y > 0 && prediction_w > 0 && prediction_h > 0 ) {
+        //         looped_bounding_box.x = static_cast<int>(prediction_x - prediction_w / 2);
+        //         looped_bounding_box.y = static_cast<int>(prediction_y - prediction_h / 2);
+        //         looped_bounding_box.width = static_cast<int>(prediction_w);
+        //         looped_bounding_box.height = static_cast<int>(prediction_h);
+        //     }
+        //     // // //////////////////////////////////////////////////////////////////////////////////////////////////////
+        //     // // ///////////////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //     if (
+        //         looped_bounding_box.x <= 0 || looped_bounding_box.y <= 0 ||
+        //         looped_bounding_box.x + looped_bounding_box.width >= this->get_image_width() ||
+        //         looped_bounding_box.y + looped_bounding_box.height >= this->get_image_height() ||
+        //         looped_bounding_box.width <= 0 || looped_bounding_box.height <= 0) {
+        //         this->get_kalman_smoothing().set_initialized( false); // Reset if out of bounds
+        //         return;
+        //         }
+        //
+        //
+        //     }
 
 
         }
 
         void FaceDetectionModel::DrawDetection(cv::Mat & image) {
+
+            if (this->get_bounding_boxes().empty()) return;
+
             BoundingBox drawable_box = this->get_bounding_boxes().at(0);
 
             // Draw bounding box

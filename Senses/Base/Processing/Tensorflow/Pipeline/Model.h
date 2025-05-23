@@ -28,7 +28,7 @@ namespace Tensorflow {
 
             Model & operator=(Model & other);
 
-            virtual void Preprocess();
+            virtual void Preprocess(tflite::Interpreter * interpreter);
 
             virtual void Process(int loop_index);
 
@@ -53,12 +53,12 @@ namespace Tensorflow {
 
             ModelDetails model_details_;
 
-            tflite::Interpreter * interpreter;
+            // tflite::Interpreter * interpreter;
 
         public:
-            tflite::Interpreter * get_interpreter();
+            // tflite::Interpreter * get_interpreter();
 
-            void set_interpreter( tflite::Interpreter * interpreter);
+            // void set_interpreter( tflite::Interpreter * interpreter);
         };
     }
 } // Tensorflow

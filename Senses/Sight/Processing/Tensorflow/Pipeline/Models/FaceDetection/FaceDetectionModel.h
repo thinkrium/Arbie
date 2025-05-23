@@ -86,7 +86,9 @@ public:
 
     FaceDetectionModel();
 
-    void Preprocess() override;
+    // void Preprocess(tflite::Interpreter * interpreter, int image_width, int image_height)  ;
+
+    void Preprocess(tflite::Interpreter *interpreter) override;
 
     void Process(int loop_index) override;
 

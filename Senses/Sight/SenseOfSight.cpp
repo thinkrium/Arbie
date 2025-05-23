@@ -29,6 +29,7 @@ namespace Senses {
             cv::flip(frame, frame, 1);
 
 
+            // face_detection_pipe.get_ai_model()->
             // Resize and convert to float
             cv::Mat resized_img, float_img;
 
@@ -43,7 +44,12 @@ namespace Senses {
 
             resized_img.convertTo( float_img, CV_32FC3, 1.0f / 255.0f, 0.0f ); // Normalize
 
+            ((Pipeline::FaceDetectionModel * )face_detection_pipe.get_ai_model().get())->set_image_height (frame.rows);
+            ((Pipeline::FaceDetectionModel * )face_detection_pipe.get_ai_model().get())->set_image_width (frame.cols);
+
             face_detection_pipe.set_float_image(float_img);
+
+            face_detection_pipe.get_ai_model();
 
             face_detection_pipe.preprocess_pipeline();
 
