@@ -30,23 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc870f5-5d33-4778-8622-1c48ec794abf" name="Changes" comment="might hav fix itptr">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Model.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline/Pipe.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FacialLandmarkDetection/FacialLandmarkDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/HandLandmarkDetection/HandLandmarkDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/ObjectDetection/ObjectDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/PoseDetection/PoseDetectionModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Senses/Sight/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Senses/Sight/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,6 +282,30 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -313,31 +321,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Sight.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.Sight.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;StartingSenses&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.main.cpp.executor": "Run",
+    "CMake Application.Sight.executor": "Run",
+    "Google Test.Sight.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "StartingSenses",
+    "last_opened_file_path": "/home/thom/Development/Robotics/Arbie/OS/SourceCode/Arbie/Senses/Base/Processing/Tensorflow/Pipeline",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.qodana",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Senses/Base/Processing/Tensorflow/Pipeline" />
@@ -395,15 +403,7 @@
       <workItem from="1746973174882" duration="43331000" />
       <workItem from="1747172502417" duration="22722000" />
       <workItem from="1747746878080" duration="26342000" />
-      <workItem from="1747918065006" duration="20125000" />
-    </task>
-    <task id="LOCAL-00010" summary="added tf libs">
-      <option name="closed" value="true" />
-      <created>1746927755864</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1746927755864</updated>
+      <workItem from="1747918065006" duration="21298000" />
     </task>
     <task id="LOCAL-00011" summary="added tf libs">
       <option name="closed" value="true" />
@@ -789,7 +789,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747846216694</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="might hav fix itptr">
+      <option name="closed" value="true" />
+      <created>1748023800118</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1748023800118</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -846,11 +854,6 @@
           <url>file://$PROJECT_DIR$/Senses/Sight/SenseOfSight.cpp</url>
           <line>14</line>
           <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp</url>
-          <line>179</line>
-          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Senses/Sight/Processing/Tensorflow/Pipeline/Models/FaceDetection/FaceDetectionModel.cpp</url>

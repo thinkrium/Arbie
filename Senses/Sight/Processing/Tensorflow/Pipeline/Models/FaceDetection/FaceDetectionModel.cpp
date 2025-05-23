@@ -221,33 +221,33 @@ namespace Pipeline {
               return a.detection_score > b.detection_score;
           });
 
-        float prediction_x = this->get_kalman_smoothing().get_prediction_matrix().at<float>(0);
-        float prediction_y = this->get_kalman_smoothing().get_prediction_matrix().at<float>(1);
-        float prediction_w = this->get_kalman_smoothing().get_prediction_matrix().at<float>(2);
-        float prediction_h = this->get_kalman_smoothing().get_prediction_matrix().at<float>(3);
-
-
-        for ( BoundingBox looped_bounding_box: this->get_bounding_boxes() ) {
-            if ( this->get_kalman_smoothing().is_initialized() && prediction_x > 0 && prediction_y > 0 && prediction_w > 0 && prediction_h > 0 ) {
-                looped_bounding_box.x = static_cast<int>(prediction_x - prediction_w / 2);
-                looped_bounding_box.y = static_cast<int>(prediction_y - prediction_h / 2);
-                looped_bounding_box.width = static_cast<int>(prediction_w);
-                looped_bounding_box.height = static_cast<int>(prediction_h);
-            }
-            // // //////////////////////////////////////////////////////////////////////////////////////////////////////
-            // // ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-            if (
-                looped_bounding_box.x <= 0 || looped_bounding_box.y <= 0 ||
-                looped_bounding_box.x + looped_bounding_box.width >= this->get_image_width() ||
-                looped_bounding_box.y + looped_bounding_box.height >= this->get_image_height() ||
-                looped_bounding_box.width <= 0 || looped_bounding_box.height <= 0) {
-                this->get_kalman_smoothing().set_initialized( false); // Reset if out of bounds
-                return;
-                }
-
-
-            }
+        // float prediction_x = this->get_kalman_smoothing().get_prediction_matrix().at<float>(0);
+        // float prediction_y = this->get_kalman_smoothing().get_prediction_matrix().at<float>(1);
+        // float prediction_w = this->get_kalman_smoothing().get_prediction_matrix().at<float>(2);
+        // float prediction_h = this->get_kalman_smoothing().get_prediction_matrix().at<float>(3);
+        //
+        //
+        // for ( BoundingBox looped_bounding_box: this->get_bounding_boxes() ) {
+        //     if ( this->get_kalman_smoothing().is_initialized() && prediction_x > 0 && prediction_y > 0 && prediction_w > 0 && prediction_h > 0 ) {
+        //         looped_bounding_box.x = static_cast<int>(prediction_x - prediction_w / 2);
+        //         looped_bounding_box.y = static_cast<int>(prediction_y - prediction_h / 2);
+        //         looped_bounding_box.width = static_cast<int>(prediction_w);
+        //         looped_bounding_box.height = static_cast<int>(prediction_h);
+        //     }
+        //     // // //////////////////////////////////////////////////////////////////////////////////////////////////////
+        //     // // ///////////////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //     if (
+        //         looped_bounding_box.x <= 0 || looped_bounding_box.y <= 0 ||
+        //         looped_bounding_box.x + looped_bounding_box.width >= this->get_image_width() ||
+        //         looped_bounding_box.y + looped_bounding_box.height >= this->get_image_height() ||
+        //         looped_bounding_box.width <= 0 || looped_bounding_box.height <= 0) {
+        //         this->get_kalman_smoothing().set_initialized( false); // Reset if out of bounds
+        //         return;
+        //         }
+        //
+        //
+        //     }
 
 
         }
