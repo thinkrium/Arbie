@@ -18,7 +18,7 @@ class ObjectDetectionModel : public Model {
 public:
 ObjectDetectionModel() = default;
 
-    void Preprocess() override;
+    void Preprocess(tflite::Interpreter * interpreter) override;
 
     void Process(int loop_index) override;
 

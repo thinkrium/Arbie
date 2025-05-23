@@ -22,7 +22,7 @@ namespace Pipeline {
         int input_index = this->get_interpreter()->inputs()[0];
         TfLiteIntArray* pipe_dims = this->get_interpreter()->tensor(input_index)->dims;
 
-        this->get_ai_model()->set_interpreter( this->get_interpreter());
+        // this->get_ai_model()->set_interpreter( this->get_interpreter());
         this->get_ai_model()->get_model_details().height = pipe_dims->data[1];
         this->get_ai_model()->get_model_details().width = pipe_dims->data[2];
         this->get_ai_model()->get_model_details().channels = pipe_dims->data[3];
@@ -32,7 +32,7 @@ namespace Pipeline {
 
     void Pipe::preprocess_pipeline() {
         // Copy to input tensor
-        float* input_tensor_data = this->get_input_tensor_data(0);
+        float* input_tensor_data = this->get_interpreter()->input_tensor(0)->data.f;
         std::memcpy(
                          input_tensor_data,
                          this->get_float_image().data,
@@ -48,9 +48,7 @@ namespace Pipeline {
             exit(11);
         }
 
-
-
-        this->get_ai_model()->Preprocess();
+        this->get_ai_model()->Preprocess(this->get_interpreter());
 
     }
 
@@ -59,8 +57,16 @@ namespace Pipeline {
     }
 
     void Pipe::post_process_pipeline() {
-        this->get_ai_model()->Preprocess();
+        this->get_ai_model()->Postprocess();
 
+    }
+
+    cv::Mat & Pipe::get_main_image() {
+        return main_image;
+    }
+
+    void Pipe::set_main_image(cv::Mat main_image) {
+        this->main_image = main_image;
     }
 
     cv::Mat & Pipe::get_float_image() {
@@ -68,7 +74,7 @@ namespace Pipeline {
     }
 
     void Pipe::set_float_image(cv::Mat float_image) {
-        this->float_image = std::move(float_image);
+        this->float_image = float_image;
     }
 
     std::shared_ptr< Model> Pipe::get_ai_model()   {

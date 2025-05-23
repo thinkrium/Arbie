@@ -20,7 +20,7 @@ FacialLandmarkDetectionModel() = default;
 
 ~FacialLandmarkDetectionModel()  override = default;
 
-void Preprocess() override;
+void Preprocess(tflite::Interpreter * interpreter) override;
 
     void Process(int loop_index) override;
 

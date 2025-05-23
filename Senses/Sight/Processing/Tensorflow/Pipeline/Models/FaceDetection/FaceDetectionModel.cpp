@@ -4,6 +4,8 @@
 
 #include "FaceDetectionModel.h"
 
+#include <iostream>
+
 namespace Arbie {
 namespace Senses {
 namespace Sight {
@@ -131,9 +133,9 @@ namespace Pipeline {
         this->set_kalman_smoothing(temporarySmoothing);
     }
 
-    void FaceDetectionModel::Preprocess() {
-        this->set_scores_tensor(  this->get_interpreter()->tensor(this->get_interpreter()->outputs()[1]) );
-        this->set_boxes_tensor(  this->get_interpreter()->tensor(this->get_interpreter()->outputs()[0]) );
+    void FaceDetectionModel::Preprocess(tflite::Interpreter * interpreter) {
+        this->set_scores_tensor(  interpreter->tensor(interpreter->outputs()[1]) );
+        this->set_boxes_tensor(  interpreter->tensor(interpreter->outputs()[0]) );
 
 
 
@@ -209,8 +211,10 @@ namespace Pipeline {
 
     void FaceDetectionModel::Postprocess() {
         if (this->get_bounding_boxes().empty()) {
-            // std::cout << "No detection\n";
-            exit(33);
+            std::cout << "No detection\n";
+            return;
+
+
         }
 
         std::sort(this->get_bounding_boxes().begin(), this->get_bounding_boxes().end(), [](const BoundingBox& a, const BoundingBox& b) {
@@ -249,6 +253,9 @@ namespace Pipeline {
         }
 
         void FaceDetectionModel::DrawDetection(cv::Mat & image) {
+
+            if (this->get_bounding_boxes().empty()) return;
+
             BoundingBox drawable_box = this->get_bounding_boxes().at(0);
 
             // Draw bounding box

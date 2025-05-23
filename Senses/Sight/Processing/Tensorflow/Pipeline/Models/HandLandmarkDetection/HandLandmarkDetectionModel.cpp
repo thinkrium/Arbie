@@ -11,7 +11,7 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
-    void HandLandmarkDetectionModel::Preprocess() {
+    void HandLandmarkDetectionModel::Preprocess(tflite::Interpreter * interpreter) {
     }
 
     void HandLandmarkDetectionModel::Process(int loop_index) {

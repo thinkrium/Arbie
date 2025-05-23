@@ -11,7 +11,7 @@ namespace Base {
 namespace Processing {
 namespace Tensorflow {
 namespace Pipeline {
-    void ObjectDetectionModel::Preprocess() {
+    void ObjectDetectionModel::Preprocess(tflite::Interpreter * interpreter) {
     }
 
     void ObjectDetectionModel::Process(int loop_index) {
